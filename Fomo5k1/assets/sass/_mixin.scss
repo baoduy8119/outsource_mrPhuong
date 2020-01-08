@@ -12,12 +12,14 @@
 }
 
 @mixin button($style) {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: bold;
     padding: 9px 25px;
-    border-radius: 5px;
+    border-radius: 8px;
     border: none;
     color: $color-lighter;
+    text-transform: uppercase;
+    border: inset 2px #ffba00;
     @if $style=="default" {
         background: rgba(0, 213, 250, 1);
         background: -moz-linear-gradient(45deg, rgba(0, 213, 250, 1) 0%, rgba(0, 126, 255, 1) 100%);
@@ -50,11 +52,6 @@
             border-radius: inherit;
             box-shadow: -22px 0px 20px 5px #00d8ff, -7px -20px 20px 20px #fa3eba;
         }
-    }
-    @else if $style=="btn-no-gradient" {
-        background: #00a8ff;
-        color: #ffffff;
-        border: 1px solid #00fffc;
     }
     &:hover {
         color: #ffffff;
