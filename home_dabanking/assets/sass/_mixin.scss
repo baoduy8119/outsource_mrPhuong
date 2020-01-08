@@ -1,0 +1,196 @@
+@mixin transition($property: all, $duration: .5s, $ease: ease) {
+    -webkit-transition: $property $duration $ease;
+    -moz-transition: $property $duration $ease;
+    -o-transition: $property $duration $ease;
+    transition: $property $duration $ease;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin button($style) {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 9px 25px;
+    border-radius: 5px;
+    border: none;
+    color: $color-lighter;
+    @if $style=="default" {
+        background: rgba(0, 213, 250, 1);
+        background: -moz-linear-gradient(45deg, rgba(0, 213, 250, 1) 0%, rgba(0, 126, 255, 1) 100%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(0, 213, 250, 1)), color-stop(100%, rgba(0, 126, 255, 1)));
+        background: -webkit-linear-gradient(45deg, rgba(0, 213, 250, 1) 0%, rgba(0, 126, 255, 1) 100%);
+        background: -o-linear-gradient(45deg, rgba(0, 213, 250, 1) 0%, rgba(0, 126, 255, 1) 100%);
+        background: -ms-linear-gradient(45deg, rgba(0, 213, 250, 1) 0%, rgba(0, 126, 255, 1) 100%);
+        background: linear-gradient(45deg, rgba(0, 213, 250, 1) 0%, rgba(0, 126, 255, 1) 100%);
+        @include transition;
+    }
+    @else if $style=="btn-border" {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(to left, #24203b, #5b5199);
+        &:after {
+            @include before_after();
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            border-radius: inherit;
+            box-shadow: -22px 0px 20px 5px #00d8ff, -7px -20px 20px 20px #fa3eba;
+        }
+    }
+    @else if $style=="btn-border-lg" {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(to left, #24203b, #5b5199);
+        &:after {
+            @include before_after();
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            border-radius: inherit;
+            box-shadow: -22px 0px 20px 5px #00d8ff, -7px -20px 20px 20px #fa3eba;
+        }
+    }
+    @else if $style=="btn-no-gradient" {
+        background: #00a8ff;
+        color: #ffffff;
+        border: 1px solid #00fffc;
+    }
+    &:hover {
+        color: #ffffff;
+        filter: brightness(1.5);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin before_after {
+    content: "";
+    position: absolute;
+}
+
+// Browser Prefixes
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+// Translate
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew ($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin ($origin) {
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin center($position) {
+    position: absolute;
+    @if $position=='vertical' {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @else if $position=='horizontal' {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    @else if $position=='both' {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin prev-next($value) {
+    z-index: 1;
+    width: auto;
+    height: auto;
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-size: 56px;
+        color: $color-1;
+        @media only screen and (max-width: 767px) {
+            font-size: 26px;
+        }
+    }
+    @if $value=="prev" {
+        left: -50px;
+        &::before {
+            content: "\f053";
+        }
+        @media only screen and (max-width: 768px) {
+            left: -25px;
+        }
+        @media only screen and (max-width: 480px) {
+            left: 0;
+        }
+    }
+    @else if $value=="next" {
+        right: -50px;
+        &::before {
+            content: "\f054";
+        }
+        @media only screen and (max-width: 768px) {
+            right: -25px;
+        }
+        @media only screen and (max-width: 480px) {
+            right: 0;
+        }
+    }
+}
+
+@mixin title {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    background-image: linear-gradient(79deg, #EA3AAE 0, #FA3E66 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
