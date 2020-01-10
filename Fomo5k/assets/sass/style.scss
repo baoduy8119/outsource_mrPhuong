@@ -11,9 +11,9 @@ body {
     font-family: 'Work Sans', sans-serif;
     font-size: 14px;
     font-weight: 800;
-    background: $bg-content url(../images/bg-content-top.png) no-repeat;
     background-position: top center;
     background-size: cover;
+    background-color: #0d0733;
     color: $color-lighter;
     -webkit-font-smoothing: antialiased;
     &.home {
@@ -360,6 +360,8 @@ img {
 }
 
 header {
+    position: relative;
+    z-index: 1;
     .header-box {
         background: rgba(22, 29, 88, 0.75);
         -webkit-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.7);
@@ -631,6 +633,10 @@ header {
     background: -o-linear-gradient(top, #000d37 0%, #1b42ad 100%);
     background: -ms-linear-gradient(top, #000d37 0%, #1b42ad 100%);
     background: linear-gradient(to bottom, #000d37 0%, #1b42ad 100%);
+    @media only screen and (min-width: 1440px) {
+        right: 80px;
+        bottom: 80px;
+    }
 }
 
 .modal {
@@ -840,6 +846,55 @@ header {
     }
     @media only screen and (max-width: 767px) {
         margin-bottom: 20px;
+    }
+}
+
+.bg-content-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+}
+
+.notifications {
+    position: fixed;
+    right: 30px;
+    bottom: 96px;
+    z-index: 10;
+    @media only screen and (min-width: 1440px) {
+        right: 80px;
+        bottom: 150px;
+    }
+    .notification {
+        display: block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: 2px solid #000;
+        color: white;
+        border-radius: 10px;
+        font-weight: 500;
+        &.success {
+            border-color: #63cd7e;
+            background: rgba(3,84,33,1);
+            background: -moz-linear-gradient(top, rgba(3,84,33,1) 0%, rgba(3,154,63,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(3,84,33,1)), color-stop(100%, rgba(3,154,63,1)));
+            background: -webkit-linear-gradient(top, rgba(3,84,33,1) 0%, rgba(3,154,63,1) 100%);
+            background: -o-linear-gradient(top, rgba(3,84,33,1) 0%, rgba(3,154,63,1) 100%);
+            background: -ms-linear-gradient(top, rgba(3,84,33,1) 0%, rgba(3,154,63,1) 100%);
+            background: linear-gradient(to bottom, rgba(3,84,33,1) 0%, rgba(3,154,63,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035421', endColorstr='#039a3f', GradientType=0 );
+        }
+        &.error {
+            border-color: #cf616a;
+            background: rgba(75,5,13,1);
+            background: -moz-linear-gradient(top, rgba(75,5,13,1) 0%, rgba(164,33,42,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(75,5,13,1)), color-stop(100%, rgba(164,33,42,1)));
+            background: -webkit-linear-gradient(top, rgba(75,5,13,1) 0%, rgba(164,33,42,1) 100%);
+            background: -o-linear-gradient(top, rgba(75,5,13,1) 0%, rgba(164,33,42,1) 100%);
+            background: -ms-linear-gradient(top, rgba(75,5,13,1) 0%, rgba(164,33,42,1) 100%);
+            background: linear-gradient(to bottom, rgba(75,5,13,1) 0%, rgba(164,33,42,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b050d', endColorstr='#a4212a', GradientType=0 );
+                    }
     }
 }
 
