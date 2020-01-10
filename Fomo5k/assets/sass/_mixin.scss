@@ -44,23 +44,6 @@
         background: -ms-linear-gradient(top, #000d37 0%, #1b42ad 100%);
         background: linear-gradient(to bottom, #000d37 0%, #1b42ad 100%);
     }
-    @else if $style=="btn-border-lg" {
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(to left, #24203b, #5b5199);
-        &:after {
-            @include before_after();
-            width: calc(100% - 4px);
-            height: calc(100% - 4px);
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            margin: auto;
-            border-radius: inherit;
-            box-shadow: -22px 0px 20px 5px #00d8ff, -7px -20px 20px 20px #fa3eba;
-        }
-    }
     &:hover {
         color: #ffffff;
         filter: brightness(1.5);

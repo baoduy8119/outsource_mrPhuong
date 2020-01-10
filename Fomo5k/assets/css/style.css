@@ -132,28 +132,7 @@ button,
     border: none;
     color: #e7be63;
     text-transform: uppercase;
-    border: inset 2px #ffba00;
-    position: relative;
-    overflow: hidden;
-    background: -webkit-gradient(linear, right top, left top, from(#24203b), to(#5b5199));
-    background: -webkit-linear-gradient(right, #24203b, #5b5199);
-    background: -o-linear-gradient(right, #24203b, #5b5199);
-    background: linear-gradient(to left, #24203b, #5b5199); }
-    button.btn-border-lg:after,
-    .button.btn-border-lg:after,
-    .btn.btn-border-lg:after {
-      content: "";
-      position: absolute;
-      width: calc(100% - 4px);
-      height: calc(100% - 4px);
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      border-radius: inherit;
-      -webkit-box-shadow: -22px 0px 20px 5px #00d8ff, -7px -20px 20px 20px #fa3eba;
-      box-shadow: -22px 0px 20px 5px #00d8ff, -7px -20px 20px 20px #fa3eba; }
+    border: inset 2px #ffba00; }
     button.btn-border-lg:hover,
     .button.btn-border-lg:hover,
     .btn.btn-border-lg:hover {
@@ -277,7 +256,7 @@ img {
   @media only screen and (max-width: 767px) {
     .overflow-table:before {
       content: '';
-      width: 50px;
+      width: 20px;
       height: 100%;
       position: absolute;
       top: 0;
@@ -740,10 +719,20 @@ header .header-tablet-middle .space-header {
   bottom: 30px;
   right: 30px;
   font-size: 30px;
-  padding: 9px 15px;
+  padding: 8px 14px;
   line-height: 1;
   z-index: 1;
-  display: none; }
+  display: none;
+  border-color: #6fd5ff;
+  color: #6fd5ff;
+  background: #000d37;
+  background: -moz-linear-gradient(top, #000d37 0%, #1b42ad 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #000d37), color-stop(100%, #1b42ad));
+  background: -webkit-linear-gradient(top, #000d37 0%, #1b42ad 100%);
+  background: -o-linear-gradient(top, #000d37 0%, #1b42ad 100%);
+  background: -ms-linear-gradient(top, #000d37 0%, #1b42ad 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#000d37), to(#1b42ad));
+  background: linear-gradient(to bottom, #000d37 0%, #1b42ad 100%); }
 
 @media only screen and (min-width: 1200px) {
   .modal .modal-lg {
@@ -1123,13 +1112,17 @@ header .header-tablet-middle .space-header {
   background: rgba(23, 49, 123, 0.95);
   padding: 20px;
   border-radius: 8px;
-  color: #f9fbff; }
+  color: #f9fbff;
+  margin-top: 25px; }
   .network h3 {
     text-transform: uppercase;
     color: #59afda;
     margin: 15px 0; }
   .network .uplines {
     margin-bottom: 50px; }
+  @media only screen and (max-width: 768px) {
+    .network {
+      margin-top: 150px; } }
 
 footer {
   padding-top: 100px;
