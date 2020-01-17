@@ -866,13 +866,12 @@ header {
         left: 0;
         right: 0;
         background: rgba(116, 109, 162, 0.1);
-        background: -moz-linear-gradient(top, rgba(116, 109, 162, 0.1) 60%, rgba(12,7,49,1) 100%);
-        background: -webkit-gradient(left top, left bottom, color-stop(60%, rgba(116, 109, 162, 0.1)), color-stop(100%, rgba(12,7,49,1)));
-        background: -webkit-linear-gradient(top, rgba(116, 109, 162, 0.1) 60%, rgba(12,7,49,1) 100%);
-        background: -o-linear-gradient(top, rgba(116, 109, 162, 0.1) 60%, rgba(12,7,49,1) 100%);
-        background: -ms-linear-gradient(top, rgba(116, 109, 162, 0.1) 60%, rgba(12,7,49,1) 100%);
-        background: linear-gradient(to bottom, rgba(116, 109, 162, 0.1) 60%, rgba(12,7,49,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0733', endColorstr='#0c0731', GradientType=0 );
+        background: -moz-linear-gradient(top, rgba(116, 109, 162, 0.1) 60%, rgba(12, 7, 49, 1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(60%, rgba(116, 109, 162, 0.1)), color-stop(100%, rgba(12, 7, 49, 1)));
+        background: -webkit-linear-gradient(top, rgba(116, 109, 162, 0.1) 60%, rgba(12, 7, 49, 1) 100%);
+        background: -o-linear-gradient(top, rgba(116, 109, 162, 0.1) 60%, rgba(12, 7, 49, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(116, 109, 162, 0.1) 60%, rgba(12, 7, 49, 1) 100%);
+        background: linear-gradient(to bottom, rgba(116, 109, 162, 0.1) 60%, rgba(12, 7, 49, 1) 100%);
     }
 }
 
@@ -881,7 +880,7 @@ header {
     right: 30px;
     bottom: 96px;
     z-index: 10;
-    text-align: right; 
+    text-align: right;
     @media only screen and (min-width: 1440px) {
         right: 80px;
         bottom: 150px;
@@ -901,26 +900,24 @@ header {
         }
         &.success span {
             border-color: #63cd7e;
-            background: rgba(3,84,33,1);
-            background: -moz-linear-gradient(top, rgba(3,84,33,1) 0%, rgba(3,154,63,1) 100%);
-            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(3,84,33,1)), color-stop(100%, rgba(3,154,63,1)));
-            background: -webkit-linear-gradient(top, rgba(3,84,33,1) 0%, rgba(3,154,63,1) 100%);
-            background: -o-linear-gradient(top, rgba(3,84,33,1) 0%, rgba(3,154,63,1) 100%);
-            background: -ms-linear-gradient(top, rgba(3,84,33,1) 0%, rgba(3,154,63,1) 100%);
-            background: linear-gradient(to bottom, rgba(3,84,33,1) 0%, rgba(3,154,63,1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035421', endColorstr='#039a3f', GradientType=0 );
+            background: rgba(3, 84, 33, 1);
+            background: -moz-linear-gradient(top, rgba(3, 84, 33, 1) 0%, rgba(3, 154, 63, 1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(3, 84, 33, 1)), color-stop(100%, rgba(3, 154, 63, 1)));
+            background: -webkit-linear-gradient(top, rgba(3, 84, 33, 1) 0%, rgba(3, 154, 63, 1) 100%);
+            background: -o-linear-gradient(top, rgba(3, 84, 33, 1) 0%, rgba(3, 154, 63, 1) 100%);
+            background: -ms-linear-gradient(top, rgba(3, 84, 33, 1) 0%, rgba(3, 154, 63, 1) 100%);
+            background: linear-gradient(to bottom, rgba(3, 84, 33, 1) 0%, rgba(3, 154, 63, 1) 100%);
         }
         &.error span {
             border-color: #cf616a;
-            background: rgba(75,5,13,1);
-            background: -moz-linear-gradient(top, rgba(75,5,13,1) 0%, rgba(164,33,42,1) 100%);
-            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(75,5,13,1)), color-stop(100%, rgba(164,33,42,1)));
-            background: -webkit-linear-gradient(top, rgba(75,5,13,1) 0%, rgba(164,33,42,1) 100%);
-            background: -o-linear-gradient(top, rgba(75,5,13,1) 0%, rgba(164,33,42,1) 100%);
-            background: -ms-linear-gradient(top, rgba(75,5,13,1) 0%, rgba(164,33,42,1) 100%);
-            background: linear-gradient(to bottom, rgba(75,5,13,1) 0%, rgba(164,33,42,1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b050d', endColorstr='#a4212a', GradientType=0 );
-                    }
+            background: rgba(75, 5, 13, 1);
+            background: -moz-linear-gradient(top, rgba(75, 5, 13, 1) 0%, rgba(164, 33, 42, 1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(75, 5, 13, 1)), color-stop(100%, rgba(164, 33, 42, 1)));
+            background: -webkit-linear-gradient(top, rgba(75, 5, 13, 1) 0%, rgba(164, 33, 42, 1) 100%);
+            background: -o-linear-gradient(top, rgba(75, 5, 13, 1) 0%, rgba(164, 33, 42, 1) 100%);
+            background: -ms-linear-gradient(top, rgba(75, 5, 13, 1) 0%, rgba(164, 33, 42, 1) 100%);
+            background: linear-gradient(to bottom, rgba(75, 5, 13, 1) 0%, rgba(164, 33, 42, 1) 100%);
+        }
     }
 }
 
@@ -1120,6 +1117,54 @@ header {
     }
     @media only screen and (max-width: 768px) {
         margin-top: 150px;
+    }
+}
+
+.marketing-table {
+    font-weight: 500;
+    .marketing-item {
+        display: flex;
+        align-items: center;
+        .people {
+            display: flex;
+            align-items: center;
+            img {
+                max-width: 14px;
+            }
+            .count {
+                font-size: 20px;
+                font-weight: bold;
+                border: 1px solid $border-color-02;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                width: 50px;
+                border-radius: 8px;
+                margin: 0 15px;
+            }
+        }
+        .text-value {
+            font-size: 18px;
+        }
+        .info {
+            .info-item {
+                font-size: 18px;
+                color: $color-2;
+                text-transform: uppercase;
+                background: #3e5384;
+                padding: 7px 10px;
+            }
+        }
+        &.row-01 {
+            .info .info-item {
+                background: #3e5384;
+            }
+        }
+        &.row-02 {
+            .info .info-item {
+                background-color: #3e5384;
+            }
+        }
     }
 }
 
