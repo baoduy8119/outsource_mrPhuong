@@ -308,6 +308,46 @@ img {
     }
 }
 
+.table-profit{
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid $border-box-color;
+    table.table-striped {
+        thead{
+            tr > th{
+                background-color: #071132;
+                &:nth-child(2n){
+                    background-color: #040d2b;
+                }
+                &:first-child,&:last-child{
+                    padding: 18px 45px;
+                    text-align: center;
+                }
+            }
+        }
+        tbody {
+            tr{
+                &:nth-of-type(odd){
+                    background-color: #3a4b78;
+                }
+                &:nth-child(2n){
+                    background-color: #24304c;
+                }
+                > td{
+                    border-right: 1px solid rgba(102, 194, 236, 0.2);
+                    text-align: center;
+                    &:first-child{
+                        width: 100%;
+                        display: block;
+                        padding: 18px 45px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .hidden-xs {
         display: none;
@@ -1230,9 +1270,21 @@ header {
     }
 }
 
+.padding-top-xl{
+    padding-top: 350px;
+}
+
+.padding-bottom-xl{
+    padding-bottom: 100px;
+}
+
+.padding-section{
+    padding-top: 150px;
+}
+
 .bg-top-center{
     position: relative;
-    padding-top: 350px;
+
     &::before{
         content: "";
         position: absolute;
@@ -1248,7 +1300,7 @@ header {
 
 .bg-gird-bottom{
     position: relative;
-    padding-bottom: 100px;
+
     &::after{
         content: "";
         position: absolute;
@@ -1428,7 +1480,7 @@ header {
         background-position: top center;
         z-index: -1;
     }
-    .column-left{
+    .number-day{
         font-size: 44px;
         text-align: center;
         line-height: 1.1;
@@ -1437,7 +1489,7 @@ header {
             display: block;
         }
     }
-    .colum-center{
+    .column-center{
         display: flex;
         justify-content: space-between;
         align-items: center;
