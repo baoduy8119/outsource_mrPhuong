@@ -234,6 +234,9 @@ button,
 .color-2 {
   color: #99b8ff; }
 
+.color-3 {
+  color: #ffe346; }
+
 .color-lighter {
   color: #ffffff; }
 
@@ -1440,6 +1443,58 @@ header {
     .marketing-table .marketing-item .statistics {
       font-size: 16px;
       padding: 0 30px; }
+
+.time-work-level {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-weight: bold;
+  height: 118px;
+  padding: 25px 0;
+  border-radius: 8px;
+  overflow: hidden; }
+  .time-work-level::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #202a48 url(../images/bg-bottom.png) no-repeat;
+    background-position: top center;
+    z-index: -1; }
+  .time-work-level .column-left {
+    font-size: 44px;
+    text-align: center;
+    line-height: 1.1; }
+    .time-work-level .column-left span {
+      font-size: 20px;
+      display: block; }
+  .time-work-level .colum-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.3; }
+  .time-work-level .column-left, .time-work-level .column-right {
+    padding: 0 30px; }
 
 footer {
   padding-top: 100px;
