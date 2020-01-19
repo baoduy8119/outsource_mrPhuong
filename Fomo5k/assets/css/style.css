@@ -32,7 +32,8 @@ a {
   color: #ffffff; }
   a:hover, a:focus {
     text-decoration: none;
-    outline: none;
+    outline: none; }
+  a:hover {
     color: #6fd5ff; }
 
 h1,
@@ -919,6 +920,19 @@ header {
     .caption-text-top {
       padding-top: 180px; } }
 
+.caption-text {
+  text-transform: uppercase;
+  font-size: 50px;
+  text-shadow: 0px -15px 16px #000, 1px 15px 20px #000; }
+  .caption-text span {
+    color: #b4e9ff;
+    font-size: 30px; }
+  .caption-text .btn-group > * {
+    margin: 0 20px; }
+
+.logo-landingpage {
+  padding-top: 100px; }
+
 .banner-top {
   text-align: center;
   background: rgba(255, 255, 255, 0.116);
@@ -1604,11 +1618,50 @@ header {
     background: none;
     border-radius: 0;
     border: none;
-    border-top: 1px solid #37557e; }
+    border-top: 1px solid #37557e;
+    padding-top: 30px; }
     .box-accordion .card .card-header {
       border-bottom: 0;
       font-size: 20px;
-      font-weight: 600; }
+      font-weight: 600;
+      border-radius: 0;
+      padding: 0;
+      position: relative; }
+      .box-accordion .card .card-header .numerical {
+        color: #6ccef8;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 8px;
+        border: 1px solid #3d5085;
+        text-align: center;
+        display: inline-block;
+        margin-right: 30px; }
+      .box-accordion .card .card-header a[aria-expanded="true"] {
+        color: #99b8ff; }
+      .box-accordion .card .card-header.active .icon-up-down {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
+      .box-accordion .card .card-header .icon-up-down {
+        background: url(../images/icon-arrow-down.png) no-repeat;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; }
+    .box-accordion .card .card-body {
+      font-size: 16px;
+      font-weight: 500;
+      padding-top: 20px;
+      padding-left: 85px; }
 
 footer {
   padding-top: 100px;
