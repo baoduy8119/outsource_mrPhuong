@@ -11,9 +11,8 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-size: 14px;
   font-weight: 800;
-  background-position: top center;
   background-size: cover;
-  background-color: #0d0733;
+  background: #0d0733 url(../images/bg-footer.png) no-repeat bottom center;
   color: #ffffff;
   -webkit-font-smoothing: antialiased; }
   body.home .body-wrapper {
@@ -79,7 +78,8 @@ h4 {
   font-weight: bold;
   font-size: 20px;
   color: #ffe346;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  text-transform: uppercase; }
 
 button,
 .button,
@@ -364,7 +364,28 @@ img {
 .table-profit {
   border-radius: 8px;
   text-align: center;
-  border: 2px solid #64bee8; }
+  border: 2px solid #64bee8;
+  position: relative; }
+  .table-profit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #080b31));
+    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+    background: -ms-llinear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+    background: -webkit-linear-gradient(335deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+    background: -o-linear-gradient(335deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+    background: linear-gradient(115deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#0c0732', GradientType=1 ); }
+  .table-profit table.table-striped tr > td, .table-profit table.table-striped th > td {
+    position: relative;
+    z-index: 1; }
   .table-profit table.table-striped thead tr > th {
     background-color: #071132; }
     .table-profit table.table-striped thead tr > th:nth-child(2n) {
@@ -383,6 +404,9 @@ img {
       width: 100%;
       display: block;
       padding: 18px 45px; }
+    .table-profit table.table-striped tbody tr > td:last-child {
+      padding: 18px 45px;
+      border-right: 0; }
 
 @media only screen and (max-width: 768px) {
   .hidden-xs {
@@ -1474,6 +1498,18 @@ header {
       font-size: 16px;
       padding: 0 30px; }
 
+.marketing {
+  position: relative; }
+  .marketing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;
+    left: 0;
+    background: url(../images/bg-transparent-top.png) repeat top center;
+    background-size: contain; }
+
 .time-work-level {
   position: relative;
   display: -webkit-box;
@@ -1490,7 +1526,8 @@ header {
   height: 118px;
   padding: 25px 0;
   border-radius: 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1; }
   .time-work-level::before {
     content: "";
     position: absolute;
@@ -1561,8 +1598,66 @@ header {
   .time-work-level .column-left, .time-work-level .column-right {
     padding: 0 30px; }
 
+.box-accordion {
+  width: 100%; }
+  .box-accordion .card {
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #37557e; }
+    .box-accordion .card .card-header {
+      border-bottom: 0;
+      font-size: 20px;
+      font-weight: 600; }
+
 footer {
   padding-top: 100px;
   color: #635e80;
   font-size: 12px;
   font-weight: normal; }
+  footer .social-network {
+    margin-bottom: 50px; }
+    footer .social-network ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      footer .social-network ul > li {
+        margin: 0 20px; }
+        footer .social-network ul > li > a {
+          font-size: 40px;
+          height: 80px;
+          width: 80px;
+          line-height: 87px;
+          border-radius: 50%;
+          background: #000d37;
+          background: -moz-linear-gradient(top, #000d37 25%, #1b42ad 100%);
+          background: -webkit-gradient(left top, left bottom, color-stop(25%, #000d37), color-stop(100%, #1b42ad));
+          background: -webkit-linear-gradient(top, #000d37 25%, #1b42ad 100%);
+          background: -o-linear-gradient(top, #000d37 25%, #1b42ad 100%);
+          background: -ms-linear-gradient(top, #000d37 25%, #1b42ad 100%);
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #000d37), to(#1b42ad));
+          background: linear-gradient(to bottom, #000d37 25%, #1b42ad 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000d37', endColorstr='#1b42ad', GradientType=0 );
+          display: inline-block;
+          -webkit-transition: all 500ms ease;
+          -o-transition: all 500ms ease;
+          transition: all 500ms ease; }
+          footer .social-network ul > li > a:hover {
+            -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            transform: scale(0.9); }
+            footer .social-network ul > li > a:hover i {
+              -webkit-transform: scale(0.9);
+              -ms-transform: scale(0.9);
+              transform: scale(0.9); }
+          footer .social-network ul > li > a i {
+            -webkit-transition: all 500ms ease;
+            -o-transition: all 500ms ease;
+            transition: all 500ms ease;
+            text-shadow: 0 8px 24px rgba(0, 0, 0, 0.7); }
