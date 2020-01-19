@@ -148,6 +148,13 @@ $(document).ready(function() {
         $('.card-header').toggleClass('active');
     })
 
-
+    $('.language-state').click(function() {
+        $(this).toggleClass('active');
+        if($(this).hasClass('active')) {
+            $(this).css('width', $('.language-items').outerWidth())
+        } else {
+            $(this).css('width', '100px')
+        }
+    });
 
 });
