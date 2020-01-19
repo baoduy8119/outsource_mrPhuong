@@ -1537,6 +1537,93 @@ header {
         background: url(../images/bg-transparent-top.png) repeat top center;
         background-size: contain;
     }
+    .content-item {
+        .item-left-line {
+            position: absolute;
+            height: calc(100% + 3px);
+            width: 2px;
+            top: 50%;
+            left: 0;
+            background: #000;
+            transform: translateY(-50%);
+        }
+        .item-right-line {
+            position: absolute;
+            content: '';
+            height: 100%;
+            left: 50%;
+            width: 2px;
+            background: #534e80;
+            margin-left: -1px;
+        }
+        .box-text-rows {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 300px;
+            .box-text-row {
+                position: relative;
+                display: flex;
+                width: 100%;
+                &:before {
+                    content: '';
+                    z-index: 10;
+                    position: absolute;
+                    top: 50%;
+                    left: -1px;
+                    width: 10px;
+                    height: 10px;
+                    background: #ffe346;
+                    border-radius: 50%;
+                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                }
+                &:after {
+                    content: '';
+                    z-index: 10;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 10px;
+                    height: 10px;
+                    background: #ffe346;
+                    border-radius: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                .value,
+                h4 {
+                    padding: 5px 10px;
+                    margin: 0;
+                }
+                .value {
+                    font-size: 20px;
+                    width: 120px;
+                    background-color: #3e5384;
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                }
+                h4 {
+                    width: 90px;
+                    background-color: #dc7d02;
+                    border-top-left-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    font-size: 14px;
+                    span {
+                        font-size: 24px;
+                    }
+                }
+            }
+            .row-left,
+            .row-right {
+                width: 50%;
+                display: flex;
+                border-radius: 12px;
+                justify-content: center;
+            }
+        }
+    }
 }
 
 .time-work-level{
