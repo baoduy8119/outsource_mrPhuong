@@ -11,10 +11,10 @@ body {
     font-family: 'Work Sans', sans-serif;
     font-size: 14px;
     font-weight: 800;
-    background-size: cover;
-    background: #0d0733 url(../images/bg-footer.png) no-repeat bottom center;
     color: $color-lighter;
+    background: #0d0733;
     -webkit-font-smoothing: antialiased;
+    position: relative;
     &.home {
         .body-wrapper {
             margin-left: 0;
@@ -27,6 +27,12 @@ body {
     }
     @media only screen and (max-width: 768px) {
         background-size: contain;
+    }
+    .bg-footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
     }
 }
 
@@ -736,12 +742,12 @@ header {
     bottom: 30px;
     right: 30px;
     font-size: 30px;
-    padding: 8px 14px;
+    padding: 12px 14px;
     line-height: 1;
     z-index: 1;
     display: none;
     border-color: #6fd5ff;
-    color: #6fd5ff;
+    color: #ffffff;
     background: #000d37;
     background: -moz-linear-gradient(top, #000d37 0%, #1b42ad 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, #000d37), color-stop(100%, #1b42ad));
@@ -1600,19 +1606,46 @@ header {
         padding: 0 30px;
     }
 }
-
+.multi-question{
+    position: relative;
+    &::before{
+        content:"";
+        background: url(../images/bg-transparent-bottom.png) repeat-y;
+        background-position: top center;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
 .box-accordion{
     width: 100%;
+    background: rgba(37,49,77,1);
+    border-radius: 8px;
+    border: 2px solid #64bee8;
+    background: #25314d;
+    background: -moz-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #25314d), color-stop(100%, rgba(37, 49, 77, 0)));
+    background: -webkit-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -o-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -ms-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: linear-gradient(to right, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25314d', endColorstr='#25314d', GradientType=1 );
+    margin-bottom: 50px;
     .card{
         background: none;
         border-radius: 0;
         border: none;
-        border-top: 1px solid #37557e;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 27px;
+        padding-left: 27px;
         &:first-child{
-            border-top: 0;
-            padding-top: 0;
+            .card-header{
+                border-top: 0;
+            }
+            
         }
         .card-header{
             border-bottom: 0;
@@ -1621,6 +1654,9 @@ header {
             border-radius: 0;
             padding: 0;
             position: relative;
+            background: none;
+            border-top: 1px solid #37557e;
+            padding-top: 27px;
             .numerical{
                 color: #6ccef8;
                 width: 50px;
@@ -1662,8 +1698,11 @@ header {
     }
 }
 
+
+
 footer {
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     color: $color-footer;
     font-size: 12px;
     font-weight: normal;
