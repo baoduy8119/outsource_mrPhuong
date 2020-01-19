@@ -144,8 +144,8 @@ $(document).ready(function() {
         $('#roll-wrapper').toggleClass('rolling');
     })
 
-    $('.card-title').click(function(e) {
-        $('.card-header').toggleClass('active');
+    $('.card-header .card-title').on('click',function(){
+        $(this).toggleClass('active');
     })
 
 

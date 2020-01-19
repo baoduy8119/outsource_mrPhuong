@@ -1609,6 +1609,11 @@ header {
         border: none;
         border-top: 1px solid #37557e;
         padding-top: 30px;
+        padding-bottom: 30px;
+        &:first-child{
+            border-top: 0;
+            padding-top: 0;
+        }
         .card-header{
             border-bottom: 0;
             font-size: 20px;
@@ -1627,25 +1632,25 @@ header {
                 display: inline-block;
                 margin-right: 30px;
             }
-            a[aria-expanded="true"]{
-                color: $color-2;
-            }
-            &.active{
-                .icon-up-down{
-                    -webkit-transform: rotate(180deg);
-                    transform: rotate(180deg);
+            .card-title{
+                + .icon-up-down{
+                    background: url(../images/icon-arrow-down.png) no-repeat;
+                    display:inline-block;
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: all 0.5s ease;
                 }
-            }
-            .icon-up-down{
-                background: url(../images/icon-arrow-down.png) no-repeat;
-                display:inline-block;
-                width: 24px;
-                height: 24px;
-                position: absolute;
-                right: 30px;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: all 0.5s ease;
+                &.active{
+                    color: $color-2;
+                    + .icon-up-down{
+                        -webkit-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                    }
+                }
             }
         }
         .card-body{

@@ -1619,7 +1619,11 @@ header {
     border-radius: 0;
     border: none;
     border-top: 1px solid #37557e;
-    padding-top: 30px; }
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .box-accordion .card:first-child {
+      border-top: 0;
+      padding-top: 0; }
     .box-accordion .card .card-header {
       border-bottom: 0;
       font-size: 20px;
@@ -1637,13 +1641,7 @@ header {
         text-align: center;
         display: inline-block;
         margin-right: 30px; }
-      .box-accordion .card .card-header a[aria-expanded="true"] {
-        color: #99b8ff; }
-      .box-accordion .card .card-header.active .icon-up-down {
-        -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        transform: rotate(180deg); }
-      .box-accordion .card .card-header .icon-up-down {
+      .box-accordion .card .card-header .card-title + .icon-up-down {
         background: url(../images/icon-arrow-down.png) no-repeat;
         display: inline-block;
         width: 24px;
@@ -1657,6 +1655,12 @@ header {
         -webkit-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease; }
+      .box-accordion .card .card-header .card-title.active {
+        color: #99b8ff; }
+        .box-accordion .card .card-header .card-title.active + .icon-up-down {
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
     .box-accordion .card .card-body {
       font-size: 16px;
       font-weight: 500;
