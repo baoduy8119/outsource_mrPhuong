@@ -118,13 +118,7 @@ $(document).ready(function() {
         $(this).parents('.block-toggle').slideUp(300);
     });
 
-    $(document).on('click', '.help_icon', function(e) {
-        e.preventDefault();
-        $(this).parent('.help').toggleClass('open').trigger('focus');
-    });
-    $(document).on('click', '.help_popup', function(e) {
-        $(this).parent('.help').trigger('focus');
-    });
+ 
     $(document).on('focusout', '.help', function(e) {
         e.preventDefault();
         $(this).removeClass('open');
@@ -150,7 +144,9 @@ $(document).ready(function() {
         $('#roll-wrapper').toggleClass('rolling');
     })
 
-
+    $('.card-title').click(function(e) {
+        $('.card-header').toggleClass('active');
+    })
 
 
 
