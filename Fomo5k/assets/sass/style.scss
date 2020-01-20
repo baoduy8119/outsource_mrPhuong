@@ -332,6 +332,20 @@ img {
     }
 }
 
+.countdown-wrapper {
+    border-radius: 8px;
+    border: 2px solid #64bee8;
+    background: #25314d;
+    background: -moz-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #25314d), color-stop(100%, rgba(37, 49, 77, 0)));
+    background: -webkit-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -o-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -ms-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#25314d), to(rgba(37, 49, 77, 0)));
+    background: linear-gradient(to right, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    padding: 50px;
+}
+
 .table-profit {
     border-radius: 8px;
     text-align: center;
