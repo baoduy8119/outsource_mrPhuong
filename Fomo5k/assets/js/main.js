@@ -148,14 +148,27 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     })
 
-    var myDate = new Date();
-    myDate.setDate(myDate.getDate() + 2);
-    $("#countdown").countdown(myDate, function(event) {
-        $(this).html(
-            event.strftime(
-                '<div class="countdown__item"><div class="countdown__timer">%D</div><span class="countdown__label">days</span></div><div class="countdown__item"><div class="countdown__timer">%H</div><span class="countdown__label">hrs</span></div><div class="countdown__item"><div class="countdown__timer">%M</div><span class="countdown__label">mins</span></div><div class="countdown__item"><div class="countdown__timer">%S</div><span class="countdown__label">sec</span></div>'
-            )
-        );
-    });
+    if($("#countdown").length > 0) {
+        var myDate = new Date();
+        myDate.setDate(myDate.getDate() + 2);
+        $("#countdown").countdown(myDate, function(event) {
+            $(this).html(
+                event.strftime(
+                    '<div class="countdown__item"><div class="countdown__timer">%D</div><span class="countdown__label">days</span></div><div class="countdown__item"><div class="countdown__timer">%H</div><span class="countdown__label">hrs</span></div><div class="countdown__item"><div class="countdown__timer">%M</div><span class="countdown__label">mins</span></div><div class="countdown__item"><div class="countdown__timer">%S</div><span class="countdown__label">sec</span></div>'
+                )
+            );
+        });
+    }
 
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function() {
+                window.location.hash = hash;
+            });
+        }
+    });
 });
