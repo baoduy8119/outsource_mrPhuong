@@ -530,22 +530,23 @@ img {
   text-align: center;
   border: 2px solid #64bee8;
   position: relative; }
-  .table-profit::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0);
-    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #080b31));
-    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
-    background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
-    background: -ms-llinear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
-    background: -webkit-linear-gradient(335deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
-    background: -o-linear-gradient(335deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
-    background: linear-gradient(115deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%); }
+  @media only screen and (min-width: 1200px) {
+    .table-profit::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0);
+      background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+      background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #080b31));
+      background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+      background: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+      background: -ms-llinear-gradient(-45deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+      background: -webkit-linear-gradient(335deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+      background: -o-linear-gradient(335deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%);
+      background: linear-gradient(115deg, rgba(255, 255, 255, 0) 30%, #0c0732 100%); } }
   .table-profit table.table-striped tr > td,
   .table-profit table.table-striped th > td {
     position: relative;
@@ -1698,6 +1699,7 @@ header {
           max-width: 100%; }
       .marketing-table .marketing-item .people img {
         max-width: 14px;
+        max-height: 33px;
         margin-left: 1px;
         margin-right: 1px; }
       .marketing-table .marketing-item .people .count {
@@ -1896,7 +1898,7 @@ header {
           border-top: 20px solid transparent;
           border-bottom: 20px solid transparent;
           border-left: 20px solid #3e5284; }
-          @media screen and (max-width: 798px) {
+          @media screen and (max-width: 767px) {
             .marketing .item-left .item-left-box p:after {
               border-top: 35px solid transparent;
               border-bottom: 35px solid transparent; } }
@@ -2010,14 +2012,14 @@ header {
           font-weight: 600;
           white-space: nowrap;
           color: #ffe346; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .marketing .item-right .box-text-rows .box-text-row h4 {
               font-size: 10px;
               padding-left: 4px; } }
           .marketing .item-right .box-text-rows .box-text-row h4 span {
             margin-left: 3px;
             font-size: 24px; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .marketing .item-right .box-text-rows .box-text-row h4 span {
                 font-size: 12px; } }
       .marketing .item-right .box-text-rows .row-left,
