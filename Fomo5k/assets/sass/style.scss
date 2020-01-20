@@ -333,6 +333,9 @@ img {
 }
 
 .countdown-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
     border: 2px solid #64bee8;
     background: #25314d;
@@ -344,6 +347,38 @@ img {
     background: -webkit-gradient(linear, left top, right top, from(#25314d), to(rgba(37, 49, 77, 0)));
     background: linear-gradient(to right, #25314d 0%, rgba(37, 49, 77, 0) 100%);
     padding: 50px;
+    max-width: 80%;
+    margin: 50px auto;
+    h2 {
+        font-size: 52px;
+        color: #99b8ff;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+    .countdown {
+        display: flex;
+        align-items: center;
+        .countdown__item {
+            height: 100px;
+            width: 100px;
+            background: yellow;
+            color: #ffffff;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+            padding: 15px 0;
+            margin: 0 15px;
+            .countdown__timer {
+                font-size: 50px;
+                line-height: 1;
+            }
+            .countdown__label {
+                font-size: 12px;
+                text-transform: uppercase;
+                line-height: 1;
+            }
+        }
+    }
 }
 
 .table-profit {
