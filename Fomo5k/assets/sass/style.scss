@@ -333,17 +333,134 @@ img {
 }
 
 .countdown-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
-    border: 2px solid #64bee8;
-    background: #25314d;
-    background: -moz-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #25314d), color-stop(100%, rgba(37, 49, 77, 0)));
-    background: -webkit-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
-    background: -o-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
-    background: -ms-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
-    background: -webkit-gradient(linear, left top, right top, from(#25314d), to(rgba(37, 49, 77, 0)));
-    background: linear-gradient(to right, #25314d 0%, rgba(37, 49, 77, 0) 100%);
     padding: 50px;
+    margin: 50px auto;
+    @media only screen and (min-width: 1200px) {
+        max-width: 80%;
+    }
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 35px 20px;
+    }
+    >* {
+        position: relative;
+        z-index: 5;
+    }
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        border-radius: 8px;
+        border-left: 2px solid #1e509a;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1e509a), to(transparent));
+        background-image: -webkit-linear-gradient(#1e509a, transparent);
+        background-image: -moz-linear-gradient(rgb(30, 80, 154), transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
+        background-image: -o-linear-gradient(rgb(30, 80, 154), transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
+        background-image: linear-gradient(to right, rgb(30, 80, 154), transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
+        -moz-background-size: 100% 2px;
+        background-size: 100% 2px;
+        background-position: 0 0, 100% 0;
+        background-repeat: no-repeat;
+        //box-shadow: -22px -22px 20px -20px rgba(0, 186, 255, 0.3), 20px -30px 20px -30px rgba(0, 186, 255, 0.3);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background: #25314d;
+        background: -moz-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, #25314d), color-stop(100%, rgba(37, 49, 77, 0)));
+        background: -webkit-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+        background: -o-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+        background: -ms-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+        background: -webkit-gradient(linear, left top, right top, from(#25314d), to(rgba(37, 49, 77, 0)));
+        background: linear-gradient(to right, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    }
+    h2 {
+        color: #99b8ff;
+        text-transform: uppercase;
+        display: inline-block;
+        font-size: 45px;
+        font-weight: bold;
+        line-height: 1;
+        @media only screen and (max-width: 768px) {
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        span {
+            font-weight: 900;
+            letter-spacing: 4px;
+            font-size: 52px;
+            display: block;
+            @media only screen and (max-width: 768px) {
+                font-size: 2em;
+            }
+        }
+    }
+    .countdown {
+        display: flex;
+        align-items: center;
+        padding-left: 50px;
+        @media only screen and (max-width: 768px) {
+            padding-left: 0;
+        }
+        .countdown__item {
+            height: 100px;
+            width: 100px;
+            color: #ffffff;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+            padding: 15px 0;
+            margin: 0 15px;
+            -webkit-box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.35);
+            box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.35), 0 10px 30px 5px #eac405 inset;
+            background: rgba(58, 34, 13, 1);
+            background: -moz-radial-gradient(center, ellipse cover, rgba(58, 34, 13, 1) 0%, rgba(253, 143, 0, 1) 100%);
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(58, 34, 13, 1)), color-stop(100%, rgba(253, 143, 0, 1)));
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(58, 34, 13, 1) 0%, rgba(253, 143, 0, 1) 100%);
+            background: -o-radial-gradient(center, ellipse cover, rgba(58, 34, 13, 1) 0%, rgba(253, 143, 0, 1) 100%);
+            background: -ms-radial-gradient(center, ellipse cover, rgba(58, 34, 13, 1) 0%, rgba(253, 143, 0, 1) 100%);
+            background: radial-gradient(ellipse at center, rgb(58, 34, 13) 0%, rgb(253, 143, 0) 100%);
+            //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3a220d', endColorstr='#fd8f00', GradientType=1);
+            @media only screen and (max-width: 768px) {
+                width: 60px;
+                height: 60px;
+                margin: 0 10px;
+            }
+            .countdown__timer {
+                font-size: 50px;
+                line-height: 1;
+                @media only screen and (max-width: 768px) {
+                    font-size: 1.5em;
+                }
+            }
+            .countdown__label {
+                font-size: 12px;
+                text-transform: uppercase;
+                line-height: 1;
+                padding-top: 7px;
+                @media only screen and (max-width: 768px) {
+                    font-size: 0.6em;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
 }
 
 .table-profit {
@@ -922,6 +1039,8 @@ header {
     text-transform: uppercase;
     font-size: 50px;
     text-shadow: 0px -15px 16px #000, 1px 15px 20px #000;
+    position: relative;
+    z-index: 1;
     @media only screen and (max-width: 768px) {
         font-size: 2em;
     }
@@ -1455,7 +1574,7 @@ header {
         position: absolute;
         width: 100%;
         height: 100%;
-        top: 0;
+        top: -30%;
         left: 0;
         background: url(../images/bg-transparent-top.png) no-repeat top center;
         background-size: contain;
@@ -1766,10 +1885,14 @@ header {
             width: 100%;
             height: 100%;
             border-radius: 10px;
-            background: -moz-radial-gradient(center, ellipse cover,  rgba(5,31,68,1) 1%, rgba(5,31,68,0.98) 3%, rgba(13,7,51,0.26) 74%, rgba(13,7,51,0) 100%); /* FF3.6-15 */
-            background: -webkit-radial-gradient(center, ellipse cover,  rgba(5,31,68,1) 1%,rgba(5,31,68,0.98) 3%,rgba(13,7,51,0.26) 74%,rgba(13,7,51,0) 100%); /* Chrome10-25,Safari5.1-6 */
-            background: radial-gradient(ellipse at center,  rgba(5,31,68,1) 1%,rgba(5,31,68,0.98) 3%,rgba(13,7,51,0.26) 74%,rgba(13,7,51,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#051f44', endColorstr='#000d0733',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+            background: -moz-radial-gradient(center, ellipse cover, rgba(5, 31, 68, 1) 1%, rgba(5, 31, 68, 0.98) 3%, rgba(13, 7, 51, 0.26) 74%, rgba(13, 7, 51, 0) 100%);
+            /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(5, 31, 68, 1) 1%, rgba(5, 31, 68, 0.98) 3%, rgba(13, 7, 51, 0.26) 74%, rgba(13, 7, 51, 0) 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: radial-gradient(ellipse at center, rgba(5, 31, 68, 1) 1%, rgba(5, 31, 68, 0.98) 3%, rgba(13, 7, 51, 0.26) 74%, rgba(13, 7, 51, 0) 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#051f44', endColorstr='#000d0733', GradientType=1);
+            /* IE6-9 fallback on horizontal gradient */
         }
         .box-text-rows {
             position: relative;
@@ -1807,7 +1930,7 @@ header {
                     height: 10px;
                     background: #ffe346;
                     border-radius: 50%;
-                    transform: translate(-50%,-50%);
+                    transform: translate(-50%, -50%);
                 }
                 .value,
                 h4 {
@@ -1957,7 +2080,6 @@ header {
                 right: 100%;
                 background-image: linear-gradient(to left, #163e7d, #080c31);
             }
-
         }
         .item-left {
             .border-box {
@@ -1976,7 +2098,6 @@ header {
                     width: 100%;
                     background-image: linear-gradient(to right, #163e7d, #080c31);
                 }
-
             }
         }
         .item-left-line {
@@ -1998,7 +2119,6 @@ header {
             background-image: linear-gradient(#0a113a, #1e509a);
             margin-left: -1px;
         }
-        
     }
 }
 
