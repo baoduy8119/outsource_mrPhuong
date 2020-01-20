@@ -383,6 +383,8 @@ img {
       background: rgba(12, 29, 83, 0.6); }
 
 .countdown-wrapper {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,47 +395,135 @@ img {
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 8px;
-  border: 2px solid #64bee8;
-  background: #25314d;
-  background: -moz-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #25314d), color-stop(100%, rgba(37, 49, 77, 0)));
-  background: -webkit-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
-  background: -o-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
-  background: -ms-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#25314d), to(rgba(37, 49, 77, 0)));
-  background: linear-gradient(to right, #25314d 0%, rgba(37, 49, 77, 0) 100%);
   padding: 50px;
-  max-width: 80%;
   margin: 50px auto; }
+  @media only screen and (min-width: 1200px) {
+    .countdown-wrapper {
+      max-width: 80%; } }
+  @media only screen and (max-width: 768px) {
+    .countdown-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      max-width: 100%;
+      padding: 35px 20px; } }
+  .countdown-wrapper > * {
+    position: relative;
+    z-index: 5; }
+  .countdown-wrapper::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    border-left: 2px solid #1e509a;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1e509a), to(transparent));
+    background-image: -webkit-linear-gradient(#1e509a, transparent);
+    background-image: -moz-linear-gradient(#1e509a, transparent), -webkit-gradient(linear, left top, left bottom, from(rgba(30, 80, 154, 0)), to(transparent));
+    background-image: -moz-linear-gradient(#1e509a, transparent), -webkit-linear-gradient(rgba(30, 80, 154, 0), transparent);
+    background-image: -moz-linear-gradient(#1e509a, transparent), -o-linear-gradient(rgba(30, 80, 154, 0), transparent);
+    background-image: -moz-linear-gradient(#1e509a, transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
+    background-image: -o-linear-gradient(#1e509a, transparent), -webkit-gradient(linear, left top, left bottom, from(rgba(30, 80, 154, 0)), to(transparent));
+    background-image: -o-linear-gradient(#1e509a, transparent), -webkit-linear-gradient(rgba(30, 80, 154, 0), transparent);
+    background-image: -o-linear-gradient(#1e509a, transparent), -o-linear-gradient(rgba(30, 80, 154, 0), transparent);
+    background-image: -o-linear-gradient(#1e509a, transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
+    background-image: -webkit-gradient(linear, left top, right top, from(#1e509a), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(rgba(30, 80, 154, 0)), to(transparent));
+    background-image: -webkit-linear-gradient(left, #1e509a, transparent), -webkit-linear-gradient(rgba(30, 80, 154, 0), transparent);
+    background-image: -o-linear-gradient(left, #1e509a, transparent), -o-linear-gradient(rgba(30, 80, 154, 0), transparent);
+    background-image: linear-gradient(to right, #1e509a, transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
+    -moz-background-size: 100% 2px;
+    background-size: 100% 2px;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat; }
+  .countdown-wrapper:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: #25314d;
+    background: -moz-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #25314d), color-stop(100%, rgba(37, 49, 77, 0)));
+    background: -webkit-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -o-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -ms-linear-gradient(left, #25314d 0%, rgba(37, 49, 77, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#25314d), to(rgba(37, 49, 77, 0)));
+    background: linear-gradient(to right, #25314d 0%, rgba(37, 49, 77, 0) 100%); }
   .countdown-wrapper h2 {
-    font-size: 52px;
     color: #99b8ff;
     text-transform: uppercase;
-    display: inline-block; }
+    display: inline-block;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 1; }
+    @media only screen and (max-width: 768px) {
+      .countdown-wrapper h2 {
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 20px; } }
+    .countdown-wrapper h2 span {
+      font-weight: 900;
+      letter-spacing: 4px;
+      font-size: 52px;
+      display: block; }
+      @media only screen and (max-width: 768px) {
+        .countdown-wrapper h2 span {
+          font-size: 2em; } }
   .countdown-wrapper .countdown {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    padding-left: 50px; }
+    @media only screen and (max-width: 768px) {
+      .countdown-wrapper .countdown {
+        padding-left: 0; } }
     .countdown-wrapper .countdown .countdown__item {
       height: 100px;
       width: 100px;
-      background: yellow;
       color: #ffffff;
       border-radius: 50%;
       text-align: center;
       vertical-align: middle;
       padding: 15px 0;
-      margin: 0 15px; }
+      margin: 0 15px;
+      -webkit-box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.35);
+      box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.35), 0 10px 30px 5px #eac405 inset;
+      background: #3a220d;
+      background: -moz-radial-gradient(center, ellipse cover, #3a220d 0%, #fd8f00 100%);
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #3a220d), color-stop(100%, #fd8f00));
+      background: -webkit-radial-gradient(center, ellipse cover, #3a220d 0%, #fd8f00 100%);
+      background: -o-radial-gradient(center, ellipse cover, #3a220d 0%, #fd8f00 100%);
+      background: -ms-radial-gradient(center, ellipse cover, #3a220d 0%, #fd8f00 100%);
+      background: -webkit-radial-gradient(center, ellipse, #3a220d 0%, #fd8f00 100%);
+      background: -o-radial-gradient(center, ellipse, #3a220d 0%, #fd8f00 100%);
+      background: radial-gradient(ellipse at center, #3a220d 0%, #fd8f00 100%); }
+      @media only screen and (max-width: 768px) {
+        .countdown-wrapper .countdown .countdown__item {
+          width: 60px;
+          height: 60px;
+          margin: 0 10px; } }
       .countdown-wrapper .countdown .countdown__item .countdown__timer {
         font-size: 50px;
         line-height: 1; }
+        @media only screen and (max-width: 768px) {
+          .countdown-wrapper .countdown .countdown__item .countdown__timer {
+            font-size: 1.5em; } }
       .countdown-wrapper .countdown .countdown__item .countdown__label {
         font-size: 12px;
         text-transform: uppercase;
-        line-height: 1; }
+        line-height: 1;
+        padding-top: 7px; }
+        @media only screen and (max-width: 768px) {
+          .countdown-wrapper .countdown .countdown__item .countdown__label {
+            font-size: 0.6em;
+            padding-top: 5px; } }
 
 .table-profit {
   border-radius: 8px;
@@ -999,7 +1089,9 @@ header {
 .caption-text {
   text-transform: uppercase;
   font-size: 50px;
-  text-shadow: 0px -15px 16px #000, 1px 15px 20px #000; }
+  text-shadow: 0px -15px 16px #000, 1px 15px 20px #000;
+  position: relative;
+  z-index: 1; }
   @media only screen and (max-width: 768px) {
     .caption-text {
       font-size: 2em; } }
@@ -1522,7 +1614,7 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
+    top: -30%;
     left: 0;
     background: url(../images/bg-transparent-top.png) no-repeat top center;
     background-size: contain; }
@@ -1744,7 +1836,7 @@ header {
     background-size: contain; }
   .marketing .item-left {
     position: relative;
-    width: 30%;
+    width: 28%;
     padding: 10px 0 10px 20px; }
     .marketing .item-left .item-left-box {
       display: -webkit-box;
@@ -1788,7 +1880,7 @@ header {
           border-left: 20px solid #3e5284; }
   .marketing .item-right {
     position: relative;
-    width: 70%;
+    width: 72%;
     padding: 10px 5px;
     overflow: hidden;
     border-radius: 10px; }
@@ -1864,7 +1956,7 @@ header {
           margin: 0; }
         .marketing .item-right .box-text-rows .box-text-row .value {
           font-size: 20px;
-          width: 52%;
+          width: 50%;
           background-color: #3e5384;
           border-top-right-radius: 12px;
           border-bottom-right-radius: 12px; }
@@ -1895,11 +1987,51 @@ header {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; }
+  .marketing .items-footer {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: 35px;
+    right: -6%;
+    left: 22%; }
+    .marketing .items-footer .item-footer {
+      width: 20%;
+      text-align: center;
+      font-size: 20px;
+      color: #99b8ff;
+      font-weight: 600;
+      text-transform: uppercase; }
+      .marketing .items-footer .item-footer sup {
+        font-size: 12px; }
+  .marketing .item-background .item-message {
+    position: relative;
+    display: inline-block;
+    color: #99b8ff;
+    font-size: 20px;
+    font-weight: 600;
+    background: url(../images/item-text-bg.png) no-repeat;
+    z-index: 3; }
+    .marketing .item-background .item-message .content {
+      position: absolute;
+      top: 32px;
+      left: 0;
+      text-align: center;
+      right: 0;
+      max-width: 170px;
+      margin: 0 auto; }
+  .marketing .item-background .computer-man {
+    position: absolute;
+    bottom: 100px;
+    left: -50px;
+    right: -15px;
+    z-index: 2; }
   .marketing .content-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-weight: 600; }
+    font-weight: 600;
+    padding-bottom: 100px; }
     .marketing .content-item .border-box {
       position: absolute;
       top: 0;
