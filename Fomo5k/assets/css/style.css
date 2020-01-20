@@ -421,20 +421,17 @@ img {
     left: 0;
     border-radius: 8px;
     border-left: 2px solid #1e509a;
+    border-right: 2px solid rgba(30, 80, 154, 0.3);
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1e509a), to(transparent));
     background-image: -webkit-linear-gradient(#1e509a, transparent);
-    background-image: -moz-linear-gradient(#1e509a, transparent), -webkit-gradient(linear, left top, left bottom, from(rgba(30, 80, 154, 0)), to(transparent));
-    background-image: -moz-linear-gradient(#1e509a, transparent), -webkit-linear-gradient(rgba(30, 80, 154, 0), transparent);
-    background-image: -moz-linear-gradient(#1e509a, transparent), -o-linear-gradient(rgba(30, 80, 154, 0), transparent);
-    background-image: -moz-linear-gradient(#1e509a, transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
-    background-image: -o-linear-gradient(#1e509a, transparent), -webkit-gradient(linear, left top, left bottom, from(rgba(30, 80, 154, 0)), to(transparent));
-    background-image: -o-linear-gradient(#1e509a, transparent), -webkit-linear-gradient(rgba(30, 80, 154, 0), transparent);
-    background-image: -o-linear-gradient(#1e509a, transparent), -o-linear-gradient(rgba(30, 80, 154, 0), transparent);
-    background-image: -o-linear-gradient(#1e509a, transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
-    background-image: -webkit-gradient(linear, left top, right top, from(#1e509a), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(rgba(30, 80, 154, 0)), to(transparent));
-    background-image: -webkit-linear-gradient(left, #1e509a, transparent), -webkit-linear-gradient(rgba(30, 80, 154, 0), transparent);
-    background-image: -o-linear-gradient(left, #1e509a, transparent), -o-linear-gradient(rgba(30, 80, 154, 0), transparent);
-    background-image: linear-gradient(to right, #1e509a, transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
+    background-image: -moz-linear-gradient(right, #1e509a, rgba(205, 220, 57, 0)), -webkit-gradient(linear, left top, left bottom, from(rgba(63, 81, 181, 0)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(#1e509a), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 235, 59, 0)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(rgba(156, 39, 176, 0)), to(rgba(255, 87, 34, 0)));
+    background-image: -moz-linear-gradient(right, #1e509a, rgba(205, 220, 57, 0)), -webkit-linear-gradient(rgba(63, 81, 181, 0), transparent), -webkit-linear-gradient(#1e509a, transparent), -webkit-linear-gradient(rgba(255, 235, 59, 0), transparent), -webkit-linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
+    background-image: -moz-linear-gradient(right, #1e509a, rgba(205, 220, 57, 0)), -o-linear-gradient(rgba(63, 81, 181, 0), transparent), -o-linear-gradient(#1e509a, transparent), -o-linear-gradient(rgba(255, 235, 59, 0), transparent), -o-linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
+    background-image: -moz-linear-gradient(right, #1e509a, rgba(205, 220, 57, 0)), linear-gradient(rgba(63, 81, 181, 0), transparent), linear-gradient(#1e509a, transparent), linear-gradient(rgba(255, 235, 59, 0), transparent), linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
+    background-image: -o-linear-gradient(right, #1e509a, rgba(205, 220, 57, 0)), -webkit-gradient(linear, left top, left bottom, from(rgba(63, 81, 181, 0)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(#1e509a), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 235, 59, 0)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(rgba(156, 39, 176, 0)), to(rgba(255, 87, 34, 0)));
+    background-image: -o-linear-gradient(right, #1e509a, rgba(205, 220, 57, 0)), -webkit-linear-gradient(rgba(63, 81, 181, 0), transparent), -webkit-linear-gradient(#1e509a, transparent), -webkit-linear-gradient(rgba(255, 235, 59, 0), transparent), -webkit-linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
+    background-image: -o-linear-gradient(right, #1e509a, rgba(205, 220, 57, 0)), -o-linear-gradient(rgba(63, 81, 181, 0), transparent), -o-linear-gradient(#1e509a, transparent), -o-linear-gradient(rgba(255, 235, 59, 0), transparent), -o-linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
+    background-image: -o-linear-gradient(right, #1e509a, rgba(205, 220, 57, 0)), linear-gradient(rgba(63, 81, 181, 0), transparent), linear-gradient(#1e509a, transparent), linear-gradient(rgba(255, 235, 59, 0), transparent), linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
     background-image: -webkit-gradient(linear, left top, right top, from(#1e509a), to(rgba(205, 220, 57, 0))), -webkit-gradient(linear, left top, left bottom, from(rgba(63, 81, 181, 0)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(#1e509a), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 235, 59, 0)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(rgba(156, 39, 176, 0)), to(rgba(255, 87, 34, 0)));
     background-image: -webkit-linear-gradient(left, #1e509a, rgba(205, 220, 57, 0)), -webkit-linear-gradient(rgba(63, 81, 181, 0), transparent), -webkit-linear-gradient(#1e509a, transparent), -webkit-linear-gradient(rgba(255, 235, 59, 0), transparent), -webkit-linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
     background-image: -o-linear-gradient(left, #1e509a, rgba(205, 220, 57, 0)), -o-linear-gradient(rgba(63, 81, 181, 0), transparent), -o-linear-gradient(#1e509a, transparent), -o-linear-gradient(rgba(255, 235, 59, 0), transparent), -o-linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
@@ -1903,6 +1900,10 @@ header {
           border-bottom: 20px solid transparent;
           border-left: 20px solid #3e5284; }
           @media screen and (max-width: 767px) {
+            .marketing .item-left .item-left-box p:after {
+              border-top: 35px solid transparent;
+              border-bottom: 35px solid transparent; } }
+          @media screen and (min-width: 1024px) and (max-width: 1192px) {
             .marketing .item-left .item-left-box p:after {
               border-top: 35px solid transparent;
               border-bottom: 35px solid transparent; } }
