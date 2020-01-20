@@ -1866,7 +1866,7 @@ header {
                     border-top: 20px solid transparent;
                     border-bottom: 20px solid transparent;
                     border-left: 20px solid #3e5284;
-                    @media screen and (max-width: 798px) {
+                    @media screen and (max-width: 767px) {
                         border-top: 35px solid transparent;
                         border-bottom: 35px solid transparent;
                     }
@@ -1970,14 +1970,14 @@ header {
                     font-weight: 600;
                     white-space: nowrap;
                     color: #ffe346;
-                    @media screen and (max-width: 768px) {
+                    @media screen and (max-width: 767px) {
                         font-size: 10px;
                         padding-left: 4px;
                     }
                     span {
                         margin-left: 3px;
                         font-size: 24px;
-                        @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 767px) {
                             font-size: 12px;
                         }
                     }
