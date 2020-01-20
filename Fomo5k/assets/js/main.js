@@ -118,13 +118,13 @@ $(document).ready(function() {
         $(this).parents('.block-toggle').slideUp(300);
     });
 
- 
+
     $(document).on('focusout', '.help', function(e) {
         e.preventDefault();
         $(this).removeClass('open');
     });
 
-   
+
 
     function formatCurrency(number) {
         return Number(number).toFixed(2).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
@@ -144,8 +144,18 @@ $(document).ready(function() {
         $('#roll-wrapper').toggleClass('rolling');
     })
 
-    $('.card-header .card-title').on('click',function(){
+    $('.card-header .card-title').on('click', function() {
         $(this).toggleClass('active');
     })
+
+    var myDate = new Date();
+    myDate.setDate(myDate.getDate() + 2);
+    $("#countdown").countdown(myDate, function(event) {
+        $(this).html(
+            event.strftime(
+                '<div class="countdown__item"><div class="countdown__timer">%D</div><span class="countdown__label">days</span></div><div class="countdown__item"><div class="countdown__timer">%H</div><span class="countdown__label">hrs</span></div><div class="countdown__item"><div class="countdown__timer">%M</div><span class="countdown__label">mins</span></div><div class="countdown__item"><div class="countdown__timer">%S</div><span class="countdown__label">sec</span></div>'
+            )
+        );
+    });
 
 });
