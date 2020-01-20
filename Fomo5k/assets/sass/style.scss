@@ -1873,6 +1873,10 @@ header {
                         border-top: 35px solid transparent;
                         border-bottom: 35px solid transparent;
                     }
+                    @media screen and (min-width: 1024px) and (max-width: 1192px) {
+                        border-top: 35px solid transparent;
+                        border-bottom: 35px solid transparent;
+                    }
                 }
             }
         }
