@@ -435,9 +435,13 @@ img {
     background-image: -webkit-linear-gradient(left, #1e509a, transparent), -webkit-linear-gradient(rgba(30, 80, 154, 0), transparent);
     background-image: -o-linear-gradient(left, #1e509a, transparent), -o-linear-gradient(rgba(30, 80, 154, 0), transparent);
     background-image: linear-gradient(to right, #1e509a, transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
+    background-image: -webkit-gradient(linear, left top, right top, from(#1e509a), to(rgba(205, 220, 57, 0))), -webkit-gradient(linear, left top, left bottom, from(rgba(63, 81, 181, 0)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(#1e509a), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 235, 59, 0)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(rgba(156, 39, 176, 0)), to(rgba(255, 87, 34, 0)));
+    background-image: -webkit-linear-gradient(left, #1e509a, rgba(205, 220, 57, 0)), -webkit-linear-gradient(rgba(63, 81, 181, 0), transparent), -webkit-linear-gradient(#1e509a, transparent), -webkit-linear-gradient(rgba(255, 235, 59, 0), transparent), -webkit-linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
+    background-image: -o-linear-gradient(left, #1e509a, rgba(205, 220, 57, 0)), -o-linear-gradient(rgba(63, 81, 181, 0), transparent), -o-linear-gradient(#1e509a, transparent), -o-linear-gradient(rgba(255, 235, 59, 0), transparent), -o-linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
+    background-image: linear-gradient(to right, #1e509a, rgba(205, 220, 57, 0)), linear-gradient(rgba(63, 81, 181, 0), transparent), linear-gradient(#1e509a, transparent), linear-gradient(rgba(255, 235, 59, 0), transparent), linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
     -moz-background-size: 100% 2px;
     background-size: 100% 2px;
-    background-position: 0 0, 100% 0;
+    background-position: 0 0, 100% 0, 0 100%, 0 0;
     background-repeat: no-repeat; }
   .countdown-wrapper:after {
     content: "";

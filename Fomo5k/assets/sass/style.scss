@@ -368,9 +368,10 @@ img {
         background-image: -moz-linear-gradient(rgb(30, 80, 154), transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
         background-image: -o-linear-gradient(rgb(30, 80, 154), transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
         background-image: linear-gradient(to right, rgb(30, 80, 154), transparent), linear-gradient(rgba(30, 80, 154, 0), transparent);
+        background-image: linear-gradient(to right, #1e509a, rgba(205, 220, 57, 0)), linear-gradient(rgba(63, 81, 181, 0), transparent), linear-gradient(#1e509a, transparent), linear-gradient(rgba(255, 235, 59, 0), transparent), linear-gradient(rgba(156, 39, 176, 0), rgba(255, 87, 34, 0));
         -moz-background-size: 100% 2px;
         background-size: 100% 2px;
-        background-position: 0 0, 100% 0;
+        background-position: 0 0, 100% 0, 0 100%, 0 0;
         background-repeat: no-repeat;
         //box-shadow: -22px -22px 20px -20px rgba(0, 186, 255, 0.3), 20px -30px 20px -30px rgba(0, 186, 255, 0.3);
     }
