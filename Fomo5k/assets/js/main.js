@@ -160,7 +160,7 @@ $(document).ready(function() {
         });
     }
 
-    $("a").on('click', function(event) {
+    $(".navbar-collapse a").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
