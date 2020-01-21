@@ -1827,6 +1827,18 @@ header {
         .marketing-table .marketing-item .statistics {
           text-align: center; } }
 
+#power-fomo5k .btn-extend {
+  font-size: 22px;
+  padding: 8px 30px;
+  display: inline-block;
+  position: relative;
+  z-index: 1; }
+  @media only screen and (max-width: 768px) {
+    #power-fomo5k .btn-extend {
+      white-space: nowrap;
+      padding: 10px 15px;
+      font-size: 14px; } }
+
 .marketing {
   position: relative;
   padding-bottom: 150px; }
