@@ -669,8 +669,24 @@ header {
         }
     }
     .header-tablet-middle {
+        width: 100%;
         @media only screen and (min-width: 769px) {
             display: none;
+        }
+        nav {
+            display: flex;
+            .language {
+                border: 2px solid #68a4c4;
+                border-radius: 10px;
+                margin-left: 10px;
+            }
+            .language-items {
+                margin-top: 5px;
+                min-width: 135px;
+                &.open {
+                    border: 2px solid #68a4c4;
+                }
+            }
         }
     }
     .icon-menu img {
@@ -1174,6 +1190,13 @@ header {
     left: 0;
     min-width: 100%;
     font-size: 0;
+    @media screen and (max-width: 768px) {
+        overflow: hidden;
+        video {
+            width: 230%;
+            transform: translateX(-25%)
+        }
+    }
     &:after {
         content: '';
         position: absolute;
@@ -1581,6 +1604,10 @@ header {
         left: 0;
         background: url(../images/bg-transparent-top.png) no-repeat top center;
         background-size: contain;
+        @media only screen and (max-width: 768px) {
+            top: 0;
+            background-size: cover;
+        }
     }
 }
 
@@ -2491,7 +2518,7 @@ footer {
         }
         li {
             display: flex;
-            align-item: center;
+            align-items: center;
             padding: 3px 20px 2px 10px;
             font-size: 12px;
         }
