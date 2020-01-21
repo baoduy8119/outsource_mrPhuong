@@ -1617,7 +1617,7 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: -30%;
+    top: -50%;
     left: 0;
     background: url(../images/bg-transparent-top.png) no-repeat top center;
     background-size: contain; }
@@ -1828,13 +1828,17 @@ header {
           text-align: center; } }
 
 .marketing {
-  position: relative; }
+  position: relative;
+  padding-bottom: 150px; }
+  @media only screen and (max-width: 768px) {
+    .marketing {
+      padding-bottom: 100px; } }
   .marketing::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 80%;
+    top: 73%;
     left: 0;
     background: url(../images/bg-transparent-top.png) no-repeat top center;
     background-size: contain; }

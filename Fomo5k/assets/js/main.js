@@ -148,7 +148,7 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     })
 
-    if($("#countdown").length > 0) {
+    if ($("#countdown").length > 0) {
         var myDate = new Date();
         myDate.setDate(myDate.getDate() + 2);
         $("#countdown").countdown(myDate, function(event) {
