@@ -739,9 +739,24 @@ header {
   @media only screen and (max-width: 768px) {
     header .header_desktop {
       display: none; } }
-  @media only screen and (min-width: 769px) {
-    header .header-tablet-middle {
-      display: none; } }
+  header .header-tablet-middle {
+    width: 100%; }
+    @media only screen and (min-width: 769px) {
+      header .header-tablet-middle {
+        display: none; } }
+    header .header-tablet-middle nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      header .header-tablet-middle nav .language {
+        border: 2px solid #68a4c4;
+        border-radius: 10px;
+        margin-left: 10px; }
+      header .header-tablet-middle nav .language-items {
+        margin-top: 5px;
+        min-width: 135px; }
+        header .header-tablet-middle nav .language-items.open {
+          border: 2px solid #68a4c4; }
   header .icon-menu img {
     max-width: 18px;
     vertical-align: -3px;
@@ -1115,7 +1130,9 @@ header {
         font-size: 14px; } }
 
 .logo-landingpage {
-  padding-top: 100px; }
+  padding-top: 100px;
+  position: relative;
+  z-index: 2; }
   @media only screen and (max-width: 768px) {
     .logo-landingpage {
       max-width: 40%;
@@ -1209,6 +1226,14 @@ header {
   left: 0;
   min-width: 100%;
   font-size: 0; }
+  @media screen and (max-width: 768px) {
+    .bg-content-top {
+      overflow: hidden; }
+      .bg-content-top video {
+        width: 230%;
+        -webkit-transform: translateX(-25%);
+        -ms-transform: translateX(-25%);
+        transform: translateX(-25%); } }
   .bg-content-top:after {
     content: '';
     position: absolute;
@@ -1621,6 +1646,10 @@ header {
     left: 0;
     background: url(../images/bg-transparent-top.png) no-repeat top center;
     background-size: contain; }
+    @media only screen and (max-width: 768px) {
+      .bg-top-center::before {
+        top: 0;
+        background-size: cover; } }
 
 .bg-gird-bottom {
   position: relative; }
@@ -2542,7 +2571,9 @@ footer {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      align-item: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       padding: 3px 20px 2px 10px;
       font-size: 12px; }
     .language .language-items img {
