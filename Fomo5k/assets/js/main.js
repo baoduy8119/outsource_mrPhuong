@@ -145,7 +145,7 @@ $(document).ready(function() {
     })
 
     $('.card-header .card-title').on('click', function() {
-        $(this).toggleClass('active');
+        $(this).addClass('active');
     })
 
     if ($("#countdown").length > 0) {

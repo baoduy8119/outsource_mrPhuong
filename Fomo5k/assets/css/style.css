@@ -2386,9 +2386,11 @@ header {
           @media only screen and (max-width: 767px) {
             .box-accordion .card .card-header .card-title + .icon-up-down {
               right: -10px; } }
-        .box-accordion .card .card-header .card-title.active {
+        .box-accordion .card .card-header .card-title[aria-expanded="false"] {
+          color: #ffffff; }
+        .box-accordion .card .card-header .card-title[aria-expanded="true"] {
           color: #99b8ff; }
-          .box-accordion .card .card-header .card-title.active + .icon-up-down {
+          .box-accordion .card .card-header .card-title[aria-expanded="true"] + .icon-up-down {
             -webkit-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
