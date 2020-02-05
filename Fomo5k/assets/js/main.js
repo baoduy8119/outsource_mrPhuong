@@ -145,10 +145,10 @@ $(document).ready(function() {
     })
 
     $('.card-header .card-title').on('click', function() {
-        $(this).toggleClass('active');
+        $(this).addClass('active');
     })
 
-    if($("#countdown").length > 0) {
+    if ($("#countdown").length > 0) {
         var myDate = new Date();
         myDate.setDate(myDate.getDate() + 2);
         $("#countdown").countdown(myDate, function(event) {
@@ -160,7 +160,7 @@ $(document).ready(function() {
         });
     }
 
-    $("a").on('click', function(event) {
+    $(".navbar-collapse a").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
