@@ -33,7 +33,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 
@@ -288,14 +287,20 @@ li {
 }
 
 header {
-    padding: 20px;
     width: 100%;
     z-index: 1000;
+    &.sticky {
+        position: fixed;
+        background: #0a0c27;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
     @media only screen and (max-width: 767px) {
         padding: 0;
     }
-    .logo{
-        span{
+    .logo {
+        span {
             font-size: 40px;
             font-weight: 900;
             color: #00a2ff;
@@ -307,6 +312,7 @@ header {
         color: $color-lighter;
     }
     .header_desktop {
+        padding: 20px;
         @media only screen and (max-width: 768px) {
             display: none;
         }
@@ -324,18 +330,18 @@ header {
             >a {
                 color: $color-lighter;
             }
-            &.nav-link{
+            &.nav-link {
                 background-color: #0e1136;
                 border-radius: 40px;
                 padding: 15px 25px;
-                > a{
+                >a {
                     font-weight: bold;
                     padding-left: 20px;
                 }
             }
-            &.nav-user{
+            &.nav-user {
                 font-size: 16px;
-                .avatar-user{
+                .avatar-user {
                     background: #262c75;
                     height: 40px;
                     width: 40px;
@@ -344,13 +350,13 @@ header {
                     line-height: 40px;
                     border-radius: 50%;
                     margin-right: 10px;
-                   img{
-                       margin-left: 0;
-                       max-width: 17px;
-                   }
+                    img {
+                        margin-left: 0;
+                        max-width: 17px;
+                    }
                 }
             }
-            img{
+            img {
                 max-width: 16px;
                 margin-left: 20px;
             }
@@ -424,29 +430,17 @@ header {
             }
             ul.menu {
                 position: absolute;
-                background: #24203b;
+                background: $bg-content;
                 width: 100%;
                 height: 100vh;
                 z-index: 100;
                 right: 0;
                 top: 0;
-                padding: 70px 30px 0;
+                padding: 70px 15px 0;
                 @include transform(translateX(-100%));
                 @include transition;
                 >li {
-                    padding: 10px 0;
-                    width: 25%;
-                    float: left;
-                    text-align: center;
-                    img {
-                        height: 80px;
-                    }
-                    .home & {
-                        float: none;
-                        width: 100%;
-                        text-align: left;
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                    }
+                    margin-left: 0;
                     &:last-child {
                         border-bottom: 0;
                     }
@@ -456,6 +450,21 @@ header {
                         &::after {
                             right: 0;
                             top: 7px;
+                        }
+                    }
+                    &.nav-user {
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    }
+                    &.nav-link {
+                        padding: 15px;
+                        text-align: center;
+                        >a {
+                            font-size: 14px;
+                            display: inline-block;
+                            padding-left: 5px;
+                        }
+                        img {
+                            margin-left: 10px;
                         }
                     }
                     &.dropdown {
@@ -640,7 +649,7 @@ header {
 
 .body-wrapper {
     @media screen and (max-width: 768px) {
-        margin-top: 80px;
+        margin-top: 20px;
     }
     .ast-tabs {
         position: relative;
@@ -711,11 +720,6 @@ header {
     }
     .content {
         width: 100%;
-        &.bg-content {
-            background: url(../images/bg-content.png) no-repeat;
-            background-position: top center;
-            background-size: contain;
-        }
         @media screen and (min-width: 769px) {
             margin-left: 250px;
         }
@@ -747,45 +751,221 @@ header {
                 }
             }
         }
-        .ast-tabs {
-            margin-top: 80px;
-            @media only screen and (max-width: 767px) {
-                margin-top: 50px;
+    }
+}
+
+.box {
+    background: #e7e7f1 url(../images/bg-content.png) no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    padding: 30px 25px 0 25px;
+    border-radius: 30px 0 0 0;
+    @media only screen and (max-width: 768px) {
+        margin: 0 15px;
+        border-radius: 5px;
+        padding: 30px 10px 0 10px
+    }
+    h2 {
+        color: $color-1;
+        font-size: 34px;
+        padding: 0 10px 20px;
+    }
+    &__item {
+        padding: 25px 30px;
+        border-radius: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        min-height: 170px;
+        transition: all 500ms ease;
+        &:hover {
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
+            transform: translateY(-5px);
+        }
+        &.-navy {
+            background-color: #0088c0;
+        }
+        &.-orange {
+            background-color: #b75a00;
+        }
+        &.-green {
+            background-color: #009047;
+        }
+        &.-blue {
+            background-color: #3540bc;
+        }
+        &.-purple {
+            background-color: #59287e;
+            padding: 17px;
+        }
+        &.-pink {
+            background-color: #ba2e73;
+        }
+        &.-white {
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+            h4 {
+                font-weight: 900;
+            }
+            >* {
+                color: #505050;
+            }
+            .box__item__list {
+                font-size: 16px;
+            }
+        }
+        &__list {
+            >li {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #e7e7e7;
+                padding: 17px 0;
+                &:last-child {
+                    border-bottom: 0;
+                }
+                label {
+                    text-transform: none;
+                    text-align: left;
+                    margin-bottom: 0;
+                }
+                span {
+                    color: #202020;
+                    font-weight: bold;
+                }
+            }
+        }
+        h4 {
+            font-size: 20px;
+            padding-bottom: 18px;
+        }
+        .level {
+            img {
+                max-width: 118px;
+            }
+        }
+        .status {
+            img {
+                max-width: 90px;
+            }
+            span {
+                text-transform: capitalize;
+                display: block;
+                font-weight: bold;
+                padding-top: 7px;
+            }
+            &.active {
+                span {
+                    color: #4caf50;
+                }
+            }
+            &.deactive {
+                display: none;
+                span {
+                    color: #9699be;
+                }
+            }
+        }
+        .value {
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 1;
+            @media only screen and (max-width: 1024px) {
+                font-size: 2rem;
+            }
+            span {
+                font-size: 20px;
+                display: block;
+                color: rgba(255, 255, 255, 0.6);
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+.menu-sidebar {
+    >li {
+        padding: 20px;
+        &.active {
+            >a {
+                color: #ffffff;
+                span {
+                    background-position-y: -38px!important;
+                }
+            }
+        }
+        >a {
+            color: $color-menu;
+            font-size: 16px;
+            transition: all 500ms ease;
+            span {
+                background: url(../images/icon-menu.png) no-repeat;
+                height: 22px;
+                display: inline-block;
+                margin-right: 20px;
+                vertical-align: middle;
+                transition: all 500ms ease;
+                &.icon-dashboard {
+                    background-position: -4px -10px;
+                    width: 29px;
+                }
+                &.icon-team {
+                    background-position: -41px -10px;
+                    width: 29px;
+                }
+                &.icon-wallet {
+                    background-position: -80px -10px;
+                    width: 30px;
+                }
+                &.icon-trade-account {
+                    background-position: -113px -10px;
+                    width: 29px;
+                }
+                &.icon-commission {
+                    background-position: -153px -10px;
+                    width: 29px;
+                }
+                &.icon-exchange {
+                    background-position: -185px -10px;
+                    width: 29px;
+                }
+            }
+            &:hover {
+                color: $color-lighter;
+                span {
+                    background-position-y: -38px;
+                }
             }
         }
     }
 }
 
 .aside-left {
-    background: #3b3560;
+    background: $bg-content;
     width: 250px;
     position: fixed;
     left: 0;
     bottom: 0;
     overflow-y: auto;
     z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 20px;
     &::-webkit-scrollbar {
         display: none;
     }
     .inner {
-        padding: 35px 20px;
+        padding: 35px 0;
     }
     @media (min-width: 769px) and (max-width: 920px) {
         width: 280px;
     }
     @media only screen and (max-width: 768px) {
-        position: static;
-        width: 100%;
-        max-height: 0;
-        @include transition;
-        &.open {
-            max-height: 500px;
-        }
-    }
-    h4 {
-        font-family: 'Work Sans', sans-serif;
-        margin-bottom: 20px;
+        display: none;
     }
 }
 
-footer {}
+.color-footer {
+    color: $color-footer;
+    font-size: 12px;
+}
