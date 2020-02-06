@@ -19,6 +19,14 @@
     border: none;
     color: $color-lighter;
     text-transform: uppercase;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    @media (min-width: 768px) and (max-width: 1024px){
+        padding: 12px 20px;
+    }
+    @media only screen and (max-width: 768px){
+        font-size: 14px;
+        padding: 12px 15px;
+    }
     @if $style=="default" {
         background: #262c75;
         @include transition;

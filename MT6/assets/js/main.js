@@ -122,7 +122,7 @@ $(document).ready(function() {
         "closeButton": true
     }
 
-    $('.copy-button').click(function(e) {
+    $('.button__multi-copy').click(function(e) {
         var text = $(this).closest('.box__item').find('.copy-text').attr('data-copy');
         var el = $(this);
         copyToClipboard(text, el);

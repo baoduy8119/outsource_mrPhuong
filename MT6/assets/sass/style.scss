@@ -87,6 +87,9 @@ button,
     >* {
         margin: 0 10px;
         border-radius: 5px;
+        @media only screen and (max-width: 1024px){
+            margin: 0 5px;
+        }
     }
 }
 
@@ -112,8 +115,8 @@ button,
 
 .form-control,
 input {
-    border: 1px solid #b5b5bf;
-    background: #d3d4e3;
+    border: 1px solid #cfcfcf;
+    background: #f5f5f5;
     padding: 8px 10px;
     height: 40px;
     font-size: 14px;
@@ -843,26 +846,43 @@ header {
             h4 {
                 font-weight: 900;
             }
-            >* {
+            > *:not(.btn){
                 color: #505050;
             }
             .box__item__list {
                 font-size: 16px;
+            }
+            &.withdraw{
+                display: none;
+            }
+        }
+        .padding80{
+            padding: 44px 15%;
+            @media only screen and (max-width: 767px){
+                padding: 0 0 20px;
             }
         }
         .copy-text {
             font-size: 14px;
             text-transform: none;
             color: $color-2;
-            padding-bottom: 40px;
-            span {
-                font-size: 16px;
-                color: #505050;
-            }
+            padding-bottom: 30px;
         }
-        .multi-button {
+        label {
+            font-size: 16px;
+            color: #505050;
+            display: block;
+            margin: 25px 0 15px;
+            text-transform: capitalize;
+        }
+        .button__multi {
+            text-align: center;
             >* {
-                margin-bottom: 20px;
+                display: block;
+                margin: 0  auto 20px;
+                .btn__icon{
+                    margin-right: 5px;
+                }
             }
         }
         &__list {
@@ -877,7 +897,7 @@ header {
                 label {
                     text-transform: none;
                     text-align: left;
-                    margin-bottom: 0;
+                    margin: 0;
                 }
                 span {
                     color: #202020;
@@ -951,6 +971,7 @@ header {
             text-align: center;
             padding: 0;
             border-radius: 0 5px 5px 0;
+            box-shadow: none;
             &::before {
                 content: "";
                 background: url(../images/icon-search.png) no-repeat;
@@ -958,6 +979,10 @@ header {
                 height: 14px;
                 display: inline-block;
             }
+        }
+        input{
+            background-color: #d3d4e3;
+            border-color: #b5b5bf;
         }
     }
 }
