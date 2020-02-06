@@ -12,38 +12,24 @@
 }
 
 @mixin button($style) {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
-    padding: 9px 25px;
+    padding: 12px 35px;
     border-radius: 5px;
     border: none;
     color: $color-lighter;
+    text-transform: uppercase;
     @if $style=="default" {
         background: #262c75;
         @include transition;
     }
-    @else if $style=="btn-border" {
-        position: relative;
-        overflow: hidden;
-        background: #00a8ff;
-        border: 1px solid #00fffc;
+    @else if $style=="btn-deposit" {
+        background: #09ab68;
+        border: 1px solid #09ab68;
     }
-    @else if $style=="btn-border-lg" {
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(to left, #24203b, #5b5199);
-        &:after {
-            @include before_after();
-            width: calc(100% - 4px);
-            height: calc(100% - 4px);
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            margin: auto;
-            border-radius: inherit;
-            box-shadow: -22px 0px 20px 5px #00d8ff, -7px -20px 20px 20px #fa3eba;
-        }
+    @else if $style=="btn-withdraw" {
+        background: #ea2851;
+        border: 1px solid #ea2851;
     }
     @else if $style=="btn-no-gradient" {
         background: #00a8ff;
