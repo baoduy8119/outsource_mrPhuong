@@ -177,34 +177,52 @@ $(document).ready(function() {
 
     });
 
-    am4core.ready(function() {
 
-        // Themes begin
-        am4core.useTheme(am4themes_animated);
-        // Themes end
+    var chart;
 
-        var chart = am4core.create("chartdiv", am4charts.PieChart3D);
-        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+    var chartData1 = [
+        {"key":"SELL","value":"63.6","pulled":false},
+        {"key":"BUY","value":"36.4","pulled":false}
+    ];
+    var chartData2 = [
+        {"key":"SELL","value":"36.4","pulled":false},
+        {"key":"BUY","value":"63.6","pulled":false}
+    ];
 
-        chart.legend = new am4charts.Legend();
+    chart = new AmCharts.AmPieChart();
+    chart.dataProvider = chartData1;
+    chart.titleField = "key";
+    chart.valueField = "value";
+    chart.pulledField = "pulled";
+    chart.outlineColor = "#FFFFFF";
+    chart.outlineAlpha = 0.8;
+    chart.outlineThickness = 0;
+    chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
+    // this makes the chart 3D
+    chart.depth3D = 30;
+    chart.angle = 40;
+    chart.colors = ["#ED1C24","#09ab68"];
+    chart.color = '#c1cbe2';
+    chart.labelTickColor = '#FFFFFF';
 
-        chart.data = [
-            {
-                country: "SELL",
-                litres: 280.262,
-                color: am4core.color("#ED1C24"),
-            },
-            {
-                country: "BUY",
-                litres:160.382,
-                color: am4core.color("#09ab68")
-            },
-          
-        ];
+    chart.write("chartdiv-1");
 
-        var series = chart.series.push(new am4charts.PieSeries3D());
-        series.dataFields.value = "litres";
-        series.dataFields.category = "country";
-        series.slices.template.propertyFields.fill = "color";
-    }); 
+    chart = new AmCharts.AmPieChart();
+    chart.dataProvider = chartData2;
+    chart.titleField = "key";
+    chart.valueField = "value";
+    chart.pulledField = "pulled";
+    chart.outlineColor = "#FFFFFF";
+    chart.outlineAlpha = 0.8;
+    chart.outlineThickness = 0;
+    chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
+    // this makes the chart 3D
+    chart.depth3D = 30;
+    chart.angle = 40;
+    chart.colors = ["#ED1C24","#09ab68"];
+    chart.color = '#c1cbe2';
+    chart.labelTickColor = '#FFFFFF';
+
+    chart.write("chartdiv-2");
+
 });
