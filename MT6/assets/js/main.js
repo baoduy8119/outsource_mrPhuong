@@ -177,5 +177,10 @@ $(document).ready(function() {
 
     });
 
+    if ($('.ast-tabs').find('.awithdrawal.active').length > 0) {
+        $("#box-item-select").addClass('active');
+    } else {
+        $("#box-item-select").removeClass('active');
+    }
 
 });

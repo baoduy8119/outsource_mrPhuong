@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
-    <title>MT6-wallet</title>
+    <title>MT6-Wallet</title>
     <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -156,35 +156,37 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <div class="box__item -white deposit">
-                                                <h4>deposit</h4>
-                                                <div class="address copy-text" data-copy="0xefereafa2fdfgrafaf341#ssffdsdsdsaawewf3$#%$2dsdsdasdasadsdrwt">
-                                                    <label>Address</label> 0xefereafa2fdfgrafaf341#ssffdsdsd saawewf3$#%$2dsdsdasdasadsdrwt
-                                                </div>
-                                                <div class="button__multi">
-                                                    <button type="button" class="button__multi-copy btn" data-original-title="Copied!">
-                                                        <span class="btn__icon">
-                                                            <img width="18px" height="18px" src="./assets/images/icon-copy-address.png" alt="copy text"/>
-                                                        </span>
-                                                        Copy address
-                                                    </button>
-                                                    <button type="button" class="button__multi-qr btn" data-original-title="Copied!">
-                                                        <span class="btn__icon">
-                                                            <img width="18px" height="18px" src="./assets/images/icons-qr-code.png" alt="qr code"/>
-                                                        </span>
-                                                        show qr code
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="box__item -white withdraw">
-                                                <h4>withdrawal</h4>
-                                                <form action="" method="POST" role="form">
-                                                    <div class="form-group padding80">
-                                                        <label>Address / Username</label>
-                                                        <input type="text" class="form-control">
+                                            <div class="box__item -white" id="box-item-select">
+                                                <div class="deposit">
+                                                    <h4>deposit</h4>
+                                                    <div class="address copy-text" data-copy="0xefereafa2fdfgrafaf341#ssffdsdsdsaawewf3$#%$2dsdsdasdasadsdrwt">
+                                                        <label>Address</label> 0xefereafa2fdfgrafaf341#ssffdsdsd saawewf3$#%$2dsdsdasdasadsdrwt
                                                     </div>
-                                                    <button type="submit" class="btn">Submit</button> 
-                                                </form>                                 
+                                                    <div class="button__multi">
+                                                        <button type="button" class="button__multi-copy btn" data-original-title="Copied!">
+                                                            <span class="btn__icon">
+                                                                <img width="18px" height="18px" src="./assets/images/icon-copy-address.png" alt="copy text"/>
+                                                            </span>
+                                                            Copy address
+                                                        </button>
+                                                        <button type="button" class="button__multi-qr btn" data-original-title="Copied!">
+                                                            <span class="btn__icon">
+                                                                <img width="18px" height="18px" src="./assets/images/icons-qr-code.png" alt="qr code"/>
+                                                            </span>
+                                                            show qr code
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="withdraw">
+                                                    <h4>withdrawal</h4>
+                                                    <form action="" method="POST" role="form">
+                                                        <div class="form-group padding80">
+                                                            <label>Address / Username</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                        <button type="submit" class="btn">Submit</button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-12">
@@ -195,7 +197,7 @@
                                                             Deposit
                                                         </a>
                                                     </li>
-                                                    <li class="nav-item">
+                                                    <li class="nav-item awithdrawal">
                                                         <a class="nav-link" id="withdrawal" data-toggle="tab" href="#tab-withdrawal" role="tab" aria-controls="#tab-withdrawal" aria-selected="false">
                                                             Withdrawal
                                                         </a>
@@ -377,7 +379,7 @@
                                                                             <th>Amount</th>
                                                                             <th>From</th>
                                                                             <th>Day</th>
-                                                                            <th>Min Balance</th>                                                                           
+                                                                            <th>Min Balance</th>
                                                                             <th>Time</th>
                                                                         </tr>
                                                                     </thead>
