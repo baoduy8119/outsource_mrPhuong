@@ -116,13 +116,13 @@ $(document).ready(function() {
     }
 
     //Config toast notification
-    toastr.options = {
-        "positionClass": "toast-bottom-right",
-        "timeOut": 3000,
-        "closeButton": true
-    }
 
     $('.button__multi-copy').click(function(e) {
+        toastr.options = {
+            "positionClass": "toast-bottom-right",
+            "timeOut": 3000,
+            "closeButton": true
+        }
         var text = $(this).closest('.box__item').find('.copy-text').attr('data-copy');
         var el = $(this);
         copyToClipboard(text, el);
@@ -136,10 +136,10 @@ $(document).ready(function() {
 
         $this.addClass('select-hidden');
         $this.wrap('<div class="select"></div>');
-        $this.after('<div class="select-styled"></div>');
+        $this.after('<div class="select-styled"><span class="fas fa-chevron-down"></span></div>');
 
         var $styledSelect = $this.next('div.select-styled');
-        $styledSelect.text($this.children('option').eq(0).text());
+        $styledSelect.append($this.children('option').eq(0).text());
 
         var $list = $('<ul />', {
             'class': 'select-options'
@@ -183,4 +183,33 @@ $(document).ready(function() {
         $("#box-item-select").removeClass('active');
     }
 
+    am4core.ready(function() {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        chart.legend = new am4charts.Legend();
+
+        chart.data = [{
+                country: "SELL",
+                litres: 280.262,
+                color: am4core.color("#ED1C24"),
+            },
+            {
+                country: "BUY",
+                litres: 160.382,
+                color: am4core.color("#09ab68")
+            },
+
+        ];
+
+        var series = chart.series.push(new am4charts.PieSeries3D());
+        series.dataFields.value = "litres";
+        series.dataFields.category = "country";
+        series.slices.template.propertyFields.fill = "color";
+    });
 });
