@@ -22,19 +22,17 @@
 
 <body class="register">
 
-    <div id="body-wrapper" class="o-wrapper">
+    <div id="body-wrapper">
 
         <header id="header" class="header">
-            <div class="header_desktop  astro-sticky">
-                <div class="container-fluid">
-                    <div class="row d-flex align-items-center text-center">
-                        <div class="col-sm-12">
-                            <div class="logo">
-                                <a href="#" title="default logo">
-                                    <img alt="default logo" class="img-responsive" src="./assets/images/logo-register.png" />
-                                    <span>MT6</span>
-                                </a>
-                            </div>
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center text-center">
+                    <div class="col-sm-12">
+                        <div class="logo">
+                            <a href="#" title="default logo">
+                                <img alt="default logo" class="img-responsive" src="./assets/images/logo-register.png" />
+                                <span>MT6</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -47,18 +45,20 @@
                 <div class="container">
                     <div class="row">
                         <div class="content">
-                            <div class="box-register text-center">
-                                <div class="form-group">
-                                    <label>Choose a username</label>
-                                    <input type="text" class="form-control" id="" placeholder="type here...">
-                                    <div class="info">
-                                        <span>Username must follow these rules:</span>
-                                        <p>Must be unique.<br> 4 to 18 characters. <br>A-Z (uppercase) Can not start with number.<br> No special characters.<br> No space between characters.
-                                        </p>
+                            <div class="box-register text-center">                              
+                                <form action="" method="POST" role="form">
+                                    <legend>Choose a username</legend>
+                                    <div class="form-group">
+                                        <label>Randomize</label>
+                                        <input type="text" class="form-control" id="" placeholder="type here...">
+                                        <div class="info">
+                                            <span>Username must follow these rules:</span>
+                                            <p>Must be unique.<br> 4 to 18 characters. <br>A-Z (uppercase)<br> Can not start with number.<br> No special characters.<br> No space between characters.
+                                            </p>
+                                        </div>                                  
                                     </div>
-                                    <button type="submit" class="btn btn-primary">register</button>
-                                </div>
-
+                                    <button type="submit" class="btn btn-register">register</button>
+                                </form>
                             </div>
                         </div>
                     </div>

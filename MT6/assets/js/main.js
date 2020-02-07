@@ -178,7 +178,7 @@ $(document).ready(function() {
     });
 
     $('.nav-pills .nav-item').click(function() {
-        if ($('.ast-tabs').find('.bonus.active').length > 0) {
+        if ($('.ast-tabs').find('.withdraw.active').length > 0) {
             $("#box-item-select .deposit").hide();
             $("#box-item-select .withdraw").show();
         } else {

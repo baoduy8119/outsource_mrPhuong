@@ -39,10 +39,13 @@
         background: #ea2851;
         border: 1px solid #ea2851;
     }
-    @else if $style=="btn-no-gradient" {
-        background: #00a8ff;
-        color: #ffffff;
-        border: 1px solid #00fffc;
+    @else if $style=="btn-register" {
+        font-size: 24px;
+        border: 2px solid #01ff96;
+        background-color: #09ab68;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+        padding: 10px 35px;
+
     }
     &:hover {
         color: #ffffff;
