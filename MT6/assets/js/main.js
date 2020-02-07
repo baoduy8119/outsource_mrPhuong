@@ -177,52 +177,64 @@ $(document).ready(function() {
 
     });
 
+    $('.nav-pills .nav-item').click(function() {
+        if ($('.ast-tabs').find('.bonus.active').length > 0) {
+            $("#box-item-select .deposit").hide();
+            $("#box-item-select .withdraw").show();
+        } else {
+            $("#box-item-select .withdraw").hide();
+            $("#box-item-select .deposit").show();
+        }
+    })
 
-    var chart;
+    if($('.pie-chart').length > 0) {
 
-    var chartData1 = [
-        {"key":"SELL","value":"63.6","pulled":false},
-        {"key":"BUY","value":"36.4","pulled":false}
-    ];
-    var chartData2 = [
-        {"key":"SELL","value":"36.4","pulled":false},
-        {"key":"BUY","value":"63.6","pulled":false}
-    ];
+        var chart;
 
-    chart = new AmCharts.AmPieChart();
-    chart.dataProvider = chartData1;
-    chart.titleField = "key";
-    chart.valueField = "value";
-    chart.pulledField = "pulled";
-    chart.outlineColor = "#FFFFFF";
-    chart.outlineAlpha = 0.8;
-    chart.outlineThickness = 0;
-    chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
-    // this makes the chart 3D
-    chart.depth3D = 30;
-    chart.angle = 40;
-    chart.colors = ["#ED1C24","#09ab68"];
-    chart.color = '#c1cbe2';
-    chart.labelTickColor = '#FFFFFF';
+        var chartData1 = [
+            {"key":"SELL","value":"63.6","pulled":false},
+            {"key":"BUY","value":"36.4","pulled":false}
+        ];
+        var chartData2 = [
+            {"key":"SELL","value":"36.4","pulled":false},
+            {"key":"BUY","value":"63.6","pulled":false}
+        ];
 
-    chart.write("chartdiv-1");
+        chart = new AmCharts.AmPieChart();
+        chart.dataProvider = chartData1;
+        chart.titleField = "key";
+        chart.valueField = "value";
+        chart.pulledField = "pulled";
+        chart.outlineColor = "#FFFFFF";
+        chart.outlineAlpha = 0.8;
+        chart.outlineThickness = 0;
+        chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
+        // this makes the chart 3D
+        chart.depth3D = 30;
+        chart.angle = 40;
+        chart.colors = ["#ED1C24","#09ab68"];
+        chart.color = '#c1cbe2';
+        chart.labelTickColor = '#FFFFFF';
 
-    chart = new AmCharts.AmPieChart();
-    chart.dataProvider = chartData2;
-    chart.titleField = "key";
-    chart.valueField = "value";
-    chart.pulledField = "pulled";
-    chart.outlineColor = "#FFFFFF";
-    chart.outlineAlpha = 0.8;
-    chart.outlineThickness = 0;
-    chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
-    // this makes the chart 3D
-    chart.depth3D = 30;
-    chart.angle = 40;
-    chart.colors = ["#ED1C24","#09ab68"];
-    chart.color = '#c1cbe2';
-    chart.labelTickColor = '#FFFFFF';
+        chart.write("chartdiv-1");
 
-    chart.write("chartdiv-2");
+        chart = new AmCharts.AmPieChart();
+        chart.dataProvider = chartData2;
+        chart.titleField = "key";
+        chart.valueField = "value";
+        chart.pulledField = "pulled";
+        chart.outlineColor = "#FFFFFF";
+        chart.outlineAlpha = 0.8;
+        chart.outlineThickness = 0;
+        chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
+        // this makes the chart 3D
+        chart.depth3D = 30;
+        chart.angle = 40;
+        chart.colors = ["#ED1C24","#09ab68"];
+        chart.color = '#c1cbe2';
+        chart.labelTickColor = '#FFFFFF';
+
+        chart.write("chartdiv-2");
+    }
 
 });
