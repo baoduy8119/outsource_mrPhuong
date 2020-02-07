@@ -15,6 +15,31 @@ body {
     background-color: $bg-content;
     color: $color-lighter;
     -webkit-font-smoothing: antialiased;
+    &.register {
+        background: url(../images/bg-register.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        .body-wrapper {
+            margin-top: 0;
+        }
+        header {
+            background: none;
+            position: static;
+            .logo {
+                span {
+                    display: block;
+                    font-size: 66px;
+                    color: #ffffff;
+                    line-height: 1;
+                }
+            }
+        }
+        .content {
+            margin-left: 0;
+        }
+    }
 }
 
 a {
@@ -87,7 +112,7 @@ button,
     >* {
         margin: 0 10px;
         border-radius: 5px;
-        @media only screen and (max-width: 1024px){
+        @media only screen and (max-width: 1024px) {
             margin: 0 5px;
         }
     }
@@ -263,6 +288,17 @@ li {
     @include prev-next(next);
 }
 
+//-----------------register--------------//
+//------------------------------------------//
+.box-register {
+    background: rgba(2, 20, 82, 0.85);
+    padding: 40px 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 43px rgba(0, 0, 0, 0.5);
+    margin: 50px auto 130px;
+    max-width: 55%;
+}
+
 //-----------------pagination--------------//
 //------------------------------------------//
 .pagination-pages {
@@ -331,6 +367,8 @@ header {
             color: #00a2ff;
             vertical-align: middle;
             padding-left: 5px;
+            text-shadow: 3px 4px 13px rgba(0, 0, 0, 0.37);
+            font-family: 'Montserrat', sans-serif;
         }
     }
     >* {
@@ -846,19 +884,32 @@ header {
             h4 {
                 font-weight: 900;
             }
-            > *:not(.btn){
+            >*:not(.btn) {
                 color: #505050;
             }
             .box__item__list {
                 font-size: 16px;
             }
-            &.withdraw{
+        }
+        &#box-item-select {
+            .deposit {
+                display: block;
+            }
+            .withdraw {
                 display: none;
             }
+            &.active {
+                .withdraw {
+                    display: block;
+                }
+                .deposit {
+                    display: none;
+                }
+            }
         }
-        .padding80{
+        .padding80 {
             padding: 44px 15%;
-            @media only screen and (max-width: 767px){
+            @media only screen and (max-width: 767px) {
                 padding: 0 0 20px;
             }
         }
@@ -879,8 +930,8 @@ header {
             text-align: center;
             >* {
                 display: block;
-                margin: 0  auto 20px;
-                .btn__icon{
+                margin: 0 auto 20px;
+                .btn__icon {
                     margin-right: 5px;
                 }
             }
@@ -980,7 +1031,7 @@ header {
                 display: inline-block;
             }
         }
-        input{
+        input {
             background-color: #d3d4e3;
             border-color: #b5b5bf;
         }
