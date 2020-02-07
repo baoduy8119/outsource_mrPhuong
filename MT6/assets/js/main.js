@@ -117,7 +117,7 @@ $(document).ready(function() {
 
     //Config toast notification
 
-    $('.copy-button').click(function(e) {
+    $('.button__multi-copy').click(function(e) {
         toastr.options = {
             "positionClass": "toast-bottom-right",
             "timeOut": 3000,
