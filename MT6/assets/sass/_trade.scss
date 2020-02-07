@@ -71,7 +71,6 @@
 }
 $background: #e74c3c;
 $select-color: #fff;
-$select-background: #006199;
 
 .select-hidden {
     display: none;
@@ -97,30 +96,32 @@ $select-background: #006199;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $select-background;
+    background-color: #007fc8;
     padding: 2px 15px;
     border-radius: 5px;
     @include transition(all 0.2s ease-in);
 
-    &:before {
-    	font-family: "Font Awesome 5 Free";
-        content: "\f078";
-        width: 0;
-        height: 0;
-        border: 7px solid transparent;
-        border-color: $select-color transparent transparent transparent;
+    .fas {
+        width: 20px;
+        height: 24px;
         position: absolute;
-        top: 16px;
-        right: 10px;
+        top: 0;
+        right: 0;
+        font-size: 10px;
+        background-color: #006199;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        text-align: center;
+        line-height: 24px;
     }
 
     &:hover {
-        background-color: darken($select-background, 2);
+        background-color: darken(#006199, 2);
     }
 
     &:active,
     &.active {
-        background-color: darken($select-background, 5);
+        background-color: darken(#006199, 5);
 
         &:after {
             top: 9px;
@@ -139,7 +140,7 @@ $select-background: #006199;
     margin: 0;
     padding: 5px 0;
     list-style: none;
-    background-color: darken($select-background, 5);
+    background-color: darken(#006199, 5);
 	border-radius: 5px;
 	border: 1px solid #6dcaff;
 	text-transform: uppercase;
@@ -151,10 +152,21 @@ $select-background: #006199;
 
         &:hover {
             color: #4fbfff;
+            font-weight: bold;
         }
 
         &[rel="hide"] {
             display: none;
         }
     }
+}
+.body-wrapper {
+	&.trade {
+		min-height: 700px;
+		background: url(../images/trade-bg.png) no-repeat;
+	}
+	#chartdiv {
+  width: 100%;
+  height: 500px;
+}
 }
