@@ -146,6 +146,14 @@ button,
     color: $color-lighter;
 }
 
+.color-win{
+    color: #09ab68;
+}
+
+.color-lose{
+    color: #ea2851;
+}
+
 .form-control,
 input {
     border: 1px solid #cfcfcf;
@@ -1099,7 +1107,7 @@ header {
                     >a{
                         border: 1px solid #e2e2e2;
                         background-color: #fafafa;
-                        border-radius: 5px;
+                        border-radius: 5px; 
                         padding: 7px 10px;
                         line-height: 1;
                         margin-right: 10px;
@@ -1133,6 +1141,51 @@ header {
                 span.icon-warning{
                     display: block;
                     margin-bottom: 7px;
+                }
+            }
+        }
+    }
+    .action{
+        position: relative;
+        display: inline-block;
+        .dropbtn {
+            font-size: 14px;
+            color: #202020;
+            border: 1px solid #c0c0c0;
+            background: #fff;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+            padding: 8px 15px;
+            text-transform: capitalize;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover,&.active{
+                border: 1px solid #c0c0c0;
+                background: #efefef;
+                filter: none;
+            }
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: auto;
+            right: 0;
+            z-index: 1;
+            color: #202020;
+            border: 1px solid #c0c0c0;
+            background: #fff;
+            -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 10px 15px;
+            > li{
+                padding-bottom: 5px;
+                &:last-child{
+                    padding-bottom: 0;
+                }
+                a{
+                    &:hover{
+                        color: $color-2;
+                    }
                 }
             }
         }
