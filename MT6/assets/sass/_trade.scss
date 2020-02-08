@@ -170,6 +170,11 @@ $select-color: #fff;
         width: 100%;
         height: 200px;
     }
+    #candlestick-chart-1,
+    #candlestick-chart-2 {
+		width: 100%;
+		height: 500px;
+	}
 }
 .detail-panel {
 	.panel-wrapper {
@@ -317,6 +322,7 @@ $select-color: #fff;
 }
 .charts {
 	.charts-header {
+		margin-bottom: 30px;
 		.select-group {
 			display: inline-block;
 			background-color: #030844;
