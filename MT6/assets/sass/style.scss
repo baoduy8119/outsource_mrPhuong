@@ -48,7 +48,7 @@ body {
 
 a {
     @include transition;
-    color: $color-lighter;
+    color: $color-text;
     &:hover,
     &:focus {
         text-decoration: none;
@@ -299,13 +299,16 @@ li {
 //-----------------register--------------//
 //------------------------------------------//
 .box-register {
-    background: rgba(2, 20, 82, 0.85);
+    background: rgba(2, 20, 82, 0.9);
     padding: 40px 60px;
-    border-radius: 5px;
+    border-radius: 5px; 
     box-shadow: 0 0 43px rgba(0, 0, 0, 0.5);
     margin: 50px auto 130px;
     max-width: 55%;
     font-size: 16px;
+    @media (min-width: 769px) and (max-width: 1024px){
+        max-width: 75%;
+    }
     @media only screen and (max-width: 768px){
         max-width: 90%;
         padding: 40px 20px;
@@ -325,13 +328,17 @@ li {
             left: 0;
             top: 0;
             margin-bottom: 0;
-            padding: 12px 25px;
+            padding: 0 25px;
+            line-height: 60px;
+            height: 60px;
             border-radius: 5px 0 0 5px;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
             background-color: #0072ff;
             border: 2px solid #01baff;
             @media only screen and (max-width: 767px){
                 font-size: 14px;
+                height: 50px;
+                line-height: 47px;
             }
         }
         input{
@@ -927,7 +934,6 @@ header {
         padding: 25px 30px;
         border-radius: 5px;
         text-align: center;
-        text-transform: uppercase;
         margin-bottom: 30px;
         min-height: 170px;
         transition: all 500ms ease;
@@ -966,6 +972,10 @@ header {
             .box__item__list {
                 font-size: 16px;
             }
+        }
+        &.--width-sm{
+            max-width: 550px;
+            margin: 6% auto;
         }
         &#box-item-select {
             .deposit {
@@ -1027,6 +1037,7 @@ header {
         h4 {
             font-size: 20px;
             padding-bottom: 18px;
+            text-transform: uppercase;
         }
         .level {
             img {
@@ -1059,6 +1070,7 @@ header {
             font-size: 50px;
             font-weight: bold;
             line-height: 1;
+            text-transform: uppercase;
             @media only screen and (max-width: 1024px) {
                 font-size: 2rem;
             }
@@ -1067,6 +1079,61 @@ header {
                 display: block;
                 color: rgba(255, 255, 255, 0.6);
                 padding-top: 5px;
+            }
+        }
+        &__trade{
+            font-size: 16px;
+            .icon-create{
+                margin-bottom: 30px;
+                cursor: pointer;
+            }
+            p{
+                padding-top: 14px;
+                padding-bottom: 20px;
+            }
+            .list-keywords{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                > li{
+                    >a{
+                        border: 1px solid #e2e2e2;
+                        background-color: #fafafa;
+                        border-radius: 5px;
+                        padding: 7px 10px;
+                        line-height: 1;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                        display: inline-block;
+                        &:hover,&:focus{
+                            border-color: #262c75;
+                            background-color: #262c75;
+                            color: #ffffff;
+                            .number{
+                                color: rgba(255, 255, 255, 0.8);
+                            }
+                        }
+                    }
+                    .number{
+                        font-size: 24px;
+                        color: rgba(0, 0, 0, 0.3);
+                        padding-right: 5px;
+                        vertical-align: middle;
+                        transition: all .5s ease;
+                    }
+                }
+            }
+            .box-warning{
+                color: #3d4c55;
+                border: 1px solid #a0d5f3;
+                background-color: #dcf2ff;
+                padding: 20px 25px;
+                border-radius: 8px;
+                margin: 30px 0 40px;
+                span.icon-warning{
+                    display: block;
+                    margin-bottom: 7px;
+                }
             }
         }
     }
