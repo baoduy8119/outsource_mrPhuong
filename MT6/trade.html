@@ -121,169 +121,227 @@
         </header>
 
         <div class="body-wrapper trade">
-            <select id="mounth">
-                <option value="hide">Select</option>
-                <option value="forex" rel="icon-temperature">Forex</option>
-                <option value="crypto">Crypto</option>
-            </select>
             <div class="container-fluid">
+                <div class="charts">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="charts-header">
+                                <div class="select-group">
+                                    <div class="flex-group">
+                                        <select>
+                                            <option value="forex">Forex</option>
+                                            <option value="crypto">Crypto</option>
+                                        </select>
+                                        <i class="convert-arrow"></i>
+                                        <select>
+                                            <option value="EUR/USD">EUR/USD</option>
+                                            <option value="EUR/USD">AUD/USD</option>
+                                            <option value="EUR/USD">GBP/USD</option>
+                                            <option value="EUR/USD">USD/JPY</option>
+                                            <option value="EUR/USD">EUR/GBP</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="info-group">
+                                    <span>10.442</span>
+                                    <span>10.187</span>
+                                    <span>10.986</span>
+                                    <span>10.514</span>
+                                </div>
+                            </div>
+                            <div class="charts-body">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
                 <div class="detail-panel">
                     <div class="row">
                         <div class="col-6">
-                            <div class="pie-chart">
-                                <div id="chartdiv-1"></div>
-                            </div>
-                            <div class="point-table">
-                                <ul class="row">
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                </ul>
-                                <ul class="row">
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                </ul>
-                                <ul class="row">
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                </ul>
-                                <ul class="row">
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                </ul>
-                                <ul class="row">
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                </ul>
-                                <ul class="row">
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
+                            <div class="panel-wrapper">
+                                <div class="pie-chart">
+                                    <div id="chartdiv-1"></div>
+                                </div>
+                                <div class="point-table">
+                                    <ul class="row">
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                </div>
+                                <ul class="button-list">
+                                    <li><button class="trade-btn buy-btn"><span class="text">Buy</span><span class="number">0.00</span></button></li>
+                                    <li><button class="trade-btn sell-btn"><span class="text">Sell</span><span class="number">0.00</span></button></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="pie-chart">
-                                <div id="chartdiv-2"></div>
+                            <div class="panel-wrapper">
+                                <div class="pie-chart">
+                                    <div id="chartdiv-2"></div>
+                                </div>
+                                <div class="point-table">
+                                    <ul class="row">
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point sell"></span></li>
+                                        <li><span class="point buy"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                        <li><span class="point"></span></li>
+                                    </ul>
+                                </div>
+                                <ul class="button-list">
+                                    <li><button class="trade-btn buy-btn"><span class="text">Buy</span><span class="number">0.00</span></button></li>
+                                    <li><button class="trade-btn sell-btn"><span class="text">Sell</span><span class="number">0.00</span></button></li>
+                                </ul>
                             </div>
-                            <div class="point-table">
-                                <ul class="row">
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                </ul>
-                                <ul class="row">
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                </ul>
-                                <ul class="row">
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                </ul>
-                                <ul class="row">
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                </ul>
-                                <ul class="row">
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                </ul>
-                                <ul class="row">
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point sell"></span></li>
-                                    <li><span class="point buy"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
-                                    <li><span class="point"></span></li>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="trade-bottom center">
+                                <div class="trade-input">
+                                    <input class="input-text" value="100">
+                                    <i class="icon-arrow"></i>
+                                </div>
+                                <ul class="usg-coin">
+                                    <li><span class="bg-5usg"></span></li>
+                                    <li><span class="bg-10usg"></span></li>
+                                    <li><span class="bg-100usg"></span></li>
+                                    <li><span class="bg-500usg"></span></li>
+                                    <li><span class="bg-1000usg"></span></li>
                                 </ul>
                             </div>
                         </div>

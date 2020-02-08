@@ -210,8 +210,8 @@ $(document).ready(function() {
         chart.outlineThickness = 0;
         chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
         // this makes the chart 3D
-        chart.depth3D = 30;
-        chart.angle = 40;
+        chart.depth3D = 20;
+        chart.angle = 30;
         chart.colors = ["#ED1C24","#09ab68"];
         chart.color = '#c1cbe2';
         chart.labelTickColor = '#FFFFFF';
@@ -228,8 +228,8 @@ $(document).ready(function() {
         chart.outlineThickness = 0;
         chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
         // this makes the chart 3D
-        chart.depth3D = 30;
-        chart.angle = 40;
+        chart.depth3D = 20;
+        chart.angle = 30;
         chart.colors = ["#ED1C24","#09ab68"];
         chart.color = '#c1cbe2';
         chart.labelTickColor = '#FFFFFF';
