@@ -16,17 +16,21 @@ body {
     color: $color-lighter;
     -webkit-font-smoothing: antialiased;
     &.register {
-        background: url(../images/bg-register.jpg) no-repeat;
-        background-position: center;
-        background-size: cover;
-        height: 100vh;
-        width: 100%;
+        background: none;
+        #body-wrapper{
+            background: url(../images/bg-register.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
         .body-wrapper {
             margin-top: 0;
         }
         header {
             background: none;
             position: static;
+            padding-top: 60px;
             .logo {
                 span {
                     display: block;
@@ -105,6 +109,10 @@ button,
 
 .btn-withdraw {
     @include button(btn-withdraw);
+}
+
+.btn-register{
+    @include button(btn-register);
 }
 
 .button-group {
@@ -292,11 +300,79 @@ li {
 //------------------------------------------//
 .box-register {
     background: rgba(2, 20, 82, 0.85);
-    padding: 40px 50px;
+    padding: 40px 60px;
     border-radius: 5px;
     box-shadow: 0 0 43px rgba(0, 0, 0, 0.5);
     margin: 50px auto 130px;
     max-width: 55%;
+    font-size: 16px;
+    @media only screen and (max-width: 768px){
+        max-width: 90%;
+        padding: 40px 20px;
+    }
+    legend{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .form-group{
+        position: relative;
+        margin-bottom: 40px;
+        label{
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-bottom: 0;
+            padding: 12px 25px;
+            border-radius: 5px 0 0 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+            background-color: #0072ff;
+            border: 2px solid #01baff;
+            @media only screen and (max-width: 767px){
+                font-size: 14px;
+            }
+        }
+        input{
+            text-transform: uppercase;
+            font-size: 20px;
+            height: 60px;
+            padding-left: 190px;
+            background-color: #0a0c27;
+            border: 2px solid #006199;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+            color: rgba(255, 255, 255, 0.6);
+            &:-webkit-input-placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
+            &:-ms-input-placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
+            &:focus {
+                color: rgba(255, 255, 255, 0.6);
+            }
+            @media only screen and (max-width: 767px){
+                font-size: 14px;
+                height: 50px;
+                padding-left: 150px;
+            }
+        }
+        .info{
+            margin-top: 35px;
+            span{
+                text-decoration: underline;
+                padding-bottom: 20px;
+                display: inline-block;
+            }
+            p{
+                line-height: 1.8;
+            }
+        }
+    }
 }
 
 //-----------------pagination--------------//
@@ -898,14 +974,6 @@ header {
             .withdraw {
                 display: none;
             }
-            &.active {
-                .withdraw {
-                    display: block;
-                }
-                .deposit {
-                    display: none;
-                }
-            }
         }
         .padding80 {
             padding: 44px 15%;
@@ -1137,4 +1205,7 @@ header {
     color: $color-footer;
     font-size: 12px;
     padding: 0 20px;
+}
+footer{
+    padding: 15px 0;
 }
