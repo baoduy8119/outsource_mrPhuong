@@ -221,14 +221,14 @@ li {
             top: 0;
             right: 0;
             z-index: 99;
-            background: -webkit-gradient(linear, left top, right top, from(rgba(52, 68, 107, 0)), color-stop(75%, rgb(10, 12, 39)), color-stop(95%, #0a0c27));
-            background: -webkit-linear-gradient(left, rgba(52, 68, 107, 0) 0%, rgb(10, 12, 39) 75%, #0a0c27 95%);
-            background: -o-linear-gradient(left, rgba(52, 68, 107, 0) 0%, rgb(10, 12, 39) 75%, #0a0c27 95%);
-            background: linear-gradient(to right, rgba(52, 68, 107, 0) 0%, rgb(10, 12, 39) 75%, #0a0c27 95%);
-            background: -webkit-linear-gradient(to right, rgba(52, 68, 107, 0) 0%, rgb(10, 12, 39) 75%, #0a0c27 95%);
-            background: -moz-linear-gradient(to right, rgba(52, 68, 107, 0) 0%, rgb(10, 12, 39) 75%, #0a0c27 95%);
-            background: -ms-linear-gradient(to right, rgba(52, 68, 107, 0) 0%, rgb(10, 12, 39) 75%, #0a0c27 95%);
-            background: -o-linear-gradient(to right, rgba(52, 68, 107, 0) 0%, rgb(10, 12, 39) 75%);
+            background: -webkit-gradient(linear, left top, right top, from(rgba(52, 68, 107, 0)), color-stop(75%, rgba(10, 12, 39, 0.25)), color-stop(95%, rgba(10, 12, 39, 0.6)));
+            background: -webkit-linear-gradient(left, rgba(52, 68, 107, 0) 0%, rgba(10, 12, 39, 0.25) 75%, rgba(10, 12, 39, 0.6) 95%);
+            background: -o-linear-gradient(left, rgba(52, 68, 107, 0) 0%, rgba(10, 12, 39, 0.25) 75%, rgba(10, 12, 39, 0.6) 95%);
+            background: linear-gradient(to right, rgba(52, 68, 107, 0) 0%, rgba(10, 12, 39, 0.25) 75%, rgba(10, 12, 39, 0.6) 95%);
+            background: -webkit-linear-gradient(to right, rgba(52, 68, 107, 0) 0%, rgba(10, 12, 39, 0.25) 75%, rgba(10, 12, 39, 0.6) 95%);
+            background: -moz-linear-gradient(to right, rgba(52, 68, 107, 0) 0%, rgba(10, 12, 39, 0.25) 75%, rgba(10, 12, 39, 0.6) 95%);
+            background: -ms-linear-gradient(to right, rgba(52, 68, 107, 0) 0%, rgba(10, 12, 39, 0.25) 75%, rgba(10, 12, 39, 0.6) 95%);
+            background: -o-linear-gradient(to right, rgba(52, 68, 107, 0) 0%, rgba(10, 12, 39, 0.25) 75%);
         }
     }
     .boxed-table {
@@ -333,6 +333,9 @@ li {
     }
     @media only screen and (max-width: 768px){
         max-width: 90%;
+        
+    }
+    @media only screen and (max-width: 767px){
         padding: 40px 20px;
     }
     legend{
@@ -409,11 +412,6 @@ li {
 .pagination-pages {
     text-align: right;
     margin: 30px 0 50px;
-    @media only screen and (max-width: 767px) {
-        text-align: center;
-        margin-bottom: 30px;
-        padding-right: 0;
-    }
     ul {
         display: inline-block;
         padding-left: 0;
@@ -929,7 +927,7 @@ header {
     }
     @media only screen and (max-width: 768px) {
         margin: 0;
-        padding: 30px 0;
+        padding: 30px 10px;
     }
     h2 {
         color: $color-1;
