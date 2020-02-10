@@ -17,7 +17,7 @@ body {
     -webkit-font-smoothing: antialiased;
     &.register {
         background: none;
-        #body-wrapper{
+        #body-wrapper {
             background: url(../images/bg-register.jpg) no-repeat;
             background-position: center;
             background-size: cover;
@@ -43,6 +43,9 @@ body {
         .content {
             margin-left: 0;
         }
+    }
+    &.trade-page {
+        color: $color-lighter;
     }
 }
 
@@ -111,15 +114,15 @@ button,
     @include button(btn-withdraw);
 }
 
-.btn-register{
+.btn-register {
     @include button(btn-register);
 }
 
-.btn-cancel{
+.btn-cancel {
     @include button(btn-cancel);
 }
 
-.btn-xs-cancel{
+.btn-xs-cancel {
     @include button(btn-xs-cancel);
 }
 
@@ -146,11 +149,11 @@ button,
     color: $color-2;
 }
 
-.color-pending{
+.color-pending {
     color: $color-pending;
 }
 
-.color-finish{
+.color-finish {
     color: $color-finish;
 }
 
@@ -158,11 +161,11 @@ button,
     color: $color-lighter;
 }
 
-.color-win{
+.color-win {
     color: #09ab68;
 }
 
-.color-lose{
+.color-lose {
     color: #ea2851;
 }
 
@@ -322,30 +325,29 @@ li {
 .box-register {
     background: rgba(2, 20, 82, 0.9);
     padding: 40px 60px;
-    border-radius: 5px; 
+    border-radius: 5px;
     box-shadow: 0 0 43px rgba(0, 0, 0, 0.5);
     margin: 50px auto 130px;
     max-width: 55%;
     font-size: 16px;
     color: $color-lighter;
-    @media (min-width: 769px) and (max-width: 1024px){
+    @media (min-width: 769px) and (max-width: 1024px) {
         max-width: 75%;
     }
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 768px) {
         max-width: 90%;
-        
     }
-    @media only screen and (max-width: 767px){
+    @media only screen and (max-width: 767px) {
         padding: 40px 20px;
     }
-    legend{
+    legend {
         font-size: 16px;
         margin-bottom: 20px;
     }
-    .form-group{
+    .form-group {
         position: relative;
         margin-bottom: 40px;
-        label{
+        label {
             font-size: 20px;
             text-transform: uppercase;
             font-weight: bold;
@@ -360,13 +362,13 @@ li {
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
             background-color: #0072ff;
             border: 2px solid #01baff;
-            @media only screen and (max-width: 767px){
+            @media only screen and (max-width: 767px) {
                 font-size: 14px;
                 height: 50px;
                 line-height: 47px;
             }
         }
-        input{
+        input {
             text-transform: uppercase;
             font-size: 20px;
             height: 60px;
@@ -387,20 +389,20 @@ li {
             &:focus {
                 color: rgba(255, 255, 255, 0.6);
             }
-            @media only screen and (max-width: 767px){
+            @media only screen and (max-width: 767px) {
                 font-size: 14px;
                 height: 50px;
                 padding-left: 150px;
             }
         }
-        .info{
+        .info {
             margin-top: 35px;
-            span{
+            span {
                 text-decoration: underline;
                 padding-bottom: 20px;
                 display: inline-block;
             }
-            p{
+            p {
                 line-height: 1.8;
             }
         }
@@ -722,7 +724,7 @@ header {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border: none;
         font-size: 16px;
-        legend{
+        legend {
             text-align: center;
             text-transform: uppercase;
             font-weight: bold;
@@ -743,16 +745,16 @@ header {
             border-radius: 2px;
             margin: 0;
         }
-        .form-group{
+        .form-group {
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            label{
+            label {
                 margin-bottom: 0;
                 padding-right: 15px;
             }
-            span{
+            span {
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -823,7 +825,7 @@ header {
                 }
                 >a {
                     font-size: 16px;
-                    font-weight: bold; 
+                    font-weight: bold;
                     padding: 12px 45px;
                     background: #d2d2dd;
                     border: 1px solid #b2b2c1;
@@ -983,7 +985,7 @@ header {
                 font-size: 16px;
             }
         }
-        &.--width-sm{
+        &.--width-sm {
             max-width: 550px;
             margin: 6% auto;
         }
@@ -1091,40 +1093,41 @@ header {
                 padding-top: 5px;
             }
         }
-        &__trade{
+        &__trade {
             font-size: 16px;
-            .icon-create{
+            .icon-create {
                 margin-bottom: 30px;
                 cursor: pointer;
             }
-            p{
+            p {
                 padding-top: 14px;
                 padding-bottom: 20px;
             }
-            .list-keywords{
+            .list-keywords {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                > li{
-                    >a{
+                >li {
+                    >a {
                         border: 1px solid #e2e2e2;
                         background-color: #fafafa;
-                        border-radius: 5px; 
+                        border-radius: 5px;
                         padding: 7px 10px;
                         line-height: 1;
                         margin-right: 10px;
                         margin-bottom: 10px;
                         display: inline-block;
-                        &:hover,&:focus{
+                        &:hover,
+                        &:focus {
                             border-color: #262c75;
                             background-color: #262c75;
                             color: #ffffff;
-                            .number{
+                            .number {
                                 color: rgba(255, 255, 255, 0.8);
                             }
                         }
                     }
-                    .number{
+                    .number {
                         font-size: 24px;
                         color: rgba(0, 0, 0, 0.3);
                         padding-right: 5px;
@@ -1133,21 +1136,21 @@ header {
                     }
                 }
             }
-            .box-warning{
+            .box-warning {
                 color: #3d4c55;
                 border: 1px solid #a0d5f3;
                 background-color: #dcf2ff;
                 padding: 20px 25px;
                 border-radius: 8px;
                 margin: 30px 0 40px;
-                span.icon-warning{
+                span.icon-warning {
                     display: block;
                     margin-bottom: 7px;
                 }
             }
         }
     }
-    .action{
+    .action {
         position: relative;
         display: inline-block;
         .dropbtn {
@@ -1159,8 +1162,9 @@ header {
             padding: 8px 15px;
             text-transform: capitalize;
             font-weight: 500;
-            cursor: pointer; 
-            &:hover,&.active{
+            cursor: pointer;
+            &:hover,
+            &.active {
                 border: 1px solid #c0c0c0;
                 background: #efefef;
                 filter: none;
@@ -1179,13 +1183,13 @@ header {
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             padding: 10px 15px;
-            > li{
+            >li {
                 padding-bottom: 5px;
-                &:last-child{
+                &:last-child {
                     padding-bottom: 0;
                 }
-                a{
-                    &:hover{
+                a {
+                    &:hover {
                         color: $color-2;
                     }
                 }
@@ -1328,6 +1332,7 @@ header {
     font-size: 12px;
     padding: 0 20px;
 }
-footer{
+
+footer {
     padding: 15px 0;
 }
