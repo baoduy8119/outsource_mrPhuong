@@ -243,7 +243,7 @@ $(document).ready(function() {
 
     //     chart.write("chartdiv-2");
     // }
-    if($('.chartdiv-2').length>0) {
+    if($('.trade-page').length > 0) {
         am4core.ready(function() {
 
             am4core.useTheme(am4themes_animated);
