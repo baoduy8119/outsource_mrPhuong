@@ -487,4 +487,31 @@ $(document).ready(function() {
             }];
         });
     }
+
+    //test popup
+    setTimeout(function(){
+        $('#startModal').modal('show');
+    }, 3000)
+    setTimeout(function(){
+        $('#startModal').modal('hide');
+    }, 6000)
+    setTimeout(function(){
+        $('#stopModal').modal('show');
+    }, 9000)
+    setTimeout(function(){
+        $('#stopModal').modal('hide');
+    }, 12000)
+    setTimeout(function(){
+        $('#winModal').modal('show');
+    }, 15000)
+    setTimeout(function(){
+        $('#winModal').modal('hide');
+    }, 18000)
+    setTimeout(function(){
+        $('#loseModal').modal('show');
+    }, 21000)
+    setTimeout(function(){
+        $('#loseModal').modal('hide');
+    }, 24000)
+    
 });
