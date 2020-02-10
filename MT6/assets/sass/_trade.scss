@@ -26,7 +26,8 @@
                     .icon-logout {
                         position: absolute;
                         right: 0;
-                        top: 4px;
+                        top: 7px;
+                        max-width: 25px;
                     }
                 }
             }
@@ -45,6 +46,7 @@
         }
         .current-date {
             order: 1;
+            min-width: 110px;
             @media screen and (max-width: 768px) {
                 display: block;
                 width: 100%;
@@ -69,6 +71,14 @@
                     height: 50px;
                     padding: 7px;
                 }
+                @media screen and (max-width: 768px) {
+                    margin: 0 20%;
+                }
+                @media screen and (max-width: 576px) {
+                    margin: 0 10px;
+                    padding: 4px 6px;
+                    height: 41px;
+                }
             }
             order: 2;
             @media screen and (max-width: 768px) {
@@ -82,6 +92,9 @@
                 border-left: 2px solid #00507e;
                 font-size: 22px;
                 font-weight: bold;
+                @media screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
             }
         }
         .links {
@@ -91,7 +104,6 @@
                 float: left;
                 width: 37%;
                 text-align: right;
-                margin-top: 8px;
             }
             order: 3;
             li {
@@ -109,7 +121,7 @@
                 border-radius: 50%;
                 background: #007fc8;
                 border: 1px solid #fff;
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 576px) {
                     width: 40px;
                     height: 40px;
                 }
@@ -518,6 +530,10 @@
     }
     .usg-coin {
         font-size: 0;
+        @media screen and (min-width: 576px) and (max-width: 768px) {
+            width: 50%;
+            margin: 20px auto 10px;
+        }
         li {
             display: inline-block;
             margin: 0 10px;
@@ -600,5 +616,100 @@
                 }
             }
         }
+    }
+}
+
+.trade-history-page {
+    background: #e7e7f1;
+    .ast-tabs {
+        padding-top: 40px;
+        .nav-item {
+            width: 25%;
+        }
+    }
+    .history-rows {
+        font-size: 16px;
+        .row {
+            padding: 18px 0;
+            border-bottom: 1px solid #d2d2dd;
+            &:last-child {
+                border: none;
+            }
+            .col {
+                padding: 0;
+            }
+        }
+        .name {
+            text-transform: uppercase;
+            &:after {
+                display: inline-block;
+                content: '-';
+                margin: 0 10px;
+            }
+        }
+        .currency {
+            color: #808080;
+            &.buy {
+                color: #09ab68;
+            }
+            &.sell {
+                color: #ea2851;
+            }
+            &.withdrawl {
+                color: #000;
+            }
+        }
+        .text {
+            font-weight: bold;
+            &:before {
+                position: relative;
+                top: 2px;
+                content: '';
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                margin-right: 3px;
+                border: 2px solid #7dd4b0;
+                background-color: #09ab68;
+            }
+            &.sell {
+                color: #ea2851;
+                &:before {
+                    background-color: #ea2851;
+                    border-color: #ff7f9a;
+                }
+            }
+            &.buy {
+                color: #09ab68;
+            }
+        }
+    }
+    .history-totals {
+        margin-top: 20px;
+        font-size: 16px;
+        .rows {
+            .row {
+                padding: 15px 20px;
+                background-color: #d2d2dd;
+                font-weight: bold;
+                border-radius: 5px;
+                margin-bottom: 2px;
+                justify-content: space-between
+            }
+        }
+    }
+    footer {
+        margin-top: 100px;
+        color: #9195b2;
+        @media screen and (max-width: 768px) {
+            margin-top: 50px;
+        }
+    }
+    #body-wrapper {
+        @media screen and (max-width: 768px) {
+            margin-top: 178px;
+        }
+        background: #e7e7f1 url(../images/trade-history-bg.png) no-repeat 0 100%;
+        background-size: contain;
     }
 }

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="description" content="MT6">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <title>MT6-trade</title>
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="trade-history-page">
+    <div id="body-wrapper">
+
+        <header id="header" class="header trade-header">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center">
+                    <div class="col-3 col-lg-2 col-xl-4">
+                        <div class="logo">
+                            <a href="#" title="default logo">
+                                <img alt="default logo" class="img-responsive" src="./assets/images/logo.png" />
+                                <span>MT6</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-9 col-lg-5 col-xl-4">
+                        <div class="header-center">
+                            <div class="header-info">
+                                <div class="inner">
+                                    <span class="action">Order</span>
+                                    <span class="time">29s</span>
+                                </div>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="javascrip:;" class="icon-candlestick icon">
+                                        <img alt="" class="img-responsive" src="./assets/images/icon-candlestick.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascrip:;" class="icon-dashboard icon">
+                                        <img alt="" class="img-responsive" src="./assets/images/icons-dashboard-white.png" />
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="current-date">Jan 20, 09:20</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 col-xl-4">
+                        <div class="navbar-collapse">
+                            <ul class="d-flex align-items-center menu">
+                                <li class="nav-item currency">
+                                    <span class="icon">$</span>
+                                    <span>5,000.00</span>
+                                </li>
+                                <li class="nav-item nav-user">
+                                    <span class="avatar-user">
+                                        <img src="./assets/images/icon-user.png" alt="icons-user"/>
+                                    </span> User001009
+                                    <a href="" class="logout">
+                                        <img src="./assets/images/icon-logout.png" class="icon-logout" alt="icons-exit" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="body-wrapper">
+            <div class="container-fluid">
+                <div class="col-sm-6 offset-sm-3">
+                    <div class="ast-tabs tabs-statistic">
+                        <ul class="nav nav-pills justify-content-center" role="tablist">
+                            <li class="nav-item today">
+                                <a class="nav-link active" id="today" data-toggle="tab" href="#tab-today" role="tab" aria-controls="#tab-today" aria-selected="true">
+                                    Today
+                                </a>
+                            </li>
+                            <li class="nav-item week">
+                                <a class="nav-link" id="week" data-toggle="tab" href="#tab-week" role="tab" aria-controls="#tab-week" aria-selected="false">
+                                    Week
+                                </a>
+                            </li>
+                            <li class="nav-item month">
+                                <a class="nav-link" id="month" data-toggle="tab" href="#tab-month" role="tab" aria-controls="#tab-month" aria-selected="false">
+                                    Month
+                                </a>
+                            </li>
+                            <li class="nav-item custom">
+                                <a class="nav-link" id="custom" data-toggle="tab" href="#tab-custom" role="tab" aria-controls="#tab-custom" aria-selected="false">
+                                    Custom
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-panel active" id="tab-today" role="tabpanel" aria-labelledby="nav-tab-today">
+                                <div class="history-rows">
+                                    <ul class="rows container">
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">USDCAD</span>
+                                                    <span class="sell text">Sell</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="sell currency">-10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Bitcoin</span>
+                                                    <span class="buy text">Buy</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="buy currency">10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Bitcoin Crash</span>
+                                                    <span class="sell text">Sell</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="currency">10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Withdrawl</span>
+                                                    <span class="buy text">Buy</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="withdrawl currency">-40.00</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="history-totals">
+                                    <ul class="rows container">
+                                        <li class="row">
+                                            <span>Begin Balance</span>
+                                            <span>1,478.50</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Deposit</span>
+                                            <span>0.00</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Withdraw</span>
+                                            <span>-40.00</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Profit</span>
+                                            <span>2,069.75</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>End Balance</span>
+                                            <span>3,508.25</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-panel" id="tab-week" role="tabpanel" aria-labelledby="nav-tab-week">
+                                <div class="history-rows">
+                                    <ul class="rows container">
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Bitcoin</span>
+                                                    <span class="buy text">Buy</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="buy currency">10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">USDCAD</span>
+                                                    <span class="sell text">Sell</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="sell currency">-10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Bitcoin Crash</span>
+                                                    <span class="sell text">Sell</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="currency">10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Withdrawl</span>
+                                                    <span class="buy text">Buy</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="withdrawl currency">-40.00</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="history-totals">
+                                    <ul class="rows container">
+                                        <li class="row">
+                                            <span>Begin Balance</span>
+                                            <span>1,478.50</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Deposit</span>
+                                            <span>0.00</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Withdraw</span>
+                                            <span>-40.00</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Profit</span>
+                                            <span>2,069.75</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>End Balance</span>
+                                            <span>3,508.25</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-panel" id="tab-month" role="tabpanel" aria-labelledby="nav-tab-month">
+                                <div class="history-rows">
+                                    <ul class="rows container">
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">USDCAD</span>
+                                                    <span class="sell text">Sell</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="sell currency">-10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Bitcoin</span>
+                                                    <span class="buy text">Buy</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="buy currency">10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Bitcoin Crash</span>
+                                                    <span class="sell text">Sell</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="currency">10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Withdrawl</span>
+                                                    <span class="buy text">Buy</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="withdrawl currency">-40.00</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="history-totals">
+                                    <ul class="rows container">
+                                        <li class="row">
+                                            <span>Begin Balance</span>
+                                            <span>1,478.50</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Deposit</span>
+                                            <span>0.00</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Withdraw</span>
+                                            <span>-40.00</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Profit</span>
+                                            <span>2,069.75</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>End Balance</span>
+                                            <span>3,508.25</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-panel" id="tab-custom" role="tabpanel" aria-labelledby="nav-tab-custom">
+                                <div class="history-rows">
+                                    <ul class="rows container">
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">USDCAD</span>
+                                                    <span class="sell text">Sell</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="sell currency">-10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Bitcoin Crash</span>
+                                                    <span class="sell text">Sell</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="currency">10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Bitcoin</span>
+                                                    <span class="buy text">Buy</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="buy currency">10.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="row">
+                                            <div class="col-9 col">
+                                                <div class="info">
+                                                    <span class="name">Withdrawl</span>
+                                                    <span class="buy text">Buy</span>
+                                                    <span class="number">4.00</span>
+                                                </div>
+                                                <div class="time">
+                                                    2018.04.15 09:13:30
+                                                </div>
+                                            </div>
+                                            <div class="col-3 col text-right">
+                                                <span class="withdrawl currency">-40.00</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="history-totals">
+                                    <ul class="rows container">
+                                        <li class="row">
+                                            <span>Begin Balance</span>
+                                            <span>1,478.50</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Deposit</span>
+                                            <span>0.00</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Withdraw</span>
+                                            <span>-40.00</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>Profit</span>
+                                            <span>2,069.75</span>
+                                        </li>
+                                        <li class="row">
+                                            <span>End Balance</span>
+                                            <span>3,508.25</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright text-center">© 2021 MT6. All Rights Reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href="#" id="back_to_top" class="button backtotop-btn" title="Back to top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
