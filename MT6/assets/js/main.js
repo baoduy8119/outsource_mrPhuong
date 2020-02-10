@@ -194,55 +194,6 @@ $(document).ready(function() {
         $(this).next().toggle();
     })
 
-    // if($('.pie-chart').length > 0) {
-
-    //     var chart;
-
-    //     var chartData1 = [
-    //         {"key":"SELL","value":"63.6","pulled":false},
-    //         {"key":"BUY","value":"36.4","pulled":false}
-    //     ];
-    //     var chartData2 = [
-    //         {"key":"SELL","value":"36.4","pulled":false},
-    //         {"key":"BUY","value":"63.6","pulled":false}
-    //     ];
-
-    //     chart = new AmCharts.AmPieChart();
-    //     chart.dataProvider = chartData1;
-    //     chart.titleField = "key";
-    //     chart.valueField = "value";
-    //     chart.pulledField = "pulled";
-    //     chart.outlineColor = "#FFFFFF";
-    //     chart.outlineAlpha = 0.8;
-    //     chart.outlineThickness = 0;
-    //     chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
-    //     // this makes the chart 3D
-    //     chart.depth3D = 20;
-    //     chart.angle = 30;
-    //     chart.colors = ["#ED1C24","#09ab68"];
-    //     chart.color = '#c1cbe2';
-    //     chart.labelTickColor = '#FFFFFF';
-
-    //     chart.write("chartdiv-1");
-
-    //     chart = new AmCharts.AmPieChart();
-    //     chart.dataProvider = chartData2;
-    //     chart.titleField = "key";
-    //     chart.valueField = "value";
-    //     chart.pulledField = "pulled";
-    //     chart.outlineColor = "#FFFFFF";
-    //     chart.outlineAlpha = 0.8;
-    //     chart.outlineThickness = 0;
-    //     chart.balloonText = "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>";
-    //     // this makes the chart 3D
-    //     chart.depth3D = 20;
-    //     chart.angle = 30;
-    //     chart.colors = ["#ED1C24","#09ab68"];
-    //     chart.color = '#c1cbe2';
-    //     chart.labelTickColor = '#FFFFFF';
-
-    //     chart.write("chartdiv-2");
-    // }
     if($('.trade-page').length > 0) {
         am4core.ready(function() {
 

@@ -4,16 +4,28 @@
         span {
             display: none;
         }
+        @media screen and (max-width: 768px) {
+            position: relative;
+            top: -20px;
+        }
     }
     ul.menu {
         @media screen and (max-width: 768px) {
-        justify-content: flex-start;
-        > li {
+            justify-content: flex-start;
+            > li {
                 margin: 0;
                 width: 50%;
                 img {
                     max-width: 30px;
                     margin-left: 0;
+                }
+                &.nav-user {
+                    position: relative;
+                    .icon-logout {
+                        position: absolute;
+                        right: 0;
+                        top: 4px;
+                    }
                 }
             }
         }
@@ -76,6 +88,7 @@
                 float: left;
                 width: 37%;
                 text-align: right;
+                margin-top: 8px;
             }
             order: 3;
             li {
@@ -120,8 +133,6 @@
         }
     }
 }
-$background: #e74c3c;
-$select-color: #fff;
 
 .select-hidden {
     display: none;
@@ -134,7 +145,7 @@ $select-color: #fff;
     display: inline-block;
     position: relative;
     font-size: 16px;
-    color: $select-color;
+    color: #fff;
     min-width: 110px;
     height: 24px;
     font-size: 14px;
@@ -176,7 +187,7 @@ $select-color: #fff;
 
         &:after {
             top: 9px;
-            border-color: transparent transparent $select-color transparent;
+            border-color: transparent transparent #fff transparent;
         }
     }
 }
@@ -213,6 +224,9 @@ $select-color: #fff;
 }
 .trade-page {
     footer {
+        @media screen and (max-width: 768px) {
+            padding-top: 0;
+        }
         .copyright {
             font-size: 12px;
             color: #006199;
@@ -239,6 +253,9 @@ $select-color: #fff;
     #chartdiv-2 {
         width: 100%;
         height: 150px;
+        @media screen and (max-width: 768px) {
+            height: 140px;
+        }
     }
     #candlestick-chart-1,
     #candlestick-chart-2 {
@@ -268,6 +285,7 @@ $select-color: #fff;
             width: 35%;
         }
         .chart-info {
+            color: white;
             li {
                 font-weight: bold;
                 span {
@@ -339,6 +357,7 @@ $select-color: #fff;
             text-align: right;
         }
         @media screen and (max-width: 768px) {
+            padding-top: 30px;
             width: 100%;
             clear: left;
             overflow: hidden;
@@ -363,15 +382,19 @@ $select-color: #fff;
             .trade-btn {
                 @media screen and (min-width: 769px) {
                     height: 70px;
+                    padding: 10px;
+                    min-width: 120px;
                 }
                 @media screen and (min-width: 1440px) {
                     min-width: 160px;
                 }
-                padding: 10px;
+                @media screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
+                padding: 10px 5px;
                 border: 2px solid white;
-                border-radius: 3px;
+                border-radius: 5px;
                 color: white;
-                min-width: 120px;
                 font-size: 24px;
                 font-weight: bold;
                 .number {
@@ -379,18 +402,27 @@ $select-color: #fff;
                     float: right;
                     font-weight: normal;
                     font-size: 16px;
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
                 }
                 .text {
-                    margin-top: 15px;
                     position: relative;
                     float: left;
+                    @media screen and (min-width: 769px) {
+                        margin-top: 15px;
+                    }
                     &:before {
+                        display: inline-block;
                         width: 39px;
                         height: 16px;
+                        margin-right: 5px;
                         content: '';
-                        position: absolute;
-                        top: -15px;
-                        left: 5px;
+                        @media screen and (min-width: 769px) {
+                            position: absolute;
+                            top: -15px;
+                            left: 5px;
+                        }
                     }
                 }
                 &.buy-btn {
@@ -398,6 +430,9 @@ $select-color: #fff;
                     .text {
                         &:before {
                             background: url('../images/trade-arrow-up.png') no-repeat;
+                            @media screen and (max-width: 768px) {
+                                background-size: 80%;
+                            }
                         }
                     }
                 }
@@ -407,6 +442,9 @@ $select-color: #fff;
                     .text {
                         &:before {
                             background: url('../images/trade-arrow-down.png') no-repeat;
+                            @media screen and (max-width: 768px) {
+                                background-size: 80%;
+                            }
                         }
                     }
                 }
@@ -427,7 +465,7 @@ $select-color: #fff;
         margin-right: 15px;
         @media screen and (max-width: 768px) {
             position: absolute;
-            top: -100%;
+            top: -54px;
             left: 50%;
             transform: translateX(-50%);
             width: 30%;
@@ -445,6 +483,8 @@ $select-color: #fff;
             border: 3px solid #008ada;
             @media screen and (max-width: 768px) {
                 width: 100%;
+                height: 54px;
+                padding: 10px 59px 10px 10px;
             }
         }
         .icon-arrow {
@@ -456,6 +496,10 @@ $select-color: #fff;
             width: 27px;
             height: 18px;
             background: url('../images/icon-arrow-input.png');
+            @media screen and (max-width: 768px) {
+                right: 10px;
+                top: 19px;
+            }
         }
     }
     .usg-coin {
