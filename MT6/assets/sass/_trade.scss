@@ -24,7 +24,8 @@
                     .icon-logout {
                         position: absolute;
                         right: 0;
-                        top: 4px;
+                        top: 7px;
+                        max-width: 25px;
                     }
                 }
             }
@@ -72,6 +73,8 @@
                 }
                 @media screen and (max-width: 576px) {
                     margin: 0 10px;
+                    padding: 4px 6px;
+                    height: 41px;
                 }
             }
             order: 2;
@@ -87,6 +90,9 @@
                 border-left: 2px solid #00507e;
                 font-size: 22px;
                 font-weight: bold;
+                @media screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
             }
         }
         .links {
@@ -96,7 +102,6 @@
                 float: left;
                 width: 37%;
                 text-align: right;
-                margin-top: 8px;
             }
             order: 3;
             li {
@@ -114,7 +119,7 @@
                 border-radius: 50%;
                 background: #007fc8;
                 border: 1px solid #fff;
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 576px) {
                     width: 40px;
                     height: 40px;
                 }
