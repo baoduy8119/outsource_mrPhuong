@@ -14,7 +14,7 @@
 @mixin button($style) {
     font-size: 16px;
     font-weight: bold;
-    padding: 12px 35px;
+    padding: 12px 25px;
     border-radius: 5px;
     border: none;
     color: $color-lighter;
@@ -23,7 +23,7 @@
     @media (min-width: 768px) and (max-width: 1024px){
         padding: 12px 20px;
     }
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 767px){
         font-size: 14px;
         padding: 12px 15px;
     }
@@ -45,7 +45,41 @@
         background-color: #09ab68;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
         padding: 10px 35px;
+        @media (min-width: 768px) and (max-width: 1024px){
+            font-size: 16px;
+            padding: 12px 35px;
+        }
+        @media only screen and (max-width: 767px){
+            font-size: 14px;
+            padding: 12px 25px;
+        }
 
+    }
+    @else if $style=="btn-xs-cancel"{
+        font-size: 14px;
+        color: #ea2851;
+        border: 1px solid #c0c0c0;
+        background: #fff;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+        padding: 8px 15px;
+        text-transform: capitalize;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover{
+            background: #ea2851;
+            color: #ffffff;
+            border-color: #c41717;
+        }
+        @media (min-width: 768px) and (max-width: 1024px){
+            padding:7px 15px;
+        }
+        @media only screen and (max-width: 768px){
+            padding:5px 10px;
+        }
+    }
+    @else if $style=="btn-cancel"{
+        background: #202020;
+        color: #ffffff;
     }
     &:hover {
         color: #ffffff;
@@ -53,6 +87,7 @@
     }
     &:focus {
         outline: none;
+        color: #ffffff;
     }
 }
 

@@ -129,6 +129,18 @@ $(document).ready(function() {
         toastr.info('Copy link to clipboard')
     })
 
+    $('.nav-pills .nav-item').click(function() {
+        if ($('.ast-tabs').find('.withdraw.active').length > 0) {
+            $("#box-item-select .deposit").hide();
+            $("#box-item-select .withdraw").show();
+        } else {
+            $("#box-item-select .withdraw").hide();
+            $("#box-item-select .deposit").show();
+        }
+    })
+
+
+
     // Iterate over each select element
     $('select').each(function() {
         var $this = $(this),
@@ -177,14 +189,9 @@ $(document).ready(function() {
 
     });
 
-    $('.nav-pills .nav-item').click(function() {
-        if ($('.ast-tabs').find('.withdraw.active').length > 0) {
-            $("#box-item-select .deposit").hide();
-            $("#box-item-select .withdraw").show();
-        } else {
-            $("#box-item-select .withdraw").hide();
-            $("#box-item-select .deposit").show();
-        }
+    $('.dropbtn').click(function(){
+        $(this).toggleClass('active');
+        $(this).next().toggle();
     })
 
     // if($('.pie-chart').length > 0) {
@@ -237,7 +244,7 @@ $(document).ready(function() {
     //     chart.write("chartdiv-2");
     // }
 
-    am4core.ready(function() {
+    // am4core.ready(function() {
 
         am4core.useTheme(am4themes_animated);
         var chart1 = am4core.create("chartdiv-1", am4charts.PieChart3D);
@@ -245,31 +252,31 @@ $(document).ready(function() {
         chart1.hiddenState.properties.opacity = 0; // this creates initial fade-in
         chart2.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
-        chart1.data = [
-            {
-                country: "Buy",
-                litres: 60.34,
-                color: am4core.color("#09ab68")
-            },
-            {
-                country: "Sell",
-                litres: 39.66,
-                color: am4core.color("#ea2851")
-            }
-        ];
+    //     chart1.data = [
+    //         {
+    //             country: "Buy",
+    //             litres: 60.34,
+    //             color: am4core.color("#09ab68")
+    //         },
+    //         {
+    //             country: "Sell",
+    //             litres: 39.66,
+    //             color: am4core.color("#ea2851")
+    //         }
+    //     ];
 
-        chart2.data = [
-            {
-                country: "Buy",
-                litres: 39.66,
-                color: am4core.color("#09ab68")
-            },
-            {
-                country: "Sell",
-                litres: 60.34,
-                color: am4core.color("#ea2851")
-            }
-        ];
+    //     chart2.data = [
+    //         {
+    //             country: "Buy",
+    //             litres: 39.66,
+    //             color: am4core.color("#09ab68")
+    //         },
+    //         {
+    //             country: "Sell",
+    //             litres: 60.34,
+    //             color: am4core.color("#ea2851")
+    //         }
+    //     ];
 
         var series1 = chart1.series.push(new am4charts.PieSeries3D());
         var series2 = chart2.series.push(new am4charts.PieSeries3D());
@@ -285,17 +292,17 @@ $(document).ready(function() {
         series1.labels.template.radius = am4core.percent(-50);
         series1.slices.template.propertyFields.fill = "color";
 
-        series2.dataFields.value = "litres";
-        series2.dataFields.category = "country";
-        series2.labels.template.disabled = false;
-        series2.labels.template.fill = am4core.color("white");
-        series2.ticks.template.disabled = true;
-        series2.alignLabels = false;
-        series2.labels.template.text = "{value.percent.formatNumber('#.0')}%";
-        series2.labels.template.radius = am4core.percent(-50);
-        series2.slices.template.propertyFields.fill = "color";
+    //     series2.dataFields.value = "litres";
+    //     series2.dataFields.category = "country";
+    //     series2.labels.template.disabled = false;
+    //     series2.labels.template.fill = am4core.color("white");
+    //     series2.ticks.template.disabled = true;
+    //     series2.alignLabels = false;
+    //     series2.labels.template.text = "{value.percent.formatNumber('#.0')}%";
+    //     series2.labels.template.radius = am4core.percent(-50);
+    //     series2.slices.template.propertyFields.fill = "color";
 
-        //end piechart
+    //     //end piechart
 
         var candlestickChart1 = am4core.create("candlestick-chart-1", am4charts.XYChart);
         candlestickChart1.paddingRight = 20;
