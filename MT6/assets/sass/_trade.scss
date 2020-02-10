@@ -32,6 +32,9 @@
                 }
             }
         }
+        >li.nav-user .avatar-user {
+            background: #007fc8;
+        }
     }
     .header-center {
         @media screen and (min-width: 769px) {
@@ -260,7 +263,10 @@
     &.trade {
         min-height: 700px;
         @media screen and (max-width: 768px) {
-            margin-top: 178px;
+            margin-top: 175px;
+        }
+        @media screen and (max-width: 480px) {
+            margin-top: 162px;
         }
     }
     #chartdiv-1,
