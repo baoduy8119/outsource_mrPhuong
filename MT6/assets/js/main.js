@@ -239,6 +239,7 @@ $(document).ready(function() {
 
     am4core.ready(function() {
 
+        am4core.useTheme(am4themes_animated);
         var chart1 = am4core.create("chartdiv-1", am4charts.PieChart3D);
         var chart2 = am4core.create("chartdiv-2", am4charts.PieChart3D);
         chart1.hiddenState.properties.opacity = 0; // this creates initial fade-in
@@ -272,6 +273,8 @@ $(document).ready(function() {
 
         var series1 = chart1.series.push(new am4charts.PieSeries3D());
         var series2 = chart2.series.push(new am4charts.PieSeries3D());
+
+        series1.hiddenState.properties.endAngle = -90;
         series1.dataFields.value = "litres";
         series1.dataFields.category = "country";
         series1.labels.template.disabled = false;
@@ -294,37 +297,152 @@ $(document).ready(function() {
 
         //end piechart
 
-        var chart = am4core.create("candlestick-chart-1", am4charts.XYChart);
-        chart.paddingRight = 20;
+        var candlestickChart1 = am4core.create("candlestick-chart-1", am4charts.XYChart);
+        candlestickChart1.paddingRight = 20;
 
-        var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-        dateAxis.renderer.grid.template.location = 0;
+        var candlestickChart2 = am4core.create("candlestick-chart-2", am4charts.XYChart);
+        candlestickChart1.paddingRight = 20;
 
-        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-        valueAxis.tooltip.disabled = true;
+        var dateAxis1 = candlestickChart1.xAxes.push(new am4charts.DateAxis());
+        dateAxis1.renderer.grid.template.location = 0;
 
-        var series = chart.series.push(new am4charts.CandlestickSeries());
-        series.dataFields.dateX = "date";
-        series.dataFields.valueY = "close";
-        series.dataFields.openValueY = "open";
-        series.dataFields.lowValueY = "low";
-        series.dataFields.highValueY = "high";
-        series.simplifiedProcessing = true;
-        series.dropFromOpenState.properties.fill = am4core.color("#ea2851");
-        series.dropFromOpenState.properties.stroke = am4core.color("#ff7f9a");
-        series.riseFromOpenState.properties.fill = am4core.color("#09ab68");
-        series.riseFromOpenState.properties.stroke = am4core.color("#01ff96");
-        series.strokeWidth  = 2;
-        dateAxis.renderer.labels.template.fill = 0;
-        dateAxis.renderer.grid.template.stroke = 0;
-        valueAxis.renderer.grid.template.stroke = am4core.color("#007fc8");
-        valueAxis.renderer.grid.template.strokeWidth = 2;
-        valueAxis.renderer.labels.template.fill = am4core.color("white");
-        series.tooltipText = "{openValueY.value} - {lowValueY.value}, {highValueY.value} - {valueY.value}";
+        var dateAxis2 = candlestickChart2.xAxes.push(new am4charts.DateAxis());
+        dateAxis1.renderer.grid.template.location = 0;
 
-        chart.cursor = new am4charts.XYCursor();
+        var valueAxis1 = candlestickChart1.yAxes.push(new am4charts.ValueAxis());
+        valueAxis1.tooltip.disabled = true;
 
-        chart.data = [ {
+        var valueAxis2 = candlestickChart2.yAxes.push(new am4charts.ValueAxis());
+        valueAxis1.tooltip.disabled = true;
+
+        var series1 = candlestickChart1.series.push(new am4charts.CandlestickSeries());
+        series1.dataFields.dateX = "date";
+        series1.dataFields.valueY = "close";
+        series1.dataFields.openValueY = "open";
+        series1.dataFields.lowValueY = "low";
+        series1.dataFields.highValueY = "high";
+        series1.simplifiedProcessing = true;
+        series1.dropFromOpenState.properties.fill = am4core.color("#ea2851");
+        series1.dropFromOpenState.properties.stroke = am4core.color("#ff7f9a");
+        series1.riseFromOpenState.properties.fill = am4core.color("#09ab68");
+        series1.riseFromOpenState.properties.stroke = am4core.color("#01ff96");
+        series1.strokeWidth  = 2;
+        dateAxis1.renderer.labels.template.fill = 0;
+        dateAxis1.renderer.grid.template.stroke = 0;
+        valueAxis1.renderer.grid.template.stroke = am4core.color("#007fc8");
+        valueAxis1.renderer.grid.template.strokeWidth = 2;
+        valueAxis1.renderer.labels.template.fill = am4core.color("white");
+        series1.tooltipText = "{openValueY.value} - {lowValueY.value}, {highValueY.value} - {valueY.value}";
+
+        var series2 = candlestickChart2.series.push(new am4charts.CandlestickSeries());
+        series2.dataFields.dateX = "date";
+        series2.dataFields.valueY = "close";
+        series2.dataFields.openValueY = "open";
+        series2.dataFields.lowValueY = "low";
+        series2.dataFields.highValueY = "high";
+        series2.simplifiedProcessing = true;
+        series2.dropFromOpenState.properties.fill = am4core.color("#ea2851");
+        series2.dropFromOpenState.properties.stroke = am4core.color("#ff7f9a");
+        series2.riseFromOpenState.properties.fill = am4core.color("#09ab68");
+        series2.riseFromOpenState.properties.stroke = am4core.color("#01ff96");
+        series2.strokeWidth  = 2;
+        dateAxis2.renderer.labels.template.fill = 0;
+        dateAxis2.renderer.grid.template.stroke = 0;
+        valueAxis2.renderer.grid.template.stroke = am4core.color("#007fc8");
+        valueAxis2.renderer.grid.template.strokeWidth = 2;
+        valueAxis2.renderer.labels.template.fill = am4core.color("white");
+        series2.tooltipText = "{openValueY.value} - {lowValueY.value}, {highValueY.value} - {valueY.value}";
+
+        candlestickChart1.cursor = new am4charts.XYCursor();
+        candlestickChart2.cursor = new am4charts.XYCursor();
+
+        candlestickChart1.data = [ {
+            "date": "2011-08-01",
+            "open": "9.461",
+            "high": "9.863",
+            "low": "9.328",
+            "close": "9.75"
+        }, {
+            "date": "2011-08-02",
+            "open": "9.110",
+            "high": "8.163",
+            "low": "8.228",
+            "close": "8.815"
+        }, {
+            "date": "2011-08-03",
+            "open": "7.461",
+            "high": "7.663",
+            "low": "7.528",
+            "close": "7.15"
+        }, {
+            "date": "2011-08-04",
+            "open": "8.461",
+            "high": "8.863",
+            "low": "8.328",
+            "close": "8.75"
+        }, {
+            "date": "2011-08-05",
+            "open": "8.101",
+            "high": "8.432",
+            "low": "8.222",
+            "close": "8.144"
+        }, {
+            "date": "2011-08-06",
+            "open": "9.261",
+            "high": "9.563",
+            "low": "9.328",
+            "close": "9.115"
+        }, {
+            "date": "2011-08-07",
+            "open": "9.461",
+            "high": "9.863",
+            "low": "9.328",
+            "close": "9.75"
+        }, {
+            "date": "2011-08-08",
+            "open": "8.461",
+            "high": "8.863",
+            "low": "8.328",
+            "close": "8.175"
+        }, {
+            "date": "2011-08-09",
+            "open": "8.361",
+            "high": "8.263",
+            "low": "8.528",
+            "close": "8.054"
+        }, {
+            "date": "2011-08-10",
+            "open": "7.961",
+            "high": "7.263",
+            "low": "7.328",
+            "close": "7.380"
+        }, {
+            "date": "2011-08-11",
+            "open": "8.461",
+            "high": "8.863",
+            "low": "8.328",
+            "close": "8.75"
+        }, {
+            "date": "2011-08-12",
+            "open": "8.361",
+            "high": "8.663",
+            "low": "8.128",
+            "close": "8.55"
+        }, {
+            "date": "2011-08-13",
+            "open": "7.461",
+            "high": "7.863",
+            "low": "7.328",
+            "close": "7.75"
+        }, {
+            "date": "2011-08-14",
+            "open": "8.161",
+            "high": "8.563",
+            "low": "8.328",
+            "close": "8.175"
+        }];
+
+        candlestickChart2.data = [ {
             "date": "2011-08-01",
             "open": "9.461",
             "high": "9.863",

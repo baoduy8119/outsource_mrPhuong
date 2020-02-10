@@ -18,102 +18,57 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body class="trade-page">
     <div id="body-wrapper">
 
         <header id="header" class="header trade-header">
-            <div class="header_desktop">
-                <div class="container-fluid">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-sm-4">
-                            <div class="logo">
-                                <a href="#" title="default logo">
-                                    <img alt="default logo" class="img-responsive" src="./assets/images/logo.png" />
-                                    <span>MT6</span>
-                                </a>
-                            </div>
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center">
+                    <div class="col-3 col-lg-4">
+                        <div class="logo">
+                            <a href="#" title="default logo">
+                                <img alt="default logo" class="img-responsive" src="./assets/images/logo.png" />
+                                <span>MT6</span>
+                            </a>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="header-center">
-                                <span class="current-date">Jan 20, 09:20</span>
-                                <div class="header-info">
+                    </div>
+                    <div class="col-9 col-lg-4">
+                        <div class="header-center">
+                            <div class="header-info">
+                                <div class="inner">
                                     <span class="action">Order</span>
                                     <span class="time">29s</span>
                                 </div>
-                                <ul class="links">
-                                    <li>
-                                        <a href="javascrip:;" class="icon-time icon">
-                                            <img alt="" class="img-responsive" src="./assets/images/icons-time.png" />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascrip:;" class="icon-dashboard icon">
-                                            <img alt="" class="img-responsive" src="./assets/images/icons-dashboard-white.png" />
-                                        </a>
-                                    </li>
-                                </ul>
-
                             </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="navbar-collapse">
-                                <ul class="d-flex align-items-center menu">
-                                    <li class="nav-item currency">
-                                        <span class="icon">$</span>
-                                        <span>5,000.00</span>
-                                    </li>
-                                    <li class="nav-item nav-user">
-                                        <span class="avatar-user">
-                                            <img src="./assets/images/icon-user.png" alt="icons-user"/>
-                                        </span> User001009
-                                        <img src="./assets/images/icon-exit.png" alt="icons-exit" />
-                                    </li>
-                                </ul>
-                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="javascrip:;" class="icon-time icon">
+                                        <img alt="" class="img-responsive" src="./assets/images/icons-time.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascrip:;" class="icon-dashboard icon">
+                                        <img alt="" class="img-responsive" src="./assets/images/icons-dashboard-white.png" />
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="current-date">Jan 20, 09:20</span>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="header-tablet-middle">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 d-flex align-items-center justify-content-between space-header">
-                            <div class="logo">
-                                <a href="#" title="default logo">
-                                    <img alt="default logo" class="img-responsive" src="./assets/images/logo.png" />
-                                </a>
-                            </div>
-                            <nav role="navigation">
-                                <div id="menuToggle">
-                                    <button type="button" class="navbar-toggle">
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </button>
-                                    <ul id="myNavbar" class="menu menu-sidebar">
-                                        <li class="nav-item nav-link">
-                                            Referral Link
-                                            <a href="#">http://mt6.io/referrallink</a>
-                                            <img src="./assets/images/icon-copy.png" alt="icons-copy" />
-                                        </li>
-                                        <li class="nav-item nav-user">
-                                            <span class="avatar-user">
-                                                <img src="./assets/images/icon-user.png" alt="icons-user"/>
-                                            </span> User001009
-                                            <img src="./assets/images/icon-exit.png" alt="icons-exit" />
-                                        </li>
-                                        <li><a href="dashboard.html"><span class="icon-dashboard"></span>Dashboard</a></li>
-                                        <li><a href="team.html"><span class="icon-team"></span>Team</a></li>
-                                        <li><a href="wallet.html"><span class="icon-wallet"></span>Wallet</a></li>
-                                        <li><a href="trade-account.html"><span class="icon-trade-account"></span>Trade Account</a></li>
-                                        <li><a href="commission.html"><span class="icon-commission"></span>Commission</a></li>
-                                        <li><a href="exchange.html"><span class="icon-exchange"></span>Exchange</a></li>
-                                        <li class="copyright color-footer">
-                                            <p>© 2020 MT6. All Rights Reserved.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
+                    <div class="col-12 col-lg-4">
+                        <div class="navbar-collapse">
+                            <ul class="d-flex align-items-center menu">
+                                <li class="nav-item currency">
+                                    <span class="icon">$</span>
+                                    <span>5,000.00</span>
+                                </li>
+                                <li class="nav-item nav-user">
+                                    <span class="avatar-user">
+                                        <img src="./assets/images/icon-user.png" alt="icons-user"/>
+                                    </span> User001009
+                                    <img src="./assets/images/icon-exit.png" alt="icons-exit" />
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -124,7 +79,7 @@
             <div class="container-fluid">
                 <div class="charts">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="charts-header">
                                 <div class="select-group">
                                     <div class="flex-group">
@@ -153,7 +108,7 @@
                                 <div id="candlestick-chart-1"></div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6 mobile-hide">
                             <div class="charts-header">
                                 <div class="select-group">
                                     <div class="flex-group">
@@ -187,10 +142,14 @@
                 </div>
                 <div class="detail-panel">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="panel-wrapper">
                                 <div class="pie-chart">
                                     <div id="chartdiv-1"></div>
+                                    <ul class="chart-info">
+                                        <li><span class="buy">Buy</span>160.382</li>
+                                        <li><span class="sell">Sell</span>280.262</li>
+                                    </ul>
                                 </div>
                                 <div class="point-table">
                                     <ul class="row">
@@ -272,10 +231,14 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6 mobile-hide">
                             <div class="panel-wrapper">
                                 <div class="pie-chart">
                                     <div id="chartdiv-2"></div>
+                                    <ul class="chart-info">
+                                        <li><span class="buy">Buy</span>160.382</li>
+                                        <li><span class="sell">Sell</span>280.262</li>
+                                    </ul>
                                 </div>
                                 <div class="point-table">
                                     <ul class="row">
@@ -379,12 +342,23 @@
             </div>
         </div>
 
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright">© 2021 MT6. All Rights Reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
         <a href="#" id="back_to_top" class="button backtotop-btn" title="Back to top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
         <script src="https://www.amcharts.com/lib/4/core.js"></script>
         <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
         <script src="./assets/js/main.js"></script>
 
     </div>

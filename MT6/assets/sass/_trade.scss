@@ -1,24 +1,65 @@
 .trade-header {
+    padding: 20px 0;
+    .logo {
+        span {
+            display: none;
+        }
+    }
+    ul.menu {
+        @media screen and (max-width: 768px) {
+        justify-content: flex-start;
+        > li {
+                margin: 0;
+                width: 50%;
+                img {
+                    max-width: 30px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
     .header-center {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @media screen and (min-width: 769px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .icon {
             img {
                 width: 20px;
             }
         }
-        .header-info {
-            @media screen and (min-width: 769px) {
-                width: 150px;
-                height: 50px;
+        .current-date {
+            order: 1;
+            @media screen and (max-width: 768px) {
+                display: block;
+                width: 100%;
+                clear: left;
+                margin-left: -20%;
+                margin-top: 20px;
+                padding: 10px 0;
+                text-align: center;
             }
-            display: flex;
+        }
+        .header-info {
+            .inner {
+                display: flex;
             align-items: center;
             justify-content: center;
             padding: 10px;
             border-radius: 50px;
             border: 2px solid #00507e;
+            }
+            order: 2;
+            @media screen and (min-width: 769px) {
+                width: 150px;
+                height: 50px;
+            }
+            @media screen and (max-width: 768px) {
+                float: left;
+                width: 63%;
+            }
+            
             span {
                 padding: 0 14px;
             }
@@ -31,6 +72,12 @@
         .links {
             font-size: 0;
             width: 110px;
+            @media screen and (max-width: 768px) {
+                float: left;
+                width: 37%;
+                text-align: right;
+            }
+            order: 3;
             li {
                 display: inline-block;
                 &:first-child {
@@ -46,6 +93,10 @@
                 border-radius: 50%;
                 background: #007fc8;
                 border: 1px solid #fff;
+                @media screen and (max-width: 768px) {
+                    width: 40px;
+                    height: 40px;
+                }
             }   
         }
     }
@@ -160,35 +211,100 @@ $select-color: #fff;
         }
     }
 }
+.trade-page {
+    footer {
+        .copyright {
+            font-size: 12px;
+            color: #006199;
+            text-align: center;
+        }
+    }
+    #body-wrapper {
+        background: #0d146b url(../images/trade-bg.png) no-repeat 0 100%;
+    }
+    .mobile-hide {
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+}
 .body-wrapper {
     &.trade {
         min-height: 700px;
-        background: #0d146b url(../images/trade-bg.png) no-repeat;
+        @media screen and (max-width: 768px) {
+            margin-top: 178px;
+        }
     }
     #chartdiv-1,
     #chartdiv-2 {
         width: 100%;
-        height: 200px;
+        height: 150px;
     }
     #candlestick-chart-1,
     #candlestick-chart-2 {
-		width: 100%;
-		height: 500px;
-	}
+        width: 100%;
+        height: 500px;
+        @media screen and (max-width: 768px) {
+            height: 300px;
+        }
+    }
 }
 .detail-panel {
-	.panel-wrapper {
-		display: flex;
-	}
+    .panel-wrapper {
+        @media screen and (min-width: 769px) {
+            display: flex;
+        }
+    }
     .pie-chart {
-        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        @media screen and (min-width: 1440px) {
+            width: 30%;
+        }
+        @media screen and (max-width: 768px) {
+            float: left;
+            width: 35%;
+        }
+        .chart-info {
+            li {
+                font-weight: bold;
+                span {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    margin-right: 10px;
+                    &.buy {
+                        color: #09ab68;
+                    }
+                    &.sell {
+                        color: #ea2851;
+                    }
+                }
+            }
+        }
     }
     .point-table {
-    	width: 40%;
+        @media screen and (min-width: 1440px) {
+            width: 40%;
+        }
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 768px) {
+            width: 65%;
+            float: left;
+        }
         .row {
             li {
-                margin: 5px 5px;
+                margin: 5px;
                 font-size: 0;
+                @media screen and (max-width: 768px) {
+                    margin: 3px;
+                }
             }
         }
         .point {
@@ -198,6 +314,10 @@ $select-color: #fff;
             border-radius: 50%;
             background-color: #0f1244;
             border: solid 2px #999999;
+            @media screen and (max-width: 768px) {
+                width: 17px;
+                height: 17px;
+            }
             &.sell {
                 background-color: #ea2851;
                 border: 2px solid #ff7f9a;
@@ -209,156 +329,217 @@ $select-color: #fff;
         }
     }
     .button-list {
-    	li {
-    		.trade-btn {
-    			@media screen and (min-width: 769px) {
-    				height: 70px;
-    			}
-    			padding: 10px;
-    			border: 2px solid white;
-    			border-radius: 3px;
-    			color: white;
-    			min-width: 160px;
-    			font-size: 24px;
-    			font-weight: bold;
-    			.number {
-    				margin-top: 10px;
-    				float: right;
-    				font-weight: normal;
-    				font-size: 16px;
-    			}
-    			.text {
-    				margin-top: 15px;
-    				position: relative;
-    				float: left;
-    				&:before {
-    					width: 39px;
-    					height: 16px;
-    					content: '';
-    					position: absolute;
-    					top: -15px;
-    					left: 5px;
-    				}
-    			}
-    			&.buy-btn {
-					background-color: #09ab68;
-					.text {
-						&:before {
-							background: url('../images/trade-arrow-up.png') no-repeat;
-						}
-					}
-    			}
-    			&.sell-btn {
-    				margin-top: 20px;
-					background-color: #ea2851;
-					.text {
-						&:before {
-							background: url('../images/trade-arrow-down.png') no-repeat;
-						}
-					}
-    			}
-    		}
-    	}
+        width: 25%;
+        padding-right: 10px;
+        @media screen and (min-width: 1440px) {
+            width: 30%;
+            padding-right: 30px;
+        }
+        @media screen and (min-width: 769px) {
+            text-align: right;
+        }
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            clear: left;
+            overflow: hidden;
+            padding-right: 0;
+        }
+        li {
+            @media screen and (max-width: 768px) {
+                width: 32%;
+                button {
+                    width: 100%;
+                }
+                &:first-child {
+                    float: left;
+                }
+                &:last-child {
+                    float: right;
+                    .trade-btn.sell-btn {
+                        margin-top: 0;
+                    }
+                }
+            }
+            .trade-btn {
+                @media screen and (min-width: 769px) {
+                    height: 70px;
+                }
+                @media screen and (min-width: 1440px) {
+                    min-width: 160px;
+                }
+                padding: 10px;
+                border: 2px solid white;
+                border-radius: 3px;
+                color: white;
+                min-width: 120px;
+                font-size: 24px;
+                font-weight: bold;
+                .number {
+                    margin-top: 10px;
+                    float: right;
+                    font-weight: normal;
+                    font-size: 16px;
+                }
+                .text {
+                    margin-top: 15px;
+                    position: relative;
+                    float: left;
+                    &:before {
+                        width: 39px;
+                        height: 16px;
+                        content: '';
+                        position: absolute;
+                        top: -15px;
+                        left: 5px;
+                    }
+                }
+                &.buy-btn {
+                    background-color: #09ab68;
+                    .text {
+                        &:before {
+                            background: url('../images/trade-arrow-up.png') no-repeat;
+                        }
+                    }
+                }
+                &.sell-btn {
+                    margin-top: 20px;
+                    background-color: #ea2851;
+                    .text {
+                        &:before {
+                            background: url('../images/trade-arrow-down.png') no-repeat;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .trade-bottom {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-top: 100px;
-	.trade-input {
-		position: relative;
-		margin-right: 15px;
-		input {
-			padding: 32px 59px 32px 32px;
-			text-align: center;
-			width: 300px;
-			background-color: #0a0c27;
-			font-size: 24px;
-			color: #ffcc6b;
-			font-weight: bold;
-			border-radius: 5px;
-			border: 3px solid #008ada;
-		}
-		.icon-arrow {
-			content: '';
-			position: absolute;
-			right: 25px;
-			top: 27px;
-			display: block;
-			width: 27px;
-			height: 18px;
-			background: url('../images/icon-arrow-input.png');
-		}
-	}
-	.usg-coin {
-		font-size: 0;
-		li {
-			display: inline-block;
-			margin: 0 10px;
-			span {
-				display: block;
-				width: 93px;
-				height: 93px;
-				background: url('../images/bg-usg.png')
-			}
-		}
-		.bg-5usg {
-			background-position: -0 -0;
-		}
-		.bg-10usg {
-			background-position: -93 -0;
-		}
-		.bg-100usg {
-			background-position: -0 -93px;
-		}
-		.bg-500usg {
-			background-position: -93px -93px;
-		}
-		.bg-100usg {
-			background-position: -186px -0;
-		}
-	}
+    @media screen and (min-width: 769px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        padding-bottom: 90px;
+    }
+    .trade-input {
+        position: relative;
+        margin-right: 15px;
+        @media screen and (max-width: 768px) {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30%;
+            margin-right: 0;
+        }
+        input {
+            padding: 32px 59px 32px 32px;
+            text-align: center;
+            width: 300px;
+            background-color: #0a0c27;
+            font-size: 24px;
+            color: #ffcc6b;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 3px solid #008ada;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+        }
+        .icon-arrow {
+            content: '';
+            position: absolute;
+            right: 25px;
+            top: 27px;
+            display: block;
+            width: 27px;
+            height: 18px;
+            background: url('../images/icon-arrow-input.png');
+        }
+    }
+    .usg-coin {
+        font-size: 0;
+        li {
+            display: inline-block;
+            margin: 0 10px;
+            @media screen and (max-width: 768px) {
+                width: 20%;
+                margin: 0;
+            }
+            span {
+                display: block;
+                width: 93px;
+                height: 93px;
+                background: url('../images/bg-usg.png');
+                @media screen and (max-width: 768px) {
+                    transform: scale(0.7);
+                }
+            }
+        }
+        .bg-5usg {
+            background-position: -0 -0;
+        }
+        .bg-10usg {
+            background-position: -93px -0;
+        }
+        .bg-100usg {
+            background-position: -0 -93px;
+        }
+        .bg-500usg {
+            background-position: -93px -93px;
+        }
+        .bg-100usg {
+            background-position: -186px -0;
+        }
+    }
 }
 .charts {
-	.charts-header {
-		margin-bottom: 30px;
-		.select-group {
-			display: inline-block;
-			background-color: #030844;
-			padding: 10px;
-			font-size: 0;
-			.flex-group {
-				display: flex;
-				align-items: center;
-			}
-		}
-		.convert-arrow {
-			display: inline-block;
-			width: 20px;
-			height: 15px;
-			margin: 0 5px;
-			background: url(../images/convert-arrow.png) no-repeat;
-			background-size: 20px;
-		}
-		.info-group {
-			padding: 8px 12px;
-			color: white;
-			background-color: #030844;
-			float: right;
-			span {
-				&:after {
-					content: '-';
-					padding: 0 10px;
-					color: #00507e;
-					font-size: 18px;
-				}
-				&:last-child {
-					&:after {
-						display: none;
-					}
-				}
-			}
-		}
-	}
+    .charts-header {
+        margin-bottom: 30px;
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .select-group {
+            display: inline-block;
+            background-color: #030844;
+            padding: 10px;
+            font-size: 0;
+            .flex-group {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .convert-arrow {
+            display: inline-block;
+            width: 20px;
+            height: 15px;
+            margin: 0 5px;
+            background: url(../images/convert-arrow.png) no-repeat;
+            background-size: 20px;
+        }
+        .info-group {
+            padding: 8px 12px;
+            color: white;
+            @media screen and (min-width: 769px) {
+                background-color: #030844;
+                float: right;
+            }
+            span {
+                &:after {
+                    content: '-';
+                    padding: 0 10px;
+                    color: #00507e;
+                    font-size: 18px;
+                }
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
