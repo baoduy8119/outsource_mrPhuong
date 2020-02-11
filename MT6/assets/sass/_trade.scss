@@ -594,8 +594,13 @@
                 width: 93px;
                 height: 93px;
                 background: url('../images/bg-usg.png');
+                transition: transform 500ms ease;
                 @media screen and (max-width: 768px) {
                     transform: scale(0.7);
+                }
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2);
                 }
             }
         }

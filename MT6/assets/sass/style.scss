@@ -621,6 +621,9 @@ header {
                             right: 0;
                             top: 7px;
                         }
+                        &.logout {
+                            display: inline-block;
+                        }
                     }
                     &.nav-user {
                         border-bottom: 1px solid rgba(255, 255, 255, 0.1);

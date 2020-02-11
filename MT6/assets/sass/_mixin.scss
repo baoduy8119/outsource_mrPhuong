@@ -20,10 +20,11 @@
     color: $color-lighter;
     text-transform: uppercase;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-    @media (min-width: 768px) and (max-width: 1024px){
+    transition: all 0.3s ease;
+    @media (min-width: 768px) and (max-width: 1024px) {
         padding: 12px 20px;
     }
-    @media only screen and (max-width: 767px){
+    @media only screen and (max-width: 767px) {
         font-size: 14px;
         padding: 12px 15px;
     }
@@ -45,17 +46,16 @@
         background-color: #09ab68;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
         padding: 10px 35px;
-        @media (min-width: 768px) and (max-width: 1024px){
+        @media (min-width: 768px) and (max-width: 1024px) {
             font-size: 16px;
             padding: 12px 35px;
         }
-        @media only screen and (max-width: 767px){
+        @media only screen and (max-width: 767px) {
             font-size: 14px;
             padding: 12px 25px;
         }
-
     }
-    @else if $style=="btn-xs-cancel"{
+    @else if $style=="btn-xs-cancel" {
         font-size: 14px;
         color: #ea2851;
         border: 1px solid #c0c0c0;
@@ -65,25 +65,27 @@
         text-transform: capitalize;
         font-weight: 500;
         cursor: pointer;
-        &:hover{
+        &:hover {
             background: #ea2851;
             color: #ffffff;
             border-color: #c41717;
         }
-        @media (min-width: 768px) and (max-width: 1024px){
-            padding:7px 15px;
+        @media (min-width: 768px) and (max-width: 1024px) {
+            padding: 7px 15px;
         }
-        @media only screen and (max-width: 768px){
-            padding:5px 10px;
+        @media only screen and (max-width: 768px) {
+            padding: 5px 10px;
         }
     }
-    @else if $style=="btn-cancel"{
+    @else if $style=="btn-cancel" {
         background: #202020;
         color: #ffffff;
     }
     &:hover {
         color: #ffffff;
-        filter: brightness(1.5);
+        opacity: 0.9;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.6);
     }
     &:focus {
         outline: none;
