@@ -293,7 +293,10 @@
         opacity: 0;
     }
     #body-wrapper {
-        background: #0d146b url(../images/trade-bg.png) no-repeat 0 100%;
+        background: #0d146b url(../images/trade-bg.png) no-repeat center 100%;
+        background-size: cover;
+        min-height: calc(100vh);
+        width: 100%;
     }
     .mobile-hide {
         @media screen and (max-width: 768px) {
