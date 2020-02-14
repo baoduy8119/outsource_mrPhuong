@@ -43,6 +43,10 @@
                                         <a href="#">http://mt6.io/referrallink</a>
                                         <img src="./assets/images/icon-copy.png" alt="icons-copy" />
                                     </li>
+                                    <li class="nav-item nav-rate">
+                                        Dab Rate
+                                        <span class="value">0.4</span>
+                                    </li>
                                     <li class="nav-item nav-user">
                                         <span class="avatar-user">
                                             <img src="./assets/images/icon-user.png" alt="icons-user"/>
@@ -78,6 +82,10 @@
                                             Referral Link
                                             <a href="#">http://mt6.io/referrallink</a>
                                             <img src="./assets/images/icon-copy.png" alt="icons-copy" />
+                                        </li>
+                                        <li class="nav-item nav-rate">
+                                            Dab Rate
+                                            <span class="value">0.4</span>
                                         </li>
                                         <li class="nav-item nav-user">
                                             <span class="avatar-user">
@@ -131,7 +139,7 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <div class="box__item -white">
+                                            <div class="box__item -white full-height">
                                                 <h4>usg wallet</h4>
                                                 <ul class="box__item__list">
                                                     <li>
@@ -147,66 +155,103 @@
                                                         <span>3,000.00 USG</span>
                                                     </li>
                                                 </ul>
-                                                <div class="button-group">
-                                                    <button type="button" class="btn btn-deposit">deposit</button>
-                                                    <button type="button" class="btn btn-default">transfer</button>
-                                                    <button type="button" class="btn btn-withdraw">withdraw</button>
+                                                <div class="button-group wallet-actions">
+                                                    <button type="button" class="action deposit btn btn-deposit">deposit</button>
+                                                    <button type="button" class="action transfer btn btn-default">transfer</button>
+                                                    <button type="button" class="action withdraw btn btn-withdraw">withdraw</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <div class="box__item -white" id="box-item-select">
+                                            <div class="box__item -white full-height" id="box-item-select">
                                                 <div class="deposit">
                                                     <h4>deposit</h4>
-                                                    <div class="address copy-text" data-copy="0xefereafa2fdfgrafaf341#ssffdsdsdsaawewf3$#%$2dsdsdasdasadsdrwt">
-                                                        <label>Address</label> 0xefereafa2fdfgrafaf341#ssffdsdsd saawewf3$#%$2dsdsdasdasadsdrwt
-                                                    </div>
-                                                    <div class="button__multi">
-                                                        <button type="button" class="button__multi-copy btn" data-original-title="Copied!">
-                                                            <span class="btn__icon">
-                                                                <img width="18px" height="18px" src="./assets/images/icon-copy-address.png" alt="copy text"/>
-                                                            </span>
-                                                            Copy address
-                                                        </button>
-                                                        <button type="button" class="button__multi-qr btn" data-original-title="Copied!">
-                                                            <span class="btn__icon">
-                                                                <img width="18px" height="18px" src="./assets/images/icons-qr-code.png" alt="qr code"/>
-                                                            </span>
-                                                            show qr code
-                                                        </button>
-                                                    </div>
+                                                    <ul class="box__item__list">
+                                                        <li>
+                                                            <label>Balance</label>
+                                                            <span>1,000.00 USG</span>
+                                                        </li>
+                                                    </ul>
+                                                    <form action="" method="POST" role="form">
+                                                        <div class="dab-convert">
+                                                            <div class="dab">
+                                                                <span>DAB</span>
+                                                                <input type="text" value="1000" class="input-text">
+                                                            </div>
+                                                            <div class="arrow-right"><span></span></div>
+                                                            <div class="usg">
+                                                                <span>USG</span>
+                                                                <input type="text" value="1000" class="input-text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="button-group">
+                                                            <button type="button" class="btn btn-send">send</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="transfer">
+                                                    <h4>Transfer</h4>
+                                                    <ul class="box__item__list">
+                                                        <li>
+                                                            <label>Balance</label>
+                                                            <span>1,000.00 USG</span>
+                                                        </li>
+                                                    </ul>
+                                                    <form action="" method="POST" role="form">
+                                                        <label for="">Address/Usename</label>
+                                                        <input type="text" class="input-text">
+                                                        <div class="button-group">
+                                                            <button type="button" class="btn btn-send">send</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                                 <div class="withdraw">
                                                     <h4>withdrawal</h4>
+                                                    <ul class="box__item__list">
+                                                        <li>
+                                                            <label>Balance</label>
+                                                            <span>1,000.00 USG</span>
+                                                        </li>
+                                                    </ul>
                                                     <form action="" method="POST" role="form">
-                                                        <div class="form-group padding80">
-                                                            <label>Address / Username</label>
-                                                            <input type="text" class="form-control">
+                                                        <div class="dab-convert">
+                                                            <div class="dab">
+                                                                <span>DAB</span>
+                                                                <input type="text" value="1000" class="input-text">
+                                                            </div>
+                                                            <div class="arrow-right"><span></span></div>
+                                                            <div class="usg">
+                                                                <span>USG</span>
+                                                                <input type="text" value="1000" class="input-text">
+                                                            </div>
                                                         </div>
-                                                        <button type="submit" class="btn">Submit</button>
+                                                        <div class="button-group">
+                                                            <button type="button" class="btn btn-send">submit</button>
+                                                            <span class="fee">Fee 5%</span>
+                                                        </div>
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-12">
                                             <div class="ast-tabs tabs-statistic">
-                                                <ul class="nav nav-pills justify-content-center" role="tablist">
-                                                    <li class="nav-item deposit">
+                                                <ul class="nav nav-pills justify-content-center wallet-actions" role="tablist">
+                                                    <li class="nav-item deposit action">
                                                         <a class="nav-link active" id="deposit" data-toggle="tab" href="#tab-deposit" role="tab" aria-controls="#tab-deposit" aria-selected="true">
                                                             Deposit
                                                         </a>
                                                     </li>
-                                                    <li class="nav-item transfer">
+                                                    <li class="nav-item transfer action">
                                                         <a class="nav-link" id="transfer" data-toggle="tab" href="#tab-transfer" role="tab" aria-controls="#tab-transfer" aria-selected="false">
                                                             Transfer
                                                         </a>
                                                     </li>
-                                                    <li class="nav-item withdraw">
+                                                    <li class="nav-item withdraw action">
                                                         <a class="nav-link" id="withdrawal" data-toggle="tab" href="#tab-withdrawal" role="tab" aria-controls="#tab-withdrawal" aria-selected="false">
                                                             Withdrawal
                                                         </a>
                                                     </li>
-                                                    <li class="nav-item bonus">
+                                                    <li class="nav-item bonus action">
                                                         <a class="nav-link" id="bonus" data-toggle="tab" href="#tab-bonus" role="tab" aria-controls="#tab-bonus" aria-selected="false">
                                                             Bonus 30%
                                                         </a>

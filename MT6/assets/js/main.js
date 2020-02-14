@@ -129,16 +129,23 @@ $(document).ready(function() {
         toastr.info('Copy link to clipboard')
     })
 
-    $('.nav-pills .nav-item').click(function() {
-        if ($('.ast-tabs').find('.withdraw.active').length > 0) {
-            $("#box-item-select .deposit").hide();
+    $('.wallet-actions.button-group .action').click(function() {
+        $('.wallet-actions.button-group .action').removeClass('active');
+        $(this).addClass('active');
+    })
+
+    $('.wallet-actions .action').click(function() {
+        if ($(this).parent().find('.withdraw.active').length > 0) {
+            $("#box-item-select > div").hide();
             $("#box-item-select .withdraw").show();
-        } else {
-            $("#box-item-select .withdraw").hide();
+        } else if ($(this).parent().find('.transfer.active').length > 0) {
+            $("#box-item-select > div").hide();
+            $("#box-item-select .transfer").show();
+        } else if ($(this).parent().find('.deposit.active').length > 0) {
+            $("#box-item-select > div").hide();
             $("#box-item-select .deposit").show();
         }
     })
-
 
 
     // Iterate over each select element
