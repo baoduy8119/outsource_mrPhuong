@@ -252,14 +252,25 @@
     .modal {
         .action-dialog {
             .modal-content {
-                font-size: 80px;
-                background: #202561;
+                font-size: 100px;
+                background: transparent;
                 text-transform: uppercase;
                 text-align: center;
-                border: 2px solid #006199;
+                border: none;
                 padding: 30px 0;
+                text-align: center;
+                @media screen and (max-width: 767px) {
+                    font-size: 60px;
+                }
                 .exchange {
-                    font-size: 20px;
+                    font-size: 100px;
+                    position: relative;
+                    top: -80px;
+                    text-shadow: 0 0px 35px #000, 0 0px 35px #000;
+                    @media screen and (max-width: 767px) {
+                        font-size: 40px;
+                        top: -40px;
+                    }
                 }
             }
             span {
@@ -267,24 +278,33 @@
                 font-weight: bold;
                 line-height: 1;
             }
-            &.start {
-                max-width: 360px;
-            }
+            &.start,
             &.stop {
-                max-width: 300px;
+                @media screen and (min-width: 768px) {
+                    max-width: 360px;
+                }
+                text-shadow: 0 0px 50px #000, 0 0px 50px #000, 0 0px 50px #000;
+            }
+            &.win,
+            &.lose {
+                .modal-content {
+                    .text img {
+                        width: 480px;
+                        margin: 0 auto;
+                        @media screen and (max-width: 767px) {
+                            width: 260px;
+                        }
+                    }
+                }
             }
             &.win {
-                max-width: 240px;
                 .modal-content {
-                    background-color: #09ab68;
-                    border-color: #01ff96;
+                    color: #00ff96;
                 }
             }
             &.lose {
-                max-width: 260px;
                 .modal-content {
-                    background-color: #ea2851;
-                    border-color: #ff7f9a;
+                    color: #ff2956;
                 }
             }
         }
@@ -494,6 +514,8 @@
                         height: 16px;
                         margin-right: 5px;
                         content: '';
+                        background-size: contain;
+                        background-repeat: no-repeat;
                         @media screen and (min-width: 769px) {
                             position: absolute;
                             top: -15px;
@@ -505,7 +527,7 @@
                     background-color: #09ab68;
                     .text {
                         &:before {
-                            background: url('../images/trade-arrow-up.png') no-repeat;
+                            background-image: url('../images/trade-arrow-up.png');
                             @media screen and (max-width: 768px) {
                                 background-size: 80%;
                             }
@@ -517,7 +539,7 @@
                     background-color: #ea2851;
                     .text {
                         &:before {
-                            background: url('../images/trade-arrow-down.png') no-repeat;
+                            background-image: url('../images/trade-arrow-down.png');
                             @media screen and (max-width: 768px) {
                                 background-size: 80%;
                             }
@@ -572,7 +594,9 @@
             display: block;
             width: 27px;
             height: 18px;
-            background: url('../images/icon-arrow-input.png');
+            background-image: url('../images/icon-arrow-input.png');
+            background-size: contain;
+            background-repeat: no-repeat;
             @media screen and (max-width: 768px) {
                 right: 10px;
                 top: 19px;
@@ -594,10 +618,10 @@
             }
             span {
                 display: block;
-                width: 93px;
-                height: 93px;
-                background: url('../images/bg-usg.png');
+                width: 100px;
+                height: 100px;
                 transition: transform 500ms ease;
+                background-size: contain;
                 @media screen and (max-width: 768px) {
                     transform: scale(0.7);
                 }
@@ -608,19 +632,19 @@
             }
         }
         .bg-5usg {
-            background-position: -0 -0;
+            background-image: url('../images/bg-5usg.png');
         }
         .bg-10usg {
-            background-position: -93px -0;
+            background-image: url('../images/bg-10usg.png');
         }
         .bg-100usg {
-            background-position: -0 -93px;
+            background-image: url('../images/bg-100usg.png');
         }
         .bg-500usg {
-            background-position: -93px -93px;
+            background-image: url('../images/bg-500usg.png');
         }
-        .bg-100usg {
-            background-position: -186px -0;
+        .bg-1000usg {
+            background-image: url('../images/bg-1000usg.png');
         }
     }
 }
