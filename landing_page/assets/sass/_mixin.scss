@@ -1,0 +1,180 @@
+
+@mixin transition($property: all, $duration: .5s, $ease: ease) {
+    -webkit-transition: $property $duration $ease;
+    -moz-transition: $property $duration $ease;
+    -o-transition: $property $duration $ease;
+    transition: $property $duration $ease;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin button{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 9px 80px;
+    border-radius: 8px;
+    border: none;
+    color: $color-button;
+    border: 2px solid $border-color;
+    background: rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    @include transition;
+    @media only screen and (max-width: 767px){
+        font-size: 16px;
+        padding: 9px 50px;
+    }
+    span.icon-button{
+        position: absolute;
+        font-size: 24px;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+    &:hover {
+        color: #000000;
+        background: $bg-primary;
+        box-shadow: 0 5px 40px -5px rgb(220, 127, 50), 0 5px 20px -5px hsla(27, 92%, 14%, 0.5);
+        @include transform(translateY(-10px));
+    }
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+@mixin before_after {
+    content: "";
+    position: absolute;
+}
+
+// Browser Prefixes
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+// Translate
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew ($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin ($origin) {
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin center($position) {
+    position: absolute;
+    @if $position=='vertical' {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @else if $position=='horizontal' {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    @else if $position=='both' {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin prev-next($value) {
+    z-index: 1;
+    width: auto;
+    height: auto;
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-size: 56px;
+        color: $color-button;
+        @media only screen and (max-width: 767px) {
+            font-size: 26px;
+        }
+    }
+    @if $value=="prev" {
+        left: -50px;
+        &::before {
+            content: "\f053";
+        }
+        @media only screen and (max-width: 768px) {
+            left: -25px;
+        }
+        @media only screen and (max-width: 480px) {
+            left: 0;
+        }
+    }
+    @else if $value=="next" {
+        right: -50px;
+        &::before {
+            content: "\f054";
+        }
+        @media only screen and (max-width: 768px) {
+            right: -25px;
+        }
+        @media only screen and (max-width: 480px) {
+            right: 0;
+        }
+    }
+}
+
+@mixin  font-size-30 {
+    font-size: 30px;
+    @media (min-width: 768px) and (max-width: 1199px){
+        font-size: 1.7rem;
+    }
+    @media only screen and (max-width: 767px){
+        font-size: 1.3rem;
+    }
+}
+@mixin  font-size-50 {
+    font-size: 50px;
+    @media (min-width: 768px) and (max-width: 1199px){
+        font-size: 2.7rem;
+        letter-spacing: 7px;
+    }
+    @media only screen and (max-width: 767px){
+        font-size: 2.3rem;
+        letter-spacing: 4px;
+    }
+}

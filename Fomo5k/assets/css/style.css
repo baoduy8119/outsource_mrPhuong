@@ -1883,42 +1883,6 @@ header {
     left: 0;
     background: url(../images/bg-transparent-top.png) no-repeat top center;
     background-size: contain; }
-<<<<<<< HEAD
-  .marketing .content-item .item-left-line {
-    position: absolute;
-    height: calc(100% + 3px);
-    width: 2px;
-    top: 50%;
-    left: 0;
-    background: #000;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
-  .marketing .content-item .item-right-line {
-    position: absolute;
-    content: '';
-    height: 100%;
-    left: 50%;
-    width: 2px;
-    background: #534e80;
-    margin-left: -1px; }
-  .marketing .content-item .box-text-rows {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 300px; }
-    .marketing .content-item .box-text-rows .box-text-row {
-=======
   .marketing .item-left {
     position: relative;
     width: 26%;
@@ -2012,68 +1976,10 @@ header {
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       /* IE6-9 fallback on horizontal gradient */ }
     .marketing .item-right .box-text-rows {
->>>>>>> cecb40f742cdf3708b71b541e1c14dee369c8584
       position: relative;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-<<<<<<< HEAD
-      width: 100%; }
-      .marketing .content-item .box-text-rows .box-text-row:before {
-        content: '';
-        z-index: 10;
-        position: absolute;
-        top: 50%;
-        left: -1px;
-        width: 10px;
-        height: 10px;
-        background: #ffe346;
-        border-radius: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%); }
-      .marketing .content-item .box-text-rows .box-text-row:after {
-        content: '';
-        z-index: 10;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 10px;
-        height: 10px;
-        background: #ffe346;
-        border-radius: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); }
-      .marketing .content-item .box-text-rows .box-text-row .value,
-      .marketing .content-item .box-text-rows .box-text-row h4 {
-        padding: 5px 10px;
-        margin: 0; }
-      .marketing .content-item .box-text-rows .box-text-row .value {
-        font-size: 20px;
-        width: 120px;
-        background-color: #3e5384;
-        border-top-right-radius: 12px;
-        border-bottom-right-radius: 12px; }
-      .marketing .content-item .box-text-rows .box-text-row h4 {
-        width: 90px;
-        background-color: #dc7d02;
-        border-top-left-radius: 12px;
-        border-bottom-left-radius: 12px;
-        font-size: 14px; }
-        .marketing .content-item .box-text-rows .box-text-row h4 span {
-          font-size: 24px; }
-    .marketing .content-item .box-text-rows .row-left,
-    .marketing .content-item .box-text-rows .row-right {
-      width: 50%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      border-radius: 12px;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
-=======
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2314,7 +2220,6 @@ header {
       background-image: -o-linear-gradient(#0a113a, #1e509a);
       background-image: linear-gradient(#0a113a, #1e509a);
       margin-left: -1px; }
->>>>>>> cecb40f742cdf3708b71b541e1c14dee369c8584
 
 .time-work-level {
   position: relative;
@@ -2666,13 +2571,9 @@ footer {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-<<<<<<< HEAD
-      align-item: center;
-=======
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
->>>>>>> cecb40f742cdf3708b71b541e1c14dee369c8584
       padding: 3px 20px 2px 10px;
       font-size: 12px; }
     .language .language-items img {
