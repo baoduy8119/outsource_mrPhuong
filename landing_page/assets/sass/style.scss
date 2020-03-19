@@ -143,7 +143,7 @@ li {
         max-width: 100%;
         flex: 0 0 100%;
     }
-    .col-custom-4 {
+    .col-custom-3 {
         max-width: 50%;
         flex: 0 0 50%;
     }
@@ -1133,11 +1133,13 @@ header {
             font-weight: 700;
         }
     }
-    .content-inner img {
-        @include transition;
-        &:hover {
-            cursor: pointer;
-            @include transform(translateY(-10px));
+    .content-inner {
+        img {
+            @include transition;
+            &:hover {
+                cursor: pointer;
+                @include transform(translateY(-10px));
+            }
         }
     }
 }
@@ -1168,7 +1170,7 @@ header {
         }
     }
     h4.title {
-        max-width: 160px;
+        max-width: 200px;
         margin: 10px auto 15px;
         padding: 0;
         color: $color-title;
@@ -1178,6 +1180,7 @@ header {
         font-weight: 400;
         text-align: center;
         line-height: 1.5;
+        font-weight: bold;
         @media only screen and (max-width: 767px) {
             max-width: 100%;
         }
@@ -1187,8 +1190,13 @@ header {
         text-align: center;
     }
     .content-inner {
-        .icon img {
-            @include transition;
+        text-align: center;
+        .icon{
+            max-width: 180px;
+            margin: 0 auto;
+            img {
+                @include transition;
+            }
         }
         &:hover {
             cursor: pointer;
@@ -1253,11 +1261,18 @@ header {
     .content-inner {
         position: relative;
         min-height: 597px;
+        @media only screen and (min-width: 1500px){
+            .ecosystem-container{
+                padding: 0 15px;
+            }
+            
+        }
         @media (min-width: 992px) and (max-width: 1199px) {
             margin: 0 auto;
             .ecosystem-container {
                 left: 45px;
                 right: 40px;
+                padding: 25px
             }
         }
         @media only screen and (max-width: 767px) {
@@ -1273,15 +1288,29 @@ header {
         letter-spacing: 3px;
         padding: 30px 0 15px;
         margin-bottom: 0;
+        text-align: center;
+        font-weight: bold;
     }
     .text {
         font-size: 14px;
         min-height: 375px;
+        @media only screen and (min-width: 1600px){
+            font-size: 16px;
+        }
+        @media (min-width: 1280px) and (max-width: 1350px){
+            font-size: 12px;
+        }
         @media (min-width: 768px) and (max-width: 1199px) {
-            font-size: 13px;
+            font-size: 16px;
         }
         @media only screen and (max-width: 767px) {
-            font-size: 13px;
+            font-size: 18px;
+        }
+        @media only screen and (max-width: 480px) {
+            font-size: 15px;
+        }
+        @media only screen and (max-width: 320px) {
+            font-size: 12px;
         }
         li {
             position: relative;
