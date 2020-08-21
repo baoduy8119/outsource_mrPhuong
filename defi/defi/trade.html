@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<script type="text/javascript">
+
+    
+</script>
+
+<body class="trade-page">
+    
+    <div class="container-fluid">
+        <main role="main" class="main">
+            <nav class="navbar navbar-dark">
+                <div class="left-block">
+                    <a href="#" class="logo">
+                        <img class="dark-logo" src="img/logo.png" alt="">
+                        <img class="light-logo" src="img/light-logo.png" alt="" />
+                    </a>
+                    <a href="" class="btn btn-primary">Main Account</a>
+                    <div class="date">14.05.2020</div>
+                </div>
+                <div class="crypto-select">
+                    <div class="select-group">
+                        <div class="flex-group">
+                            <select>
+                                <option value="forex">Forex</option>
+                                <option value="crypto">Crypto</option>
+                            </select>
+                            <i class="icon-convert"></i>
+                            <select>
+                                <option value="EUR/USD">EUR/USD</option>
+                                <option value="EUR/USD">AUD/USD</option>
+                                <option value="EUR/USD">GBP/USD</option>
+                                <option value="EUR/USD">USD/JPY</option>
+                                <option value="EUR/USD">EUR/GBP</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-block">
+                    <a href="" class="btn btn-primary">Login</a>
+                    <div class="skin-mode">
+                        <label class="switch">
+                            <input type="checkbox" checked="checked" name="skin-mode">
+                            <i class="slider icon icon-light"></i>
+                            <span class="dark-mode">Dark Mode</span>
+                            <span class="light-mode">Light Mode</span>
+                        </label>
+                    </div>
+                </div>
+            </nav>
+            <div class="main-chart">
+                <div id="tv_chart_container"></div>
+            </div>
+        </main>
+        <div class="side-bar">
+            <h2 class="title">Exchange</h2>
+            <div class="point-table">
+                <ul class="row">
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                </ul>
+                <ul class="row">
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                </ul>
+                <ul class="row">
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                </ul>
+                <ul class="row">
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                </ul>
+                <ul class="row">
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                </ul>
+                <ul class="row">
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point sell"></span></li>
+                    <li><span class="point buy"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                    <li><span class="point"></span></li>
+                </ul>
+            </div>
+            <div class="traders-sentiments">
+                <a class="btn-history"><i class="icon icon-history"></i></a>
+                <h5 class="title">Traders sentiments</h5>
+                <div class="meter nostripes">
+                    <span style="width: 54%"></span>
+                    <div class="meter-value">
+                        <span class="left">54%</span>
+                        <span class="right">46%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="trade-amount">
+                <div class="trade-input">
+                    <input class="input-text" value="100">
+                    <i class="icon icon-clear"></i>
+                </div>
+                <ul class="amount-list">
+                    <li><span>100</span></li>
+                    <li><span>500</span></li>
+                    <li><span>1/2</span></li>
+                    <li><span>x2</span></li>
+                </ul>
+            </div>
+            <div class="trade-btn">
+                <ul>
+                    <li>
+                        <button class="btn btn-second">
+                            <i class="icon icon-increase"></i>
+                            Buy
+                            <small>100</small>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-order">
+                            <small>order</small>
+                            30s
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-primary">
+                            <i class="icon icon-decrease"></i>
+                            Sell
+                            <small>100</small>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- History Modal-->
+            <div class="trade-history defi-modal">
+                <h2>History</h2>
+                <button class="btn"><i class="btn-close icon-history-back"></i></button>
+                <div class="history-pane tab-style">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="today-tab" data-toggle="tab" href="#today-pane" role="tab" aria-controls="team" aria-selected="true">Today</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="week-tab" data-toggle="tab" href="#week-pane" role="tab" aria-controls="person" aria-selected="false">Week</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="month-tab" data-toggle="tab" href="#month-pane" role="tab" aria-controls="person" aria-selected="false">Month</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-tab" data-toggle="tab" href="#custom-pane" role="tab" aria-controls="person" aria-selected="false">Custom</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="today-pane" role="tabpanel" aria-labelledby="today-tab">
+                            <div class="history-rows">
+                                <ul class="rows">
+                                    <li class="row">
+                                        <div class="col-9 col">
+                                            <div class="info">
+                                                <span class="name">USDCAD</span>
+                                                <span class="sell text">Sell</span>
+                                                <span class="number">4.00</span>
+                                            </div>
+                                            <div class="time">
+                                                2018.04.15 09:13:30
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col text-right">
+                                            <span class="sell currency">-10.00</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="col-9 col">
+                                            <div class="info">
+                                                <span class="name">Bitcoin</span>
+                                                <span class="buy text">Buy</span>
+                                                <span class="number">4.00</span>
+                                            </div>
+                                            <div class="time">
+                                                2018.04.15 09:13:30
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col text-right">
+                                            <span class="buy currency">10.00</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="col-9 col">
+                                            <div class="info">
+                                                <span class="name">Bitcoin Crash</span>
+                                                <span class="sell text">Sell</span>
+                                                <span class="number">4.00</span>
+                                            </div>
+                                            <div class="time">
+                                                2018.04.15 09:13:30
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col text-right">
+                                            <span class="currency">10.00</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="col-9 col">
+                                            <div class="info">
+                                                <span class="name">Withdrawl</span>
+                                                <span class="buy text">Buy</span>
+                                            </div>
+                                            <div class="time">
+                                                2018.04.15 09:13:30
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col text-right">
+                                            <span class="withdrawl currency">-40.00</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="history-totals">
+                                <ul class="rows">
+                                    <li class="row">
+                                        <span>Begin Balance</span>
+                                        <span>1,478.50</span>
+                                    </li>
+                                    <li class="row">
+                                        <span>Deposit</span>
+                                        <span>0.00</span>
+                                    </li>
+                                    <li class="row">
+                                        <span>Withdraw</span>
+                                        <span>-40.00</span>
+                                    </li>
+                                    <li class="row">
+                                        <span>Profit</span>
+                                        <span>2,069.75</span>
+                                    </li>
+                                    <li class="row">
+                                        <span>End Balance</span>
+                                        <span>3,508.25</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="week-pane" role="tabpanel" aria-labelledby="week-tab">
+                            <div class="history-rows">
+                                <ul class="rows">
+                                    <li class="row">
+                                        <div class="col-9 col">
+                                            <div class="info">
+                                                <span class="name">USDCAD</span>
+                                                <span class="sell text">Sell</span>
+                                                <span class="number">4.00</span>
+                                            </div>
+                                            <div class="time">
+                                                2018.04.15 09:13:30
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col text-right">
+                                            <span class="sell currency">-10.00</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="col-9 col">
+                                            <div class="info">
+                                                <span class="name">Bitcoin</span>
+                                                <span class="buy text">Buy</span>
+                                                <span class="number">4.00</span>
+                                            </div>
+                                            <div class="time">
+                                                2018.04.15 09:13:30
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col text-right">
+                                            <span class="buy currency">10.00</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="col-9 col">
+                                            <div class="info">
+                                                <span class="name">Bitcoin Crash</span>
+                                                <span class="sell text">Sell</span>
+                                                <span class="number">4.00</span>
+                                            </div>
+                                            <div class="time">
+                                                2018.04.15 09:13:30
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col text-right">
+                                            <span class="currency">10.00</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="col-9 col">
+                                            <div class="info">
+                                                <span class="name">Withdrawl</span>
+                                                <span class="buy text">Buy</span>
+                                            </div>
+                                            <div class="time">
+                                                2018.04.15 09:13:30
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col text-right">
+                                            <span class="withdrawl currency">-40.00</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="history-totals">
+                                <ul class="rows">
+                                    <li class="row">
+                                        <span>Begin Balance</span>
+                                        <span>1,478.50</span>
+                                    </li>
+                                    <li class="row">
+                                        <span>Deposit</span>
+                                        <span>0.00</span>
+                                    </li>
+                                    <li class="row">
+                                        <span>Withdraw</span>
+                                        <span>-40.00</span>
+                                    </li>
+                                    <li class="row">
+                                        <span>Profit</span>
+                                        <span>2,069.75</span>
+                                    </li>
+                                    <li class="row">
+                                        <span>End Balance</span>
+                                        <span>3,508.25</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Win Modal-->
+            <div class="modal fade" id="winModal" role="dialog" aria-labelledby="winModalLabel" aria-hidden="true">
+                <div class="modal-dialog action-dialog win modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <span class="text"><img src="img/win.png" alt=""></span>
+                        <span class="exchange">+3.75</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Lose Modal-->
+            <div class="modal fade" id="loseModal" role="dialog" aria-labelledby="winModalLabel" aria-hidden="true">
+                <div class="modal-dialog action-dialog lose modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <span class="text"><img src="img/lose.png" alt=""></span>
+                        <span class="exchange">-3.75</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Notification-->
+            <!-- <div class="toast-group">
+                <div role="alert" aria-live="assertive" aria-atomic="true" class="toast info" data-autohide="false">
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <i class="icon-close"></i>
+                    </button>
+                    <div class="toast-content">
+                        This is a message
+                    </div>
+                </div>
+                <div role="alert" aria-live="assertive" aria-atomic="true" class="toast warming" data-autohide="false">
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <i class="icon-close"></i>
+                    </button>
+                    <div class="toast-content">
+                        This is a warming message
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    
+    
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/chart/charting_library.min.js"></script>
+    <script type="text/javascript" src="js/chart/polyfills.js"></script>
+    <script type="text/javascript" src="js/chart/bundle.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.chart-page{
+	background-color: transparent;
+}
+.group-wWM3zP_M- {
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+#header-toolbar-chart-styles svg {
+	color: black;
+}
+#header-toolbar-chart-styles  .apply-common-tooltip {
+	background: #efefef;
+	cursor: pointer;
+	border-radius: 5px;
+}
+#header-toolbar-chart-styles  .apply-common-tooltip:before {
+	content:'';
+	opacity: 0.9;
+	background: #efefef !important;
+}
+.layout__area--top {
+	width: 47px !important;
+	top: 46px !important;
+}
+.chart-page .chart-container-border {
+	background-color: transparent !important;
+}

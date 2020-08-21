@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/fav.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.custom-scrollbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="icon icon-mobile-menu"></i>
+        </button>
+        <div class="right-block">
+            <div class="skin-mode">
+                <label class="switch">
+                    <input type="checkbox" checked="checked" name="skin-mode">
+                    <i class="slider icon icon-light"></i>
+                    <span class="dark-mode">Dark Mode</span>
+                    <span class="light-mode">Light Mode</span>
+                </label>
+            </div>
+            <button class="login-btn btn">Login</button>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <nav id="sidebarMenu" class="sidebar collapse">
+            <button class="btn">
+                <i class="btn-close icon-history-back"></i>
+            </button>
+            <a href="/" class="logo">
+                <img class="dark-logo" src="img/logo.png" alt="">
+                <img class="light-logo" src="img/light-logo.png" alt="" />
+            </a>
+            <div class="account-info">
+                <span class="user">DANIELMORNINGSTAR</span>
+                <span class="status">
+                    <i class="icon icon-check"></i>
+                    Activated
+                </span>
+                <div class="referralink">
+                    <a href="" class="link" data-toggle="modal" data-target="#registerModal">http://defi.trade/referralink</a>
+                    <i class="icon icon-copy"></i>
+                </div>
+            </div>
+            <div class="sidebar-sticky navbar-collapse">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./dashboard.html">
+                            <i class="icon icon-dashboard"></i> Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./wallet.html">
+                            <i class="icon icon-wallet"></i> Wallet
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./direct_referral.html">
+                            <i class="icon icon-direct-referral"></i> Direct Referral
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./trade_account.html">
+                            <i class="icon icon-trade-account"></i> Trade Account
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ib.html">
+                            <i class="icon icon-IB"></i> IB
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./trade.html">
+                            <i class="icon icon-exchange"></i> Exchange
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./internal_exchange.html">
+                            <i class="icon icon-internal-exchange"></i> Internal Exchange
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./news.html">
+                            <i class="icon icon-news"></i> News
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main role="main" class="main">
+            <div class="dashboard-items">
+                <h2 class="title">Dashboard</h2>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-md-6 item">
+                                <div class="wallet">
+                                    <h4>
+                                        <i class="icon icon-wallet-o"></i>
+                                        Wallet
+                                    </h4>
+                                    <div class="amount">
+                                        <small>Use</small>
+                                        1,000.00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 item">
+                                <div class="ib">
+                                    <h4>
+                                        <i class="icon icon-ib-o"></i>
+                                        IB
+                                    </h4>
+                                    <div class="amount">
+                                        <small>Use</small>
+                                        1,000.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 item mb-0">
+                                <div class="rank">
+                                    <h4>
+                                        <i class="icon icon-rank-o"></i>
+                                        Rank
+                                    </h4>
+                                    <div class="rank-icon">
+                                        <img src="img/rank-icon.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 item mb-0">
+                                <div class="income">
+                                    <h4>
+                                        <i class="icon icon-income-o"></i>
+                                        Total Income
+                                    </h4>
+                                    <div class="amount">
+                                        <small>Use</small>
+                                        1,000.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row h-100">
+                            <div class="col-md-12 amount-info">
+                                <div class="volume-pane h-100 tab-style">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#team-pane" role="tab" aria-controls="team" aria-selected="true">Team Volume</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#person-pane" role="tab" aria-controls="person" aria-selected="false">Person Volume</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="team-pane" role="tabpanel" aria-labelledby="team-tab">
+                                            <ul class="amount-list">
+                                                <li>
+                                                    <span class="label">Total</span>
+                                                    <span class="value">1,000.00 USE</span>
+                                                </li>
+                                                <li>
+                                                    <span class="label">Week</span>
+                                                    <span class="value">1,000.00 USE</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane fade" id="person-pane" role="tabpanel" aria-labelledby="person-tab">
+                                            <ul class="amount-list">
+                                                <li>
+                                                    <span class="label">Total</span>
+                                                    <span class="value">5,00.00 USE</span>
+                                                </li>
+                                                <li>
+                                                    <span class="label">Week</span>
+                                                    <span class="value">5,00.00 USE</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Choose a username:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-primary btn-small">Randomize</button>
+                                </div>
+                                <input type="text" class="form-control" id="username" placeholder="or manually type it...">
+                            </div>
+                        </div>
+                        <span class="note">A username must be followed this rules:</span>
+                        <p class="text">
+                            Must be unique. </br>
+                            4 to 15 characters.</br>
+                            Must be uppercased ( A to Z).</br>
+                            Can not start with numbers.</br>
+                            No special characters.</br>
+                            No space between characters.
+                        </p>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/jquery.custom-scrollbar.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
